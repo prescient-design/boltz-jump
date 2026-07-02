@@ -69,7 +69,7 @@ Config files for the test sets are provided in `configs/`.
 
 ## Citation
 
-If you use this code, please cite our GenBio workshop paper, the original Boltz-2 paper, and the ConforMix paper (for benchmarks):
+If you use this code, please cite the following:
 
 ```bibtex
 @inproceedings{daigavane2026boltzjump,
