@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MKNTGDEVVAIISQNGKVIREIPLTGHKGNEQFTIKGKGAQYNLMEVDGERIRIKEDNSPDQVGVKMGWKSKAGDTIVCLPHKVFVEIKSTQKLEHHHHHH
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3ld7_B/protein/3ld7_B.pdb

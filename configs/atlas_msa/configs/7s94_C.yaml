@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSGQQLEKGLSNLHRIVTEDLQALEKSVSNLEESLTSLSEVVLQNRRGLDLLFLKEGGLCVALKEECSFYVDHSGAIRDSMSKLRERLEKRHKEKEAG
+      msa: <ATLAS_MSA_DIR>/7s94_C.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/7s94_C/protein/7s94_C.pdb

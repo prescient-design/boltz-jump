@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MKTLTGADALEFHKKLKERNKALHASDLELALVHADAVGKERFDLEELEKICDTSDAGRLTDAKERNDIYERMYYVEYPNVMTLKEFAHIVETLFSWS
+      msa: <ATLAS_MSA_DIR>/4z8t_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4z8t_B/protein/4z8t_B.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SHMFVNKDQIAKDVKQFYDQALQQAVVDDDANNAKAVVKTFHETVDCCGSSTLAALTTSVLKNNLCPSGSNIISNLLKKDCHQKIDDFFSGKL
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3x0g_A/protein/3x0g_A.pdb

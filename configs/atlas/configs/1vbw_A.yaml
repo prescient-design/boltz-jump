@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SRCQGKSSWPQLVGSTGAAAKAVIERENPRVRAVIIKVGSGATKDFRCDRVRVWVTERGIVARPPTIG
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1vbw_A/protein/1vbw_A.pdb

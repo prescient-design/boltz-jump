@@ -1,0 +1,11 @@
+version: 1
+sequences:
+  - protein:
+      id: 'A1'
+      sequence: DAYAQWLKDGGPSSGRPPPS
+
+initial_structure:
+  pdb: ./structures/trpcage_folded.pdb
+
+final_structure:
+  pdb: ./structures/trpcage_uncapped_unfolded_chainA.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MIINEKYPYLSYLLRCYFNQDFEVLFGNADETLAAYKATETAEERLQMKAEIDYLLALSLPDDELQDILLNKLDCSYYYPNEWSSSEEWLKHIYKQMNHHHHHH
+
+initial_structure:
+  pdb: <ATLAS_DIR>/5e3e_E/protein/5e3e_E.pdb

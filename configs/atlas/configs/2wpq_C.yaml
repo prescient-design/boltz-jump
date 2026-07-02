@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MKQIEDKIEEILSKIYHIENEIARIKKLIFDTNEKVDQNTADITTNTNSINQNTTDIATNTTNINNLSDSMKQIEDKIEEILSKIYHIENEIARIKKLI
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2wpq_C/protein/2wpq_C.pdb

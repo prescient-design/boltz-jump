@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: DAYAQWLKDGGPSSGRPPPS
+
+initial_structure:
+  pdb: ./structures/trpcage_fully_unfolded.pdb

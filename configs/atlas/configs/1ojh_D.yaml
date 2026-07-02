@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MNQPIELSLEQQFSIRSFATQVQNMSHDQAKDFLVKLYEQMVVREATYQELLKHQWGLDSGSTPA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1ojh_D/protein/1ojh_D.pdb

@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '01'
+      sequence: SFLLSKVSFVIKKIRLEKGMTQEDLAYKSNLDRTFISGIERNSRNLTIKSLELIMKGLEVSDVVFFEMLIKEILKHD
+      msa: <MDCATH_MSA_DIR>/4i6uB00.a3m
+
+initial_structure:
+  pdb: <MDCATH_DIR>/4i6uB00.pdb

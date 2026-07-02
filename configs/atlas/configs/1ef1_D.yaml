@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: AEASADLRADAMAKDRSEEERTTEAEKNERVQKHLKALTSELANARDESKKTANDMIHAENMRLGRDKYKTLRQIRQGNTKQRIDEFESM
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1ef1_D/protein/1ef1_D.pdb

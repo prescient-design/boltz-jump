@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: HMNEHNLLIFCLKDNVSISEYTEMIDWAYKNIQSETVVEITENQIIEYQNRGLWRLVSEITDNWLFGPSEGDWLIDKESILAVKEKLQNSDFSTEPLVKNIIHVLEYAIKNEKTVIFHF
+      msa: <ATLAS_MSA_DIR>/3w1o_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3w1o_A/protein/3w1o_A.pdb

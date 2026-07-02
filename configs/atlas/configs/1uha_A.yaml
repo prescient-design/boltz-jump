@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: APECGERASGKRCPNGKCCSQWGYCGTTDNYCGQGCQSQCDYWRCGRDFGGRLCEEDMCCSKYGWCGYSDDHCEDGCQSQCD
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1uha_A/protein/1uha_A.pdb

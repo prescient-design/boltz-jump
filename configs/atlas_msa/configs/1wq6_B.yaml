@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: AMATRQEEMIDHRLTDREWAEEWKHLDHLLNCIMDMVEKTRRSLTVLRRCQEADREELNYWIRRYSDAEDLK
+      msa: <ATLAS_MSA_DIR>/1wq6_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1wq6_B/protein/1wq6_B.pdb

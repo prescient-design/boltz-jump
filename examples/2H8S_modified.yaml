@@ -1,0 +1,10 @@
+version: 1
+sequences:
+  - protein:
+      id: 'A'
+      sequence: GCCSDPRCNYDHPEIC
+
+initial_structure:
+  cif: ./structures/2H8S_modified.cif
+
+

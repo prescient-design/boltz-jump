@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SNAMSQKLYNMKFAAVYLALIAKVERKGGKAESVHQVTSWLTGYEVSDVLACLDRDVTYGDFFRQAPYYVPERIAITGKICGVRIEEIDDPLMQEIRRLDKLVDWLAKGKTSQQVLEKYEKHK
+      msa: <ATLAS_MSA_DIR>/3c9p_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3c9p_A/protein/3c9p_A.pdb

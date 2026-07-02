@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GPGSSGPADCCRMKECCTDRVNECLQRYSGREDKFVSFCYQEATVTCGSFNEIVGCCYGYQMCMIRVVKPNSLSGAHEACKTVSCGNPCA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4u5h_G/protein/4u5h_G.pdb

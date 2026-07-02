@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: NPAENIASEISKSVEGAIQQVKNLLTLAADRAEQIVNDLASTTTSTITRPIIELSNTADKIAEGNLEAEVPHQNRADEIGILAKSIERLRRSLKVAMESLEEALK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4gn0_A/protein/4gn0_A.pdb

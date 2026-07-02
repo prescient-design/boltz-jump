@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SNAMDGQQLNRLLLEWIGAWDPFGLGKDAYDVEAASVLQAVYETEDARTLAARIQSIYEFAFDEPIPFPHCLKLARRLLELKQAASCPLP
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1u84_A/protein/1u84_A.pdb

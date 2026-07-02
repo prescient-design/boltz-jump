@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MEGALPKGLSDLIADPTLGPQITPDWVRTLSRIELRGKRPRDKQDWYEIYLHLKRILS
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6ro6_B/protein/6ro6_B.pdb

@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SNAMALGFGMKMELQQFLDALASSPEKIEFETTMAVIEDNYDFTPAAFTNGNTQNDANENNGSCKIFAFGLLNALDKEATLACFGRFYREDVLLHPENNDHQNIRNFMVTGWEGIQFETSALTAK
+      msa: <ATLAS_MSA_DIR>/2qhq_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2qhq_B/protein/2qhq_B.pdb

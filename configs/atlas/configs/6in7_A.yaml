@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MMSREALQETLSAVMDNEADELELRRVLAACGEDAELRSTWSRYQLARSVMHREPTLPKLDIAAAVSAALADEAAPPKAEK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6in7_A/protein/6in7_A.pdb

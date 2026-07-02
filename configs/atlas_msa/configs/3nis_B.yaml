@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSVHKHTGRNCGRKFKIGEPLYRCHECGCDDTCVLCIHCFNPKDHVNHHVCTDICTEFTSGICDCGDEEAWNSPLHCKAEEQ
+      msa: <ATLAS_MSA_DIR>/3nis_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3nis_B/protein/3nis_B.pdb

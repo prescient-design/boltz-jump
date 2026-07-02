@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: 'A'
+      sequence: NLYIQWLKDGGPSSGRPPPS
+
+initial_structure:
+  cif: ./structures/1L2Y.cif

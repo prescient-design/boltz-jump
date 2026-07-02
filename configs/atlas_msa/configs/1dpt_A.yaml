@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: PFLELDTNLPANRVPAGLEKRLCAAAASILGKPADRVNVTVRPGLAMALSGSTEPCAQLSISSIGVVGTAEDNRSHSAHFFEFLTKELALGQDRILIRFFPLESWQIGKIGTVMTFL
+      msa: <ATLAS_MSA_DIR>/1dpt_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1dpt_A/protein/1dpt_A.pdb

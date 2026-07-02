@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSIINETADDIVYRLTVIIDDRYESLKNLITLRADRLEMIINDNVSTILASI
+
+initial_structure:
+  pdb: <ATLAS_DIR>/5jr5_A/protein/5jr5_A.pdb

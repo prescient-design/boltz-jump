@@ -1,0 +1,9 @@
+version: 1  # Optional, defaults to 1
+sequences:
+  - protein:
+      id: A
+      sequence: LSDEDFKAVFGMTRSAFANLPLWKQQHLKKEKGLF
+      msa: empty
+  
+initial_structure:
+  cif: ./structures/1YRF.cif

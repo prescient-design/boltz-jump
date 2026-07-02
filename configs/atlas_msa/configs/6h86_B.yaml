@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MADSDPGERSYDNMLKMLSDLNKDLEKLLEEMEKISVQATWMAYDMVVMRTNPTLAESMRRLEDAFLNCKEEMEKNWQELLTETKRKQ
+      msa: <ATLAS_MSA_DIR>/6h86_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6h86_B/protein/6h86_B.pdb

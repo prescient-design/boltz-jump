@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: YRAIKGMETKREIGGYTYKVVFYENVFQDSILLGNFASQEGNVLKYENGQSCWNGPHRSAIVTVECGVENEIVSVLEAQKCEYLIKMKSPAACS
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4xqm_A/protein/4xqm_A.pdb

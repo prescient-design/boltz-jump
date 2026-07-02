@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: VSGSSSVGEMSGRSVSQQTSDQYANNLAGRTESPQGSSLASRIIERLSSVAHSVIGFIQRMFSEGSHKP
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1l2w_I/protein/1l2w_I.pdb

@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: ARKDNLAKTIAETAKIREVLIIQNVLNCFNDDQVRSDFLNGENGAKKLENTELELLEKFFIETQTRRPETADDVSFIATAQKSAELFYSTINARPKSFGEVSFEKLRSLFQQIQDSGYLDKYYL
+      msa: <ATLAS_MSA_DIR>/6bk4_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6bk4_A/protein/6bk4_A.pdb

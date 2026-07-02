@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: EDKYTDKYDNINLDEILANKRLLVAYVNCVMERGKCSPEGKELKEHLQDAIENGCKKCTENQEKGAYRVIEHLIKNEIEIWRELTAKYDPTGNWRKKYEDRAKAAGIVIPEE
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1n8u_A/protein/1n8u_A.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: QVYAPLVLRDPVSNPNNRKIDQDDDYELVRRNMHYQSQMLLDMAKIALENAKNADSPRHVEVFAQLMGQMTTTNKEMLKMHKEMKDLAGAAVQK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3txs_C/protein/3txs_C.pdb

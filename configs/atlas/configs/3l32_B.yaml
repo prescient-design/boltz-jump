@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MNLLFQSYLDNVGVQIVRQMRSGERFLKIWSQTVEEIVSYVTVNF
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3l32_B/protein/3l32_B.pdb

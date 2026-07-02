@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: AISCGQVASAIAPCISYARGQGSGPSAGCCSGVRSLNNAARTTADRRAACNCLKNAAAGVSGLNAGNAASIPSKCGVSIPYTISTSTDCSRVN
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1fk5_A/protein/1fk5_A.pdb

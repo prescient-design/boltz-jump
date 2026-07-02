@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GPLGSPLTASMLASAPPQEQKQMLGERLFPLIQAMHPTLAGKITGMLLEIDNSELLHMLESPESLRSKVDEAVAVLQAHQAKEAAQKA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3ktp_A/protein/3ktp_A.pdb

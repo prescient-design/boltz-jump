@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SGLVPRGSHMIIKNYSYARQNLKALMTKVNDDSDMVTVTSTDDKNVVIMSESDYNSMMETLYLQQNPNNAEHLAQSIADLERGKTITKDIDV
+      msa: <ATLAS_MSA_DIR>/7bwf_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/7bwf_B/protein/7bwf_B.pdb

@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SALQDLLRTLKSPSSPQQQQQVLNILKSNPQLMAAFIKQRTAKYVAN
+      msa: <ATLAS_MSA_DIR>/7jfl_C.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/7jfl_C/protein/7jfl_C.pdb

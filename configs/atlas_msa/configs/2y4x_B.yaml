@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSHMIKPDETRVKQFLEGFNIETFEMVGTLSNAQGTFALVKGAGGVHRVRVGDYLGRNDGKVVGISEGKIDVIEIVPDGEGNWLERPRSLTLK
+      msa: <ATLAS_MSA_DIR>/2y4x_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2y4x_B/protein/2y4x_B.pdb

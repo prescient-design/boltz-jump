@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: EQEQQYDVHGNVISAAVYQKFHVYGPEDMVFDGDAGGLTIPGAGAFWGTLFTSDLQRLYKDTVSFQYNALGTYLNINFFDSSGGFLGHIQAGAVSAVVGVGGGSGSWHNWEVA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4cv7_A/protein/4cv7_A.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: AVNFEVKDQTLMMELVPERLRGETATFDIEADGKVYVEKGRRVTARHIRQLEKDGVNFIEVPVEYIVGKVSAKDYVNEATGELIITANQEISLEALANLSQAG
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3e7h_A/protein/3e7h_A.pdb

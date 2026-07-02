@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SRAQVLSLYRAMLRESKRFSAYNYRTYAVRRIRDAFRENKNVKDPVEIQTLVNKAKRDLGVIRRQVHIGQLYST
+      msa: <ATLAS_MSA_DIR>/6odd_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6odd_B/protein/6odd_B.pdb

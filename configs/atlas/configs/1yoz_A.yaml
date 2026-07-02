@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GHMLYINSFLDRMGEIIRGEKSVEEADKLLDQKNIFEMFRSDCEEILNLYKSGKAEKEEVQRNFYLLKTYVVSQLSIHFERLKEFAESKGFKIEKKLDPEVINEIALYIDRVEKEV
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1yoz_A/protein/1yoz_A.pdb

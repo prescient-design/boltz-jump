@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SMTIMEVNLLKGPKGLGFSIAGGIGNQHIPGDNSIYITKIIEGGAAQKDGRLQIGDRLLAVNNTNLQDVRHEEAVASLKNTSDMVYLKVAKPGS
+      msa: <ATLAS_MSA_DIR>/2fe5_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2fe5_A/protein/2fe5_A.pdb

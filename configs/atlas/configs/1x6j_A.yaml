@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSHMDINNKARIHWACRRGMRELDISIMPFFEHEYDSLSDDEKRIFIRLLECDDPDLFNWLMNHGKPADAELEMMVRLIQTRNRERGPVAI
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1x6j_A/protein/1x6j_A.pdb

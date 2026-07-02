@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: CDIPQSTNCGGNVYSNDDINTAIQGALDDVANGDRPDNYPHQYYDEASEDITLCCGSGPWSEFPLVYNGPYYSSRDNYVSPGPDRVIYQTNTGEFCATVTHTGAASYDGFTQCS
+      msa: <ATLAS_MSA_DIR>/3agn_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3agn_A/protein/3agn_A.pdb

@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MFTINAEVRKEQGKGASRRLRAANKFPAIIYGGKEAPLAIELDHDKVMNMQAKAEFYSEVLTIVVDGKEIKVKAQDVQRHPYKPKLQHIDFVRA
+      msa: <ATLAS_MSA_DIR>/1dfu_P.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1dfu_P/protein/1dfu_P.pdb

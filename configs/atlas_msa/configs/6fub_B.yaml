@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: METGNKYIEKRAIDLSRERDPNFFDNPGIPVPECFWFMFKNNVRQDAGTCYSSWKMDMKVGPNWVHIKSDDNCNLSGDFPPGWIVLGKKRPGF
+      msa: <ATLAS_MSA_DIR>/6fub_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6fub_B/protein/6fub_B.pdb

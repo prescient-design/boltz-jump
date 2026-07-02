@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GPGSPQNTGFLRGACIKTGDRFRVKIGYNQELIAVFKSLPSRHYDSFTKTWDFSMSDYRALMKAVERLSTVSLKPL
+      msa: <ATLAS_MSA_DIR>/4o66_C.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4o66_C/protein/4o66_C.pdb

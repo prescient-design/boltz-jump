@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSHMKTRKIPLRKSVVSNEVIDKRDLLRIVKNKEGQVFIDPTGKANGRGAYIKLDNAEALEAKKKKVFNRSFSMEVEESFYDELIAYVDHKVKRRELGLE
+      msa: <ATLAS_MSA_DIR>/1g2r_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1g2r_A/protein/1g2r_A.pdb

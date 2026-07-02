@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: VDMSNVVKTYDLQDGSKVHVFKDGKMGMENKFGKSMNMPEGKVMETRDGTKIIMKGNEIFRLDEALRKGHSEGG
+      msa: <ATLAS_MSA_DIR>/3dso_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3dso_A/protein/3dso_A.pdb

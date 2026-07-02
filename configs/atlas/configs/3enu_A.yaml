@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: TIEVPVLTFVPVQVSAELENRGCWVKFFDKKNFQGDSLFLSGPATLPRLIGPFGYDWENKVRSVKVGPRANLTIFDNHNYRDEDKFLDAGANVANLSKEMGFFDNFRSMVLNCI
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3enu_A/protein/3enu_A.pdb

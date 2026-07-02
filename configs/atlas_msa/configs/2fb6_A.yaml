@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SNAMSANDKLTILWTTDNKDTVFNMLAMYALNSKNRGWWKHINIILWGASVKLVANDTQVQTEILEMLQSGITIEACQDCCENFGVASIITNLGITVRYMGIPLTEYLKNGEKILSI
+      msa: <ATLAS_MSA_DIR>/2fb6_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2fb6_A/protein/2fb6_A.pdb

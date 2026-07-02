@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GANAMASMKFAVIDRKNFTLIHFEIEKPIKPEILKEIEIPSVDTRKGVVISGRGPIWLHCFLAHKYAHTPFVAVYDPRLGAVVVQSHSELREGDVIDVVVEEILKGGVRHV
+      msa: <ATLAS_MSA_DIR>/6yud_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6yud_B/protein/6yud_B.pdb

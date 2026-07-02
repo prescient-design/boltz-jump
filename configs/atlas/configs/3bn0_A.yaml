@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MAVRIRLAKFGRKHHPIYRIVVMDAKSPREGKYIDILGTYDPKRKVLINVYPEKVKEWVLKGVELSHRAKAILWNHGILKEVVPEGYEMKRVGDYYVFEKRESKKSKGGEAA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3bn0_A/protein/3bn0_A.pdb

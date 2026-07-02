@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GQDVDKDPGRGLPVEEYHYGMQLDVKNVLHRTDNSTRTGVVPVTVVYEDHSGELHKIRFLEWGGSTSNG
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4f98_A/protein/4f98_A.pdb

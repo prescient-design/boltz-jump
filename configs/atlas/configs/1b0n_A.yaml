@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MIGQRIKQYRKEKGYSLSELAEKAGVAKSYLSSIERNLQTNPSIQFLEKVSAVLDVSVHTLLDEKHETEYDGQLDSEWEKLVRDAMTSGVSKKQFREFLDYQKWRKSQKEE
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1b0n_A/protein/1b0n_A.pdb

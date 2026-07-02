@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GEHIPGTLRFRLSPAARNILEKHSLDASQGTATGPRGIFTKEDALKLVQLKQTGKILEHHHHHH
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2f60_K/protein/2f60_K.pdb

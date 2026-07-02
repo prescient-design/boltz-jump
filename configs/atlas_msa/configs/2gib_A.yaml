@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SANVTQAFGRRGPEQTQGNFGDQDLIRQGTDYKHWPQIAQFAPSASAFFGMSRIGMEVTPSGTWLTYHGAIKLDDKDPQFKDNVILLNKHIDAYKTFPPTEPK
+      msa: <ATLAS_MSA_DIR>/2gib_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2gib_A/protein/2gib_A.pdb

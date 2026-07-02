@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: EIGFSPLLTAEEEIHYATLALKGDMEARKKMIESNLRLVVKIARRYLNRGLPLLDLIEEGNLGLMKSVEKFDPKRGFRFSTYATWWIRQTIERAIMNQTR
+      msa: <ATLAS_MSA_DIR>/5h6x_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/5h6x_A/protein/5h6x_A.pdb

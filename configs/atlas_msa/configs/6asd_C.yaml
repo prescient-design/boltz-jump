@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GKRKRCGVCEPCQQKTNCGECTYCKNRKNSHQICKKRKCEELKKKPS
+      msa: <ATLAS_MSA_DIR>/6asd_C.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6asd_C/protein/6asd_C.pdb

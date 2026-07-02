@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: NLYIQWLKDGGPSSGRPPPS
+
+initial_structure:
+  pdb: ./structures/1L2Y_unfolded.pdb

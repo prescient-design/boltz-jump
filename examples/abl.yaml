@@ -1,0 +1,11 @@
+version: 1  # Optional, defaults to 1
+sequences:
+  - protein:
+      id: A
+      sequence: GSGNSLEKHSWYHGPVSRNAAEYLLSSGINGSFLVRESESSPGQRSISLRYEGRVYHYRINTASDGKLYVSSESRFNTLAELVHHHSTVADGLITTLHYPAPKRGIHRD
+      msa: empty
+  
+initial_structure:
+  cif: ./structures/boltz_results_abl/predictions/abl/abl_model_0.cif
+#   cif: ./structures/1AB2.cif
+#   cif: ./structures/boltz_jump_results_abl/predictions/abl/abl_noisy_model_0.cif

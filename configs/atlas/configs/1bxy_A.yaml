@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MPRLKVKLVKSPIGYPKDQKAALKALGLRRLQQERVLEDTPAIRGNVEKVAHLVRVEVVE
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1bxy_A/protein/1bxy_A.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SNAEASRVYEIIVESVVNEVREDFENAGIDEQTLQDLKNIWQKKLTETKVTTF
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1nh2_B/protein/1nh2_B.pdb

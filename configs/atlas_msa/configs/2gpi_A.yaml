@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GMNQSIIFTEQLTWDVQLSAIHFTAQQQGMVIDCYIGQKVLEHLAAEKINNSEQALSLFEQFRFDIEEQAEKLIEQEAFDVQGHIQVERVD
+      msa: <ATLAS_MSA_DIR>/2gpi_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2gpi_A/protein/2gpi_A.pdb

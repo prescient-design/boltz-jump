@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: NPYTIYPPVPKTASINGFADRIYDQIPKCAQECVKQSTSSTPCPYWDTGCLCVIPNFTGAVGNCVASKCRGADVTNFRKLAVGACAAAGVWDPYWIIPASVSSALDAAATA
+      msa: <ATLAS_MSA_DIR>/4y7s_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4y7s_A/protein/4y7s_A.pdb

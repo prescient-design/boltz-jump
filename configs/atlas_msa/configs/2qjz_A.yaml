@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSDNLSRHDMLAWINESLQLNLTKIEQLCSGAAYCQFMDMLFPGSIALKKVKFQAKLEHEYIQNFKILQAGFKRMGVDKIIPVDKLVKGKFQDNFEFVQWFKKFFDANYDGKDYDPVAARQGQ
+      msa: <ATLAS_MSA_DIR>/2qjz_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2qjz_A/protein/2qjz_A.pdb

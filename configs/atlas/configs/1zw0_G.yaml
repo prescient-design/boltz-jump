@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MTQLEEQLHNVETVRSITMQLEMALTKLKKDMMRGGDAKQYQVWQRESKALESAIAIIHYVAGDLK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1zw0_G/protein/1zw0_G.pdb

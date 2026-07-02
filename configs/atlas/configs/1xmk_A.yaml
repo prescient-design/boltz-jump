@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSHMASLDMAEIKEKICDYLFNVSDSSALNLAKNIGLTKARDINAVLIDMERQGDVYRQGTTPPIWHLTDKKRERMQIK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1xmk_A/protein/1xmk_A.pdb

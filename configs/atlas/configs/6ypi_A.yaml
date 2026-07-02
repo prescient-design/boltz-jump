@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSGSPLAQQIKNILSLIGQADAAGRMDEVRTLQLNLCQLMVEYFQQSDGDGGSPLAQQIQNIHSFGHQAWAAGRLDEVRRIQENLYQLMKEYFQQSD
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6ypi_A/protein/6ypi_A.pdb

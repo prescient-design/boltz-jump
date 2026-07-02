@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '01'
+      sequence: MILYDAIMYKYPNAVSRKDFELRNDGNGSYIEKWNLRAPLPTQAELETWWEELQKNPPYE
+
+initial_structure:
+  pdb: <MDCATH_DIR>/2hg7A00.pdb

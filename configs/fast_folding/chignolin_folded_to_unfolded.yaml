@@ -1,0 +1,11 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: YYDPETGTWY
+
+initial_structure:
+  pdb: ./structures/chignolin_uncapped.pdb
+
+final_structure:
+  pdb: ./structures/chignolin_uncapped_unfolded.pdb

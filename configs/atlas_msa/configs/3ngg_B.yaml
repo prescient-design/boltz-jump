@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: KDRPKKPGLCPPRPQKPCVKECKNDDSCPGQQKCCNYGCKDECRDPIFVG
+      msa: <ATLAS_MSA_DIR>/3ngg_B.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3ngg_B/protein/3ngg_B.pdb

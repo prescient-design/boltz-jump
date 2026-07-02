@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SAPADYFRILVQQFEVQLQQYRQQIEELENHLATQANNSHITPQDLSMAMQKIYQTFVALAAQLQSIHENVKVLKEQYLGYRKMFLGDA
+      msa: <ATLAS_MSA_DIR>/4jo7_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4jo7_A/protein/4jo7_A.pdb

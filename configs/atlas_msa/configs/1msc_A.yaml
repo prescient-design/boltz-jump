@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: ASNFTQFVLVDNGGTGDVTVAPSNFANGVAEWISSNSRSQAYKVTCSVRQSSAQNRKYTIKVEVPKVATQTVGGVELPVAARRSYLNMELTIPIFATNSDCELIVKAMQGLLKDGNPIPSAIAANSGIY
+      msa: <ATLAS_MSA_DIR>/1msc_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1msc_A/protein/1msc_A.pdb

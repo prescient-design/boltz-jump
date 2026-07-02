@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MSKINVNVENVSGVQGFLFHTDGKESYGYRAFINGVEIGIKDIETVQGFQQIIPSINISKSDVEAIRKAMKK
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4f87_A/protein/4f87_A.pdb

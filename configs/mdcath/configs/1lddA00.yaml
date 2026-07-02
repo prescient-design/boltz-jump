@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '01'
+      sequence: KYELTLQRSLPFIEGMLTNLGAMKLHKIHSFLKITVPKDWGYNRITLQQLEGYLNTLADEGRLKYIANGSYEIV
+
+initial_structure:
+  pdb: <MDCATH_DIR>/1lddA00.pdb

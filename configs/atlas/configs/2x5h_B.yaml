@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GMASLKEIIDELGKQAKEQNKIASRIMKIKGIKRIVVQLNAVPQDGKIRYSMTIHSQNNFRKQIGITPQDAEDLKLIAEFLEKYSDFLNEYVKFTPR
+
+initial_structure:
+  pdb: <ATLAS_DIR>/2x5h_B/protein/2x5h_B.pdb

@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GRKLELTKAEKHVHAFMMDTQLTKRVKNAAANVLRETWLIYKNTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQLE
+
+initial_structure:
+  pdb: <ATLAS_DIR>/5wbx_B/protein/5wbx_B.pdb

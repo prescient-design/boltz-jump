@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: PTHIAICLYYKLGETPLPLVIETGKDAKALQIIKLAELYDIPVIEDIPLARSLYKNIHKGQYITEDFFEPVAQLIRIAIDLDY
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3bzl_D/protein/3bzl_D.pdb

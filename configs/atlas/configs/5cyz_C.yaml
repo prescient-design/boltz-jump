@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: EATECLTRSNLKKLQEKIFDRELNDIACDHCLCSTENRRDIKYSRLWFLFELEMSENWNENLRLSCYNKYVYSAIDESWKMENILLKEQEKHYEYFPIGQLLIPN
+
+initial_structure:
+  pdb: <ATLAS_DIR>/5cyz_C/protein/5cyz_C.pdb

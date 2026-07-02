@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: ACDYTCGSNCYSSSDVSTAQAAGYKLHEDGETVGSNSYPHKYNNYEGFDFSVSSPYYEWPILSSGDVYSGGSPGADRVVFNENNQLAGVITHTGASGNNFVECT
+      msa: <ATLAS_MSA_DIR>/1i0v_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1i0v_A/protein/1i0v_A.pdb

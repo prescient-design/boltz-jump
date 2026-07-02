@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GPIGSADPEKRKLIQQQLVLLLHAHKCQRREQANGEVRQCNLPHCRTMKNVLNHMTHCQSGKSCQVAHCASSRQIISHWKNCTRHDCPVCLPLKNA
+      msa: <ATLAS_MSA_DIR>/7qgs_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/7qgs_A/protein/7qgs_A.pdb

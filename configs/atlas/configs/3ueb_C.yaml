@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MDKGSSGKRVIHIGLPELSEEQLIEIGELAQETIIDYVFDHLTRSEVKDIEVTMRINREETLDLEIEVYLEVPIFVKVDVDKLIDEAVERAYEIVERKLREIANERENQA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3ueb_C/protein/3ueb_C.pdb

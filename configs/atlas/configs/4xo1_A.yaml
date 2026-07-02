@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MNIEELKKQAETEIADFIAQKIAEMNKNTGKEVSEMRFTAREKMTGLESYDVKIKIMLEH
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4xo1_A/protein/4xo1_A.pdb

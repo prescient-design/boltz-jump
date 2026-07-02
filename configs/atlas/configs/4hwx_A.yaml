@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSAHGPSAMVFTVIQGSGEPTDTVLRATTLSCAYTAEGTHPAPRAACDALNATDGELNRLLAAPDPSLVCPMYFDPVTVTADGVLNGRRVAWKHTFSNTCVMSANLNSNPVYAF
+
+initial_structure:
+  pdb: <ATLAS_DIR>/4hwx_A/protein/4hwx_A.pdb

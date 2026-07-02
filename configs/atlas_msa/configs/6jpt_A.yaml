@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: MEDTPLVISKQKTEVVCGVPTQVVCTAFSSHILVVVTQFGKMGTLVSLEPSSVASDVSKPVLTTKVLLGQDEPLIHVFAKNLVAFVSQEAGNRAVLLAVAVKDKSMEGLKALREVIRVCQVW
+      msa: <ATLAS_MSA_DIR>/6jpt_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/6jpt_A/protein/6jpt_A.pdb

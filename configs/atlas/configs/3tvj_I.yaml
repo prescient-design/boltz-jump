@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GSGEVTCEPGTTFKDKCNTCRCGSDGKSAVCTKLWCNQ
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3tvj_I/protein/3tvj_I.pdb

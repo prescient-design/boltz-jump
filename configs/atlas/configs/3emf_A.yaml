@@ -1,0 +1,8 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: NNTPVTNKLKAYGDANFNFTNNSIADAEKQVQEAYKGLLNLNEKNASDKLLVEDNTAATVGNLRKLGWVLSSKNGTRNEKSQQVKHADEVLFEGKGGVQVTSTSENGKHTITFALA
+
+initial_structure:
+  pdb: <ATLAS_DIR>/3emf_A/protein/3emf_A.pdb

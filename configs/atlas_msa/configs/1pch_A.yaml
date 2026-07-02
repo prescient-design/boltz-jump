@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: AKFSAIITDKVGLHARPASVLAKEASKFSSNITIIANEKQGNLKSIMNVMAMAIKTGTEITIQADGNDADQAIQAIKQTMIDTALIQG
+      msa: <ATLAS_MSA_DIR>/1pch_A.a3m
+
+initial_structure:
+  pdb: <ATLAS_DIR>/1pch_A/protein/1pch_A.pdb
