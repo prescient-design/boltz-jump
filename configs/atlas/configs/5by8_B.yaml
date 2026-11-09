@@ -5,4 +5,4 @@ sequences:
       sequence: RLPITVSKPTPYTFDLGHLLANDPNPLELPKSEPLNASLKATARDGVQSLLNQLLTTCPITSSQQGVLLTLPAPSTILPRHKPLP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5by8_B/protein/5by8_B.pdb
+  pdb: ${ATLAS_DIR}/5by8_B/protein/5by8_B.pdb

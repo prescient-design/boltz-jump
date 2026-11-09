@@ -5,4 +5,4 @@ sequences:
       sequence: VTQSFLPPGWEMRIAPNGRPFFIDHNTKTTTWEDPRLKF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7lp1_A/protein/7lp1_A.pdb
+  pdb: ${ATLAS_DIR}/7lp1_A/protein/7lp1_A.pdb

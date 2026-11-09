@@ -5,4 +5,4 @@ sequences:
       sequence: GAMASSWEPLVSVLEAYYAGRRHKKQLLKKTPFIIRAQAHIRRHLV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6tj6_C/protein/6tj6_C.pdb
+  pdb: ${ATLAS_DIR}/6tj6_C/protein/6tj6_C.pdb

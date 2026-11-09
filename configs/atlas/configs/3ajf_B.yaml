@@ -5,4 +5,4 @@ sequences:
       sequence: NGLSNIVLTCKDLPIPIDLLSLFFDILNERHPSFDEHMFLQMIRKPDDPENLSVFLKSAIWMLSHKRDLPGHYRLPLTCLVSTYSEYFVELKPR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ajf_B/protein/3ajf_B.pdb
+  pdb: ${ATLAS_DIR}/3ajf_B/protein/3ajf_B.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: TDKAYVAPEKFSSKVLTWLGKMPLFKNTEVVQKHTENIRVQDQKILQTFLHALTEKYGETAVNDALLMSRINMNKPLTQRLAVQITECVKAADEGFINLIKSKDN
-      msa: <ATLAS_MSA_DIR>/1jyo_F.a3m
+      msa: ${ATLAS_MSA_DIR}/1jyo_F.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1jyo_F/protein/1jyo_F.pdb
+  pdb: ${ATLAS_DIR}/1jyo_F/protein/1jyo_F.pdb

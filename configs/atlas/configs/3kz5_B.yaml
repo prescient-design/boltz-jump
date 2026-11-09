@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMSSRHQFAPGATVLYKGDKMVLNLDRSRVPTECIEKIEAILKELEKPAP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3kz5_B/protein/3kz5_B.pdb
+  pdb: ${ATLAS_DIR}/3kz5_B/protein/3kz5_B.pdb

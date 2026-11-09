@@ -5,4 +5,4 @@ sequences:
       sequence: AKFSAIITDKVGLHARPASVLAKEASKFSSNITIIANEKQGNLKSIMNVMAMAIKTGTEITIQADGNDADQAIQAIKQTMIDTALIQG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1pch_A/protein/1pch_A.pdb
+  pdb: ${ATLAS_DIR}/1pch_A/protein/1pch_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: TQLEEQLHNVETVRSITMQLEMALTKLKKDMMRGGDAKQYQVWQRESKALESAIAIIHYVAGDLK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2p58_A/protein/2p58_A.pdb
+  pdb: ${ATLAS_DIR}/2p58_A/protein/2p58_A.pdb

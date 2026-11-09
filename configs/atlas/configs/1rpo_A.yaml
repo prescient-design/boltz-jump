@@ -5,4 +5,4 @@ sequences:
       sequence: MTKQEKTALNMARFIRSQTLTLLEKLNELADAADEQADICESLHDHADELYRSCLARFGDDGENL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1rpo_A/protein/1rpo_A.pdb
+  pdb: ${ATLAS_DIR}/1rpo_A/protein/1rpo_A.pdb

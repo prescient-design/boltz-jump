@@ -5,4 +5,4 @@ sequences:
       sequence: SYYIDADLLREIKQHLKQQQEGLSHLISIIKDDLEDIKLV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4jnu_A/protein/4jnu_A.pdb
+  pdb: ${ATLAS_DIR}/4jnu_A/protein/4jnu_A.pdb

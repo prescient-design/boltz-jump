@@ -5,4 +5,4 @@ sequences:
       sequence: KYELTLQRSLPFIEGMLTNLGAMKLHKIHSFLKITVPKDWGYNRITLQQLEGYLNTLADEGRLKYIANGSYEIV
 
 initial_structure:
-  pdb: <MDCATH_DIR>/1lddA00.pdb
+  pdb: ${MDCATH_DIR}/1lddA00.pdb

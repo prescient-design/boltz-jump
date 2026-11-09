@@ -5,4 +5,4 @@ sequences:
       sequence: SLLISYESDFKTTLEQAKASLAEAPSQPLSQRNTTLKHVEQQQDELFDLLDQMDVEVNNSIGDASERATYKAKLREWKKTIQSDIKRPLQSLVDSGD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3onj_A/protein/3onj_A.pdb
+  pdb: ${ATLAS_DIR}/3onj_A/protein/3onj_A.pdb

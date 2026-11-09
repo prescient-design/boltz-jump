@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GPGSMTETTTTFMDNVLGWLHKGYPEGVPPKDYFALLALLKRSLTEDEVVRAAQAILRSTDGQSPVTDDDIRNAVHQIIEKEPTAEEINQVAARLASVGWPLAVPVR
-      msa: <ATLAS_MSA_DIR>/3ol4_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3ol4_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ol4_A/protein/3ol4_A.pdb
+  pdb: ${ATLAS_DIR}/3ol4_A/protein/3ol4_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: MTMDTAQLKSQIQQYLVESGNYELISNELKARLLQEGWVDKVKDLTKSEMNINESTNFTQILSTVEPKALEMVSDSTRETVLKQIREFLEEIVDTQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3mhs_B/protein/3mhs_B.pdb
+  pdb: ${ATLAS_DIR}/3mhs_B/protein/3mhs_B.pdb

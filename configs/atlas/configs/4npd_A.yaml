@@ -5,4 +5,4 @@ sequences:
       sequence: ADNKFNKEQQNAFYEILHLPNLTEEQRNGFIQSLKDDPSVSKEILAEAKKLNDAQAPK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4npd_A/protein/4npd_A.pdb
+  pdb: ${ATLAS_DIR}/4npd_A/protein/4npd_A.pdb

@@ -6,5 +6,5 @@ sequences:
       msa: ./structures/1a62_A_0.csv
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1a62_A/protein/1a62_A.pdb
+  pdb: ${ATLAS_DIR}/1a62_A/protein/1a62_A.pdb
 

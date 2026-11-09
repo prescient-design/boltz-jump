@@ -5,4 +5,4 @@ sequences:
       sequence: MLYIDEFKEAIDKGYILGDTVAIVRKNGKIFDYVLPHEKVRDDEVVTVERVEEVMVELDKLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6cka_B/protein/6cka_B.pdb
+  pdb: ${ATLAS_DIR}/6cka_B/protein/6cka_B.pdb

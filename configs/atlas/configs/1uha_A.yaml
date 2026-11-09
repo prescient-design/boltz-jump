@@ -5,4 +5,4 @@ sequences:
       sequence: APECGERASGKRCPNGKCCSQWGYCGTTDNYCGQGCQSQCDYWRCGRDFGGRLCEEDMCCSKYGWCGYSDDHCEDGCQSQCD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1uha_A/protein/1uha_A.pdb
+  pdb: ${ATLAS_DIR}/1uha_A/protein/1uha_A.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GPALNTEKMKTMLKAGMTVDDYAAKLKLTDKIAAAANSARAMEKLGETLKMKKLLRYLNYVAEHTAV
-      msa: <ATLAS_MSA_DIR>/3zrg_B.a3m
+      msa: ${ATLAS_MSA_DIR}/3zrg_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3zrg_B/protein/3zrg_B.pdb
+  pdb: ${ATLAS_DIR}/3zrg_B/protein/3zrg_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: VLSEEEIEYRRRDARNALASQRLEGLEPDPQVVAQMERVVVGELETSDVIKDLMERIKREE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3shg_B/protein/3shg_B.pdb
+  pdb: ${ATLAS_DIR}/3shg_B/protein/3shg_B.pdb

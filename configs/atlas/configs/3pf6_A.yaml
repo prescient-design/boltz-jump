@@ -5,4 +5,4 @@ sequences:
       sequence: GMSQFQEVRPVAQALYPTHPSTKDALEEARLLFPGGTHHDFMRALMGYHNTLVKVMEEQCGS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3pf6_A/protein/3pf6_A.pdb
+  pdb: ${ATLAS_DIR}/3pf6_A/protein/3pf6_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: EDDEDYGDLGGCPFLVAENKTGYPTIVACKQDCNGTTETAPNGTRCFSIGDEGLRRMTANLPYDCPLGQCSNGDCIPKETYEVCYRRNWRDKKNHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3fpu_A/protein/3fpu_A.pdb
+  pdb: ${ATLAS_DIR}/3fpu_A/protein/3fpu_A.pdb

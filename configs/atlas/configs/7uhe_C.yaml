@@ -5,4 +5,4 @@ sequences:
       sequence: GSASTVKGSVDLEKLAFGLTKLNEDDLVGVVQMVTDNKTPEMNVTNNVEEGEFIIDLYSLPEGLLKSLWDYVKKNT
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7uhe_C/protein/7uhe_C.pdb
+  pdb: ${ATLAS_DIR}/7uhe_C/protein/7uhe_C.pdb

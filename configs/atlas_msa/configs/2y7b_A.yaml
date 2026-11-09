@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: VNSSVEERGFLTIFEDVSGFGAWHRRWCVLSGNCISYWTYPDDEKRKNPIGRINLANCTSRQIEPANREFCARRNTFELITVRPQREDDRETLVSQCRDTLCVTKNWLSADTKEERDLWMQKLNQVLVDIRLWQ
-      msa: <ATLAS_MSA_DIR>/2y7b_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2y7b_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2y7b_A/protein/2y7b_A.pdb
+  pdb: ${ATLAS_DIR}/2y7b_A/protein/2y7b_A.pdb

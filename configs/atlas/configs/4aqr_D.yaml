@@ -5,4 +5,4 @@ sequences:
       sequence: SSIERLQQWRKAALVLNASRRFRYTLDLKKEQETREMRQKIRSHAHALLAANRFMDM
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4aqr_D/protein/4aqr_D.pdb
+  pdb: ${ATLAS_DIR}/4aqr_D/protein/4aqr_D.pdb

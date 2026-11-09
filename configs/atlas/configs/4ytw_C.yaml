@@ -5,4 +5,4 @@ sequences:
       sequence: MGNIMSASFAPECTDLKTKYDSCFNEWYSEKFLKGKSVENECSKQWYAYTTCVNAALVKQGIKPALDEAREEAPFENGGKL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ytw_C/protein/4ytw_C.pdb
+  pdb: ${ATLAS_DIR}/4ytw_C/protein/4ytw_C.pdb

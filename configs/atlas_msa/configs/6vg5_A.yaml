@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MNRVSTVQQLTKRFSLGMLQGRGPLKLFMALVAFLRFLTIPPTAGILKRWGTIKKSKAINVLRGFRKEIGRMLNILNRRRR
-      msa: <ATLAS_MSA_DIR>/6vg5_A.a3m
+      msa: ${ATLAS_MSA_DIR}/6vg5_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6vg5_A/protein/6vg5_A.pdb
+  pdb: ${ATLAS_DIR}/6vg5_A/protein/6vg5_A.pdb

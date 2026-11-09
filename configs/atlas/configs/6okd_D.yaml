@@ -5,4 +5,4 @@ sequences:
       sequence: GSREGCASRCMKYNDELEKCEARMMSMSNTEEDCEQELEDLLYCLDHCHSQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6okd_D/protein/6okd_D.pdb
+  pdb: ${ATLAS_DIR}/6okd_D/protein/6okd_D.pdb

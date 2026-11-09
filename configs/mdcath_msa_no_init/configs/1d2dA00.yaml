@@ -1,0 +1,7 @@
+version: 1
+sequences:
+  - protein:
+      id: '01'
+      sequence: MVYDKIAAQGEVVRKLKAEKAPKAKVTEAVECLLSLKAEYKEKTGKEYVPGLEHHH
+      msa: ${MDCATH_MSA_DIR}/1d2dA00.a3m
+

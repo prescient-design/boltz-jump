@@ -5,4 +5,4 @@ sequences:
       sequence: MSEHREGTLFYDTETGRYDIRFDLESFYGGLHCGECFDVKVKDVWVPVRIEMGDDWYLVGLNVSRLDGLRVRMLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3nrl_B/protein/3nrl_B.pdb
+  pdb: ${ATLAS_DIR}/3nrl_B/protein/3nrl_B.pdb

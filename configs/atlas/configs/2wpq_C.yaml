@@ -5,4 +5,4 @@ sequences:
       sequence: MKQIEDKIEEILSKIYHIENEIARIKKLIFDTNEKVDQNTADITTNTNSINQNTTDIATNTTNINNLSDSMKQIEDKIEEILSKIYHIENEIARIKKLI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2wpq_C/protein/2wpq_C.pdb
+  pdb: ${ATLAS_DIR}/2wpq_C/protein/2wpq_C.pdb

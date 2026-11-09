@@ -5,4 +5,4 @@ sequences:
       sequence: GPGSSGPADCCRMKECCTDRVNECLQRYSGREDKFVSFCYQEATVTCGSFNEIVGCCYGYQMCMIRVVKPNSLSGAHEACKTVSCGNPCA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4u5h_B/protein/4u5h_B.pdb
+  pdb: ${ATLAS_DIR}/4u5h_B/protein/4u5h_B.pdb

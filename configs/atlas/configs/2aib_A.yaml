@@ -5,4 +5,4 @@ sequences:
       sequence: TACTATQQTAAYKTLVSILSESSFSQCSKDSGYSMLTATALPTNAQYKLMCASTACNTMIKKIVALNPPDCDLTVPTSGLVLDVYTYANGFSSKCASL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2aib_A/protein/2aib_A.pdb
+  pdb: ${ATLAS_DIR}/2aib_A/protein/2aib_A.pdb

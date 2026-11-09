@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GPHMTRIIYDRKFLMECRNSPVTKTPPRDLPTIPGVTS
-      msa: <ATLAS_MSA_DIR>/4ued_B.a3m
+      msa: ${ATLAS_MSA_DIR}/4ued_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ued_B/protein/4ued_B.pdb
+  pdb: ${ATLAS_DIR}/4ued_B/protein/4ued_B.pdb

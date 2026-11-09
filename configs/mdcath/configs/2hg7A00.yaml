@@ -5,4 +5,4 @@ sequences:
       sequence: MILYDAIMYKYPNAVSRKDFELRNDGNGSYIEKWNLRAPLPTQAELETWWEELQKNPPYE
 
 initial_structure:
-  pdb: <MDCATH_DIR>/2hg7A00.pdb
+  pdb: ${MDCATH_DIR}/2hg7A00.pdb

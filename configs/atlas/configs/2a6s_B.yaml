@@ -5,4 +5,4 @@ sequences:
       sequence: MKLIWSEESWDDYLYWQETDKRIVKKINELIKDTRRTPFEGKGKPEPLKHNLSGFWSRRITEEHRLVYAVTDDSLLIAACRYHY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2a6s_B/protein/2a6s_B.pdb
+  pdb: ${ATLAS_DIR}/2a6s_B/protein/2a6s_B.pdb

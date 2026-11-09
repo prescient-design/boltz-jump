@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: HRQALGERLYPRVQAMQPAFASKITGMLLELSPAQLLLLLASEDSLRARVDEAMELIIAHG
-      msa: <ATLAS_MSA_DIR>/1i2t_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1i2t_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1i2t_A/protein/1i2t_A.pdb
+  pdb: ${ATLAS_DIR}/1i2t_A/protein/1i2t_A.pdb

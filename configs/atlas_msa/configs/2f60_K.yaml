@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GEHIPGTLRFRLSPAARNILEKHSLDASQGTATGPRGIFTKEDALKLVQLKQTGKILEHHHHHH
-      msa: <ATLAS_MSA_DIR>/2f60_K.a3m
+      msa: ${ATLAS_MSA_DIR}/2f60_K.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2f60_K/protein/2f60_K.pdb
+  pdb: ${ATLAS_DIR}/2f60_K/protein/2f60_K.pdb

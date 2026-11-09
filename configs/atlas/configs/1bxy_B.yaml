@@ -5,4 +5,4 @@ sequences:
       sequence: MPRLKVKLVKSPIGYPKDQKAALKALGLRRLQQERVLEDTPAIRGNVEKVAHLVRVEVVE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1bxy_B/protein/1bxy_B.pdb
+  pdb: ${ATLAS_DIR}/1bxy_B/protein/1bxy_B.pdb

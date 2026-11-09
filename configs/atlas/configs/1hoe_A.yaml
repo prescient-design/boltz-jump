@@ -5,4 +5,4 @@ sequences:
       sequence: DTTVSEPAPSCVTLYQSWRYSQADNGCAETVTVKVVYEDDTEGLCYAVAPGQITTVGDGYIGSHGHARYLARCL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1hoe_A/protein/1hoe_A.pdb
+  pdb: ${ATLAS_DIR}/1hoe_A/protein/1hoe_A.pdb

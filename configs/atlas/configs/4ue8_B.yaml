@@ -5,4 +5,4 @@ sequences:
       sequence: GPHMTKLIYERAFMKNLRGSPLSQTPPSNVPSCLLRGT
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ue8_B/protein/4ue8_B.pdb
+  pdb: ${ATLAS_DIR}/4ue8_B/protein/4ue8_B.pdb

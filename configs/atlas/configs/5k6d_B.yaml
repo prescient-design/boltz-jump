@@ -5,4 +5,4 @@ sequences:
       sequence: MWKVSERCLKGHGKFQADQEIGNGLATAKGQCKGTDSDQKKAGKCDKHCTGVCLGSGGSCGDGSSQKPNKEDCYCKSK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5k6d_B/protein/5k6d_B.pdb
+  pdb: ${ATLAS_DIR}/5k6d_B/protein/5k6d_B.pdb

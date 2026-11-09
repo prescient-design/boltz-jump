@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '01'
       sequence: KVERKLVALELSGKRIARKGYEVLKNGERVGEITSGNFSPTLGKSIALALVSKSVKIGDQLGVVFPGGKLVEALVVKKPFYRGSVR
-      msa: <MDCATH_MSA_DIR>/1wosA04.a3m
+      msa: ${MDCATH_MSA_DIR}/1wosA04.a3m
 
 initial_structure:
-  pdb: <MDCATH_DIR>/1wosA04.pdb
+  pdb: ${MDCATH_DIR}/1wosA04.pdb

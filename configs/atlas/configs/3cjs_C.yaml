@@ -5,4 +5,4 @@ sequences:
       sequence: MKKVVAVVKLQLPAGKATPAPPVGPALGQHGANIMEFVKAFNAATANMGDAIVPVEITIYADRSFTFVTKTP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3cjs_C/protein/3cjs_C.pdb
+  pdb: ${ATLAS_DIR}/3cjs_C/protein/3cjs_C.pdb

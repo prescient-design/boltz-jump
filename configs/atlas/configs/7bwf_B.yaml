@@ -5,4 +5,4 @@ sequences:
       sequence: SGLVPRGSHMIIKNYSYARQNLKALMTKVNDDSDMVTVTSTDDKNVVIMSESDYNSMMETLYLQQNPNNAEHLAQSIADLERGKTITKDIDV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7bwf_B/protein/7bwf_B.pdb
+  pdb: ${ATLAS_DIR}/7bwf_B/protein/7bwf_B.pdb

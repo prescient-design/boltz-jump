@@ -5,4 +5,4 @@ sequences:
       sequence: MEIMDEIKVNLQKEVSLEEAERYAKNIASKYGDGILLSVHDSKTGYRAPEVYCCGEKPWEVYACNRGANLKISVNQFEFYFRIEVEGQAKY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3c0f_B/protein/3c0f_B.pdb
+  pdb: ${ATLAS_DIR}/3c0f_B/protein/3c0f_B.pdb

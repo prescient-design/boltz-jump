@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMEANENILKLKLYRSLGVILDLENDQVLINRKNDGNIDILPLDNNLSDFYKTKYIWERLGK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2ftx_B/protein/2ftx_B.pdb
+  pdb: ${ATLAS_DIR}/2ftx_B/protein/2ftx_B.pdb

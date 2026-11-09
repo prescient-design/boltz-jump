@@ -5,4 +5,4 @@ sequences:
       sequence: MGEPTEFEYLRKVLFEYMMGRETKTMAKVITTVLKFPDDQTQKILEREDARLMSWLRSSS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1upt_D/protein/1upt_D.pdb
+  pdb: ${ATLAS_DIR}/1upt_D/protein/1upt_D.pdb

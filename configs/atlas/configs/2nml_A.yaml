@@ -5,4 +5,4 @@ sequences:
       sequence: MSHTILLVQPTKRPEGRTYADYESVNECMEGVCKMYEEHLKRMNPNSPSITYDISQLFDFIDDLADLSCLVYRADTQTYQPYNKDWIKEKIYVLLRRQAQQAGK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2nml_A/protein/2nml_A.pdb
+  pdb: ${ATLAS_DIR}/2nml_A/protein/2nml_A.pdb

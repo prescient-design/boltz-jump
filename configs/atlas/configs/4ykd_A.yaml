@@ -5,4 +5,4 @@ sequences:
       sequence: MELSASATELLQDYMLTLRTKLSSQEIQQFAALLHEYRNGASIHEFCINLRQLYGDSRKFLLLGLRPFIPEKDSQHFENFLETIGVKDLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ykd_A/protein/4ykd_A.pdb
+  pdb: ${ATLAS_DIR}/4ykd_A/protein/4ykd_A.pdb

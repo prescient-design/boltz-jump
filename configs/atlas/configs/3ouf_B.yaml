@@ -5,4 +5,4 @@ sequences:
       sequence: MAKDKEFQVLFVLTILTLISGTIFYSTVEGLRPIDALYFSVVTLTTVGYGDFSPQTDFGKIFTILYIFIGIGLVFGFIHKLAVNVQLPSILSNLVPR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ouf_B/protein/3ouf_B.pdb
+  pdb: ${ATLAS_DIR}/3ouf_B/protein/3ouf_B.pdb

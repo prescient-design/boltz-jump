@@ -5,4 +5,4 @@ sequences:
       sequence: METGNKYIEKRAIDLSRERDPNFFDNPGIPVPECFWFMFKNNVRQDAGTCYSSWKMDMKVGPNWVHIKSDDNCNLSGDFPPGWIVLGKKRPGF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6fub_B/protein/6fub_B.pdb
+  pdb: ${ATLAS_DIR}/6fub_B/protein/6fub_B.pdb

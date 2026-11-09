@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MVRVGMRAAPRVSLEALKAALGGLKLSEAKVYLITDWQDKRDQARYALLLHTGKKDLLVPDAFGPAFPGGEEALSELVGLLLAQGARRFYEAVVSPGEMTALLDLPPEELLKRVMAIANPTDPGIYLKRAA
-      msa: <ATLAS_MSA_DIR>/1wna_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1wna_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1wna_A/protein/1wna_A.pdb
+  pdb: ${ATLAS_DIR}/1wna_A/protein/1wna_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: AMFQIGKMRYVSVRDFKGKVLIDIREYWMDPEGEMKPGRKGISLNPEQWSQLKEQISDIDDAVRKL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1pcf_C/protein/1pcf_C.pdb
+  pdb: ${ATLAS_DIR}/1pcf_C/protein/1pcf_C.pdb

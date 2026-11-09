@@ -5,4 +5,4 @@ sequences:
       sequence: GPGSPQNTGFLRGACIKTGDRFRVKIGYNQELIAVFKSLPSRHYDSFTKTWDFSMSDYRALMKAVERLSTVSLKPL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4o66_D/protein/4o66_D.pdb
+  pdb: ${ATLAS_DIR}/4o66_D/protein/4o66_D.pdb

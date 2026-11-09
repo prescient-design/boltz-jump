@@ -5,4 +5,4 @@ sequences:
       sequence: TACTASQQTAAYKTLVSILSDASFNQCSTDSGYSMLTAKALPTTAQYKLMCASTACNTMIKKIVTLNPPNCDLTVPTSGLVLNVYSYANGFSNKCSSL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1lri_A/protein/1lri_A.pdb
+  pdb: ${ATLAS_DIR}/1lri_A/protein/1lri_A.pdb

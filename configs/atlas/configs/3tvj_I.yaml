@@ -5,4 +5,4 @@ sequences:
       sequence: GSGEVTCEPGTTFKDKCNTCRCGSDGKSAVCTKLWCNQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3tvj_I/protein/3tvj_I.pdb
+  pdb: ${ATLAS_DIR}/3tvj_I/protein/3tvj_I.pdb

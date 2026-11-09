@@ -5,4 +5,4 @@ sequences:
       sequence: SNAMQRQPVSSSRILSIGYDPDNRMLEIQFREQGTYQYLGVPERAHQNFMSAVSKGRFFDGVIKGKFLCRKIG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4rgi_A/protein/4rgi_A.pdb
+  pdb: ${ATLAS_DIR}/4rgi_A/protein/4rgi_A.pdb

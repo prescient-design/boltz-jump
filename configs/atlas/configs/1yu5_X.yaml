@@ -5,4 +5,4 @@ sequences:
       sequence: PTKLETFPLDVLVNTAAEDLPRGVDPSRKENHLSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1yu5_X/protein/1yu5_X.pdb
+  pdb: ${ATLAS_DIR}/1yu5_X/protein/1yu5_X.pdb

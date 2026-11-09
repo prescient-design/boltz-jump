@@ -5,4 +5,4 @@ sequences:
       sequence: SNAMKYFQIDELTLNAMLRITTIESLTPEQRLELIKAHLLNIKTPSDDNEPWDEF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5kko_D/protein/5kko_D.pdb
+  pdb: ${ATLAS_DIR}/5kko_D/protein/5kko_D.pdb

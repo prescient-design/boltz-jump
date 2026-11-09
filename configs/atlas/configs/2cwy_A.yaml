@@ -5,4 +5,4 @@ sequences:
       sequence: MVPDWEEVLGLWRAGRYYEVHEVLEPYWLKATGEERRLLQGVILLAAALHQRRLGRPGLRNLRKAEARLEGLPCPLMGLDWRSLLQEARRRLGA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2cwy_A/protein/2cwy_A.pdb
+  pdb: ${ATLAS_DIR}/2cwy_A/protein/2cwy_A.pdb

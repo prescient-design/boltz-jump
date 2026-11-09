@@ -5,4 +5,4 @@ sequences:
       sequence: GKRKRCGVCEPCQQKTNCGECTYCKNRKNSHQICKKRKCEELKKKPS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6asd_C/protein/6asd_C.pdb
+  pdb: ${ATLAS_DIR}/6asd_C/protein/6asd_C.pdb

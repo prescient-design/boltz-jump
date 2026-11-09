@@ -5,4 +5,4 @@ sequences:
       sequence: MSDRKAVIKNADMSEEMQQDAVDCATQALEKYNIEKDIAAYIKKEFDKKYNPTWHCIVGRNFGSYVTHETRHFIYFYLGQVAILLFKSG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3bri_A/protein/3bri_A.pdb
+  pdb: ${ATLAS_DIR}/3bri_A/protein/3bri_A.pdb

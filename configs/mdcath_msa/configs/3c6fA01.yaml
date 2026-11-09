@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '01'
       sequence: PNIVIRKGELQYKVMKKNKIDINQLQSMLRQAGSFSIQEVEYAIMETNGMVSVLPKSDFDKP
-      msa: <MDCATH_MSA_DIR>/3c6fA01.a3m
+      msa: ${MDCATH_MSA_DIR}/3c6fA01.a3m
 
 initial_structure:
-  pdb: <MDCATH_DIR>/3c6fA01.pdb
+  pdb: ${MDCATH_DIR}/3c6fA01.pdb

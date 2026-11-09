@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GMGKRDDLIAQYADDLRNKCGMEPDMALLEKVTKGCGPAIYNRDASTVAGSDTAELETIKKNFLMKKLGLADSESLMGGIQSVIETYGRSERNKYRAVVYYMLTKHFGKESVYG
-      msa: <ATLAS_MSA_DIR>/2pyq_C.a3m
+      msa: ${ATLAS_MSA_DIR}/2pyq_C.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2pyq_C/protein/2pyq_C.pdb
+  pdb: ${ATLAS_DIR}/2pyq_C/protein/2pyq_C.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: RVSPFGGLKRLPAGLLLGHGPIRMVLAILAFLRFTAIKPSLGLINRWGSVGKKEAMEIIKKFKKDLAAMLRIINAR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5ygh_A/protein/5ygh_A.pdb
+  pdb: ${ATLAS_DIR}/5ygh_A/protein/5ygh_A.pdb

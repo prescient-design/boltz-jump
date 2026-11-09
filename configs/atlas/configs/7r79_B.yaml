@@ -5,4 +5,4 @@ sequences:
       sequence: DQPSVGDAFDKYNEAVKVFTQLSSAANCDWPACLSSLSASSAACIAAIGELGLDIPLDLACAATATTSATQACKGCLW
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7r79_B/protein/7r79_B.pdb
+  pdb: ${ATLAS_DIR}/7r79_B/protein/7r79_B.pdb

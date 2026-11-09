@@ -5,4 +5,4 @@ sequences:
       sequence: MCMAKVVLTKADGGRVEIGDVLEVRAEGGAVRVTTLFDEEHAFPGLAIGRVDLRSGVISLIEEQNR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5n76_F/protein/5n76_F.pdb
+  pdb: ${ATLAS_DIR}/5n76_F/protein/5n76_F.pdb

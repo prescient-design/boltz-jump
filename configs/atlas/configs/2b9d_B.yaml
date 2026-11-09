@@ -5,4 +5,4 @@ sequences:
       sequence: MKQPYAVVASCAYCEKLVRLTVLADHSAIRQLEEMLLRSLNIVCPLCTLQRQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2b9d_B/protein/2b9d_B.pdb
+  pdb: ${ATLAS_DIR}/2b9d_B/protein/2b9d_B.pdb

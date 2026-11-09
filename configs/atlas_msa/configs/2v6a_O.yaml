@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MMVWTPVNNKMFETFSYLPPLTDEQIAAQVDYIVANGWIPCLEFAEADKAYVSNESAIRFGSVSCLYYDNRYWTMWKLPMFGCRDPMQVLREIVACTKAFPDAYVRLVAFDNQKQVQIMGFLVQRPKTARDFQPANKRSV
-      msa: <ATLAS_MSA_DIR>/2v6a_O.a3m
+      msa: ${ATLAS_MSA_DIR}/2v6a_O.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2v6a_O/protein/2v6a_O.pdb
+  pdb: ${ATLAS_DIR}/2v6a_O/protein/2v6a_O.pdb

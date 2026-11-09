@@ -5,4 +5,4 @@ sequences:
       sequence: AAEEKTEFDVILKAAGANKVAVIKAVRGATGLGLKEAKDLVESAPAALKEGVSKDDAEALKKALEEAGAEVEVK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1ctf_A/protein/1ctf_A.pdb
+  pdb: ${ATLAS_DIR}/1ctf_A/protein/1ctf_A.pdb

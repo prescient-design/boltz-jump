@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GKRERELTMVFESFGFKHGIPIDADYVFDVRFLPNPHWDPKLRPMTGLDKPVAAFLDRHTEVHNFIYQTRSYLELWLPMLETNNRSYLTVAIGCTGGKHRSVYIAEQLADYFRSRGKNVQSRHRTLEKRKP
-      msa: <ATLAS_MSA_DIR>/5o5s_A.a3m
+      msa: ${ATLAS_MSA_DIR}/5o5s_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5o5s_A/protein/5o5s_A.pdb
+  pdb: ${ATLAS_DIR}/5o5s_A/protein/5o5s_A.pdb

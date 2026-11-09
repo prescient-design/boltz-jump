@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SMKQDQLIVEKMEQTYEAFSPKLANLIEALDAFKEHYEEYATLRNFYSSDEWFRLANQPWDDIPSGVLSEDLLFDMIGDHNQLAADIADLAPIMAKHM
-      msa: <ATLAS_MSA_DIR>/4pz1_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4pz1_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4pz1_A/protein/4pz1_A.pdb
+  pdb: ${ATLAS_DIR}/4pz1_A/protein/4pz1_A.pdb

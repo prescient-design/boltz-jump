@@ -5,4 +5,4 @@ sequences:
       sequence: GHMKVTSVAMPSYIGSSLEFTKNNLIQIVGIKEANIEVVEVTTAPAGSVEGMVVEQSPRAGEKVDLNKTRVKISIYKPKTTSATP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5nod_A/protein/5nod_A.pdb
+  pdb: ${ATLAS_DIR}/5nod_A/protein/5nod_A.pdb

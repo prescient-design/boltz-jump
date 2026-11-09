@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMDINNKARIHWACRRGMRELDISIMPFFEHEYDSLSDDEKRIFIRLLECDDPDLFNWLMNHGKPADAELEMMVRLIQTRNRERGPVAI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1x6i_A/protein/1x6i_A.pdb
+  pdb: ${ATLAS_DIR}/1x6i_A/protein/1x6i_A.pdb

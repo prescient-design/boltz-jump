@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '01'
       sequence: MILYDAIMYKYPNAVSRKDFELRNDGNGSYIEKWNLRAPLPTQAELETWWEELQKNPPYE
-      msa: <MDCATH_MSA_DIR>/2hg7A00.a3m
+      msa: ${MDCATH_MSA_DIR}/2hg7A00.a3m
 
 initial_structure:
-  pdb: <MDCATH_DIR>/2hg7A00.pdb
+  pdb: ${MDCATH_DIR}/2hg7A00.pdb

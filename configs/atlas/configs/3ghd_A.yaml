@@ -5,4 +5,4 @@ sequences:
       sequence: KAIVVQPKDTVDRVAKILSRNKAGSAVVMEGDEILGVVTERDILDKVVAKGKNPKEVKVEEIMTKNPVKI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ghd_A/protein/3ghd_A.pdb
+  pdb: ${ATLAS_DIR}/3ghd_A/protein/3ghd_A.pdb

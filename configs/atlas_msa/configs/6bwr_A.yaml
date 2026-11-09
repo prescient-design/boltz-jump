@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: TADAVLMIEANLDDQTGEGLGYVMNQLLTAGAYDVFFTPIQMKKDRPATKLTVLGNVNDKDLLTKLILQETTTIGVRYQTWQRTIMQRHFLTVATPYGDVQVKVATYQDIEKKMPEYADCAQLAQQFHIPFRTVYQAALVAVDQLDEEA
-      msa: <ATLAS_MSA_DIR>/6bwr_A.a3m
+      msa: ${ATLAS_MSA_DIR}/6bwr_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6bwr_A/protein/6bwr_A.pdb
+  pdb: ${ATLAS_DIR}/6bwr_A/protein/6bwr_A.pdb

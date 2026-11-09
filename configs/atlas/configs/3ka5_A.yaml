@@ -5,4 +5,4 @@ sequences:
       sequence: EIVKTKRFAIKPMSEEEAVLEMELLGHNFFVFQNGDSNEVNVVYKRKDGNYGLIEPELEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ka5_A/protein/3ka5_A.pdb
+  pdb: ${ATLAS_DIR}/3ka5_A/protein/3ka5_A.pdb

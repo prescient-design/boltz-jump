@@ -5,4 +5,4 @@ sequences:
       sequence: GNSDGQLDTHLADLYLLKYDTGLGVYESFICKYLEDSNDYIASHPQKLSLDEMPRPLESETVSLRQLIVSVLPSRPSI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ksn_C/protein/4ksn_C.pdb
+  pdb: ${ATLAS_DIR}/4ksn_C/protein/4ksn_C.pdb

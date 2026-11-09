@@ -5,4 +5,4 @@ sequences:
       sequence: PRRGAVAHANSIVQQLVSEGADISHTRNMLRNAMNGDAVAFSRVEQNIFRQHFPNMPMHGISRDSELAIELRGALRRAVHQQAAS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3hgl_A/protein/3hgl_A.pdb
+  pdb: ${ATLAS_DIR}/3hgl_A/protein/3hgl_A.pdb

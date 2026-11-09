@@ -5,4 +5,4 @@ sequences:
       sequence: ARARKGALVQCDPSIKALILQIDAKMSDIVLEELDDTHLLVNPSKVEFVKHELNRLLSKNIYNPMDEEENQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3dgp_B/protein/3dgp_B.pdb
+  pdb: ${ATLAS_DIR}/3dgp_B/protein/3dgp_B.pdb

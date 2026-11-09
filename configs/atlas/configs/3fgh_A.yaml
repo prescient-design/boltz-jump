@@ -5,4 +5,4 @@ sequences:
       sequence: GKPKRPRSAYNVYVAERFQEAKGDSPQEKLKTVKENWKNLSDSEKELYIQHAKEDETRYHNEMKSWA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3fgh_A/protein/3fgh_A.pdb
+  pdb: ${ATLAS_DIR}/3fgh_A/protein/3fgh_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: PSMKERQVCWGARDEYWKCLDENLEDASQCKKLRSSFESSCPQQWIKYFDKRRDYLKFKEKFEAGQFEPS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6pce_A/protein/6pce_A.pdb
+  pdb: ${ATLAS_DIR}/6pce_A/protein/6pce_A.pdb

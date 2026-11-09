@@ -5,4 +5,4 @@ sequences:
       sequence: MESNLTTAASVIAAALAVGIGSIGPGLGQGQAAGQAVEGIARQPEAEGKIRGTLLLSLAFMEALTIYGLVVALVLLFANPFV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2xqu_A/protein/2xqu_A.pdb
+  pdb: ${ATLAS_DIR}/2xqu_A/protein/2xqu_A.pdb

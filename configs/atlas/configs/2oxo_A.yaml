@@ -5,4 +5,4 @@ sequences:
       sequence: MTLHSWLDRYEKILASRGIKQKTLINYMSKIKAIRRGLPDAPLEDITTKEIAAMLNGYIDEGKAASAKLIRSTLSDAFREAIAEGHITTNHVAATRAAKSEVR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2oxo_A/protein/2oxo_A.pdb
+  pdb: ${ATLAS_DIR}/2oxo_A/protein/2oxo_A.pdb

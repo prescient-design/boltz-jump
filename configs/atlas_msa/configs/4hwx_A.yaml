@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GSAHGPSAMVFTVIQGSGEPTDTVLRATTLSCAYTAEGTHPAPRAACDALNATDGELNRLLAAPDPSLVCPMYFDPVTVTADGVLNGRRVAWKHTFSNTCVMSANLNSNPVYAF
-      msa: <ATLAS_MSA_DIR>/4hwx_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4hwx_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4hwx_A/protein/4hwx_A.pdb
+  pdb: ${ATLAS_DIR}/4hwx_A/protein/4hwx_A.pdb

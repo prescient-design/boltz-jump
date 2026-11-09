@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MNLLFQSYLDNVGVQIVRQMRSGERFLKIWSQTVEEIVSYVTVNF
-      msa: <ATLAS_MSA_DIR>/3l32_B.a3m
+      msa: ${ATLAS_MSA_DIR}/3l32_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3l32_B/protein/3l32_B.pdb
+  pdb: ${ATLAS_DIR}/3l32_B/protein/3l32_B.pdb

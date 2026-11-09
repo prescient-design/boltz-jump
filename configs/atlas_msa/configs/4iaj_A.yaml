@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GGVLNMIEITYIDASKNERTVTFESYEDFERSQQACLIGVADYYPVQKLTYKGHNLDYHGTYGDIFFYLMKQDLSQYN
-      msa: <ATLAS_MSA_DIR>/4iaj_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4iaj_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4iaj_A/protein/4iaj_A.pdb
+  pdb: ${ATLAS_DIR}/4iaj_A/protein/4iaj_A.pdb

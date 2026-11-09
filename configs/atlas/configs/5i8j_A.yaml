@@ -5,4 +5,4 @@ sequences:
       sequence: SMSKLTKVTFIGWFKSGEMFTKDIMLSGDREEIEWVTVQLAEVNNALVKAFINDEKVFEADFRG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5i8j_A/protein/5i8j_A.pdb
+  pdb: ${ATLAS_DIR}/5i8j_A/protein/5i8j_A.pdb

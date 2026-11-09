@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: APLAQRVRIMGGTNRGRAEVYYNNEWGTICDDDWDNNDATVFCRMLGYSRGRALSSYGGGSGNIWLDNVNCRGTENSLWDCSKNSWGNHNCVHNEDAGVECS
-      msa: <ATLAS_MSA_DIR>/2oya_B.a3m
+      msa: ${ATLAS_MSA_DIR}/2oya_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2oya_B/protein/2oya_B.pdb
+  pdb: ${ATLAS_DIR}/2oya_B/protein/2oya_B.pdb

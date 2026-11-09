@@ -5,4 +5,4 @@ sequences:
       sequence: MTDLVAVWDVALSDGVHKIEFEHGTTSGKRVVYVDGKEEIRKEWMFKLVGKETFYVGAAKTKATINIDAISGFAYEYTLEINGKSLKKYM
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3mx7_A/protein/3mx7_A.pdb
+  pdb: ${ATLAS_DIR}/3mx7_A/protein/3mx7_A.pdb

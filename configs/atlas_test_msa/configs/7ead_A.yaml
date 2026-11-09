@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GLPYPEGYRFWTHVKSMELKPGHPLYESFGGLHHIYVNPTGLRTYLEGKKAPFPKGTVIVFDLLEAKVEGNALLEGPRKLIGVMAKDPGRYPDTGGWGYYAFGPDKKPLAIDPKACHACHQGAANTDYVFSAFRP
-      msa: <ATLAS_MSA_DIR>/7ead_A.a3m
+      msa: ${ATLAS_MSA_DIR}/7ead_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7ead_A/protein/7ead_A.pdb
+  pdb: ${ATLAS_DIR}/7ead_A/protein/7ead_A.pdb

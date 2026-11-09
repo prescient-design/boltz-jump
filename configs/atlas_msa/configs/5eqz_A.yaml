@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MAHHHHHHYVEEKKEIDSLMEDVLALVNDSSGGKFKDYKDKINELKENLKDIGNAELKEKLLNLQNSFQDKLAAKLAALKAAKNTIENITDKDQDISKRKIWSEAKLVGVTVPLLGSNTSGNGDKMSKNAVEQIDKVIKFLEEGTN
-      msa: <ATLAS_MSA_DIR>/5eqz_A.a3m
+      msa: ${ATLAS_MSA_DIR}/5eqz_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5eqz_A/protein/5eqz_A.pdb
+  pdb: ${ATLAS_DIR}/5eqz_A/protein/5eqz_A.pdb

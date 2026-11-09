@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: TDITANVVVSNPRPIFTESRSFKAVANGKIYIGQIDTDPVNPANQIPVYIENEDGSHVQITQPLIINAAGKIVYNGQLVKIVTVQGHSMAIYDANGSQVDYIANVLKWDPDQYSIEADKKFKQIEDKIEEILSKIYHIENEIARIKKLIGE
-      msa: <ATLAS_MSA_DIR>/2vnl_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2vnl_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2vnl_A/protein/2vnl_A.pdb
+  pdb: ${ATLAS_DIR}/2vnl_A/protein/2vnl_A.pdb

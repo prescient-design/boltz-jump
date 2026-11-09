@@ -5,4 +5,4 @@ sequences:
       sequence: GEECDCGSPSNPCCDAATCKLRPGAQCADGLCCDQCRFKKKRTICRIARGDFPDDRCTGQSADCPRWNGL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1j2l_A/protein/1j2l_A.pdb
+  pdb: ${ATLAS_DIR}/1j2l_A/protein/1j2l_A.pdb

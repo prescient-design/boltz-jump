@@ -5,4 +5,4 @@ sequences:
       sequence: ETDICKLPKDEGTCRDFILKWYYDPNTKSCARFWYGGCGGNENKFGSQKECEKVCAPV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1knt_A/protein/1knt_A.pdb
+  pdb: ${ATLAS_DIR}/1knt_A/protein/1knt_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: HRQALGERLYPRVQAMQPAFASKITGMLLELSPAQLLLLLASEDSLRARVDEAMELIIAHG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1i2t_A/protein/1i2t_A.pdb
+  pdb: ${ATLAS_DIR}/1i2t_A/protein/1i2t_A.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MGSDKIHHHHHHMFPYKIVDDVVILMPNKELNIENAHLFKKWVFDEFLNKGYNKIFLVLSDVESIDSFSLGVIVNILKSISSSGGFFALVSPNEKVERVLSLTNLDRIVKIYDTISEAMEEVRRK
-      msa: <ATLAS_MSA_DIR>/3f43_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3f43_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3f43_A/protein/3f43_A.pdb
+  pdb: ${ATLAS_DIR}/3f43_A/protein/3f43_A.pdb

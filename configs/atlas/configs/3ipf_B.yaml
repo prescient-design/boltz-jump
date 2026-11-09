@@ -5,4 +5,4 @@ sequences:
       sequence: MDNRQFLSLTGVSKVQSFDPKEILLETIQGVLSIKGEKLGIKHLDLKAGQVEVEGLIDALVYPLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ipf_B/protein/3ipf_B.pdb
+  pdb: ${ATLAS_DIR}/3ipf_B/protein/3ipf_B.pdb

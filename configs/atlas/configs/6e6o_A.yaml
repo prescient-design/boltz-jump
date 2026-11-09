@@ -5,4 +5,4 @@ sequences:
       sequence: DACEQAAIQCVESACESLCTEGEDRTGCYMYIYSNCPPYV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6e6o_A/protein/6e6o_A.pdb
+  pdb: ${ATLAS_DIR}/6e6o_A/protein/6e6o_A.pdb

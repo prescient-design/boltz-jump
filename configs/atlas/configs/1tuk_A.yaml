@@ -5,4 +5,4 @@ sequences:
       sequence: ACQASQLAVCASAILSGAKPSGECCGNLRAQQGCFCQYAKDPTYGQYIRSPHARDTLTSCGLAVPHC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1tuk_A/protein/1tuk_A.pdb
+  pdb: ${ATLAS_DIR}/1tuk_A/protein/1tuk_A.pdb

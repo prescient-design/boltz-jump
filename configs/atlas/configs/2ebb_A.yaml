@@ -5,4 +5,4 @@ sequences:
       sequence: MRLTEEEVQALLEKADGWKLADERWIVKKYRFQDYLQGIEFVRRIAAISENANHHPFISIDYKLITVKLSSWRAKGLTKLDFDLAKQYDEVYNQMKQGEGE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2ebb_A/protein/2ebb_A.pdb
+  pdb: ${ATLAS_DIR}/2ebb_A/protein/2ebb_A.pdb

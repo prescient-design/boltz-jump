@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GIRLKDELINIKQILEAADIMFIYEEEKWPENISLLNENILSMCLKEAVTNVVKHSQAKTCRVDIQQLWKEVVITVSDDGTFKGEENSFSKGHGLLGMRERLEFANGSLHIDTENGTKLTMAIPNNSK
-      msa: <ATLAS_MSA_DIR>/3ehg_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3ehg_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ehg_A/protein/3ehg_A.pdb
+  pdb: ${ATLAS_DIR}/3ehg_A/protein/3ehg_A.pdb

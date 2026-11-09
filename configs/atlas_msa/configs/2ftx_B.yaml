@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GSHMEANENILKLKLYRSLGVILDLENDQVLINRKNDGNIDILPLDNNLSDFYKTKYIWERLGK
-      msa: <ATLAS_MSA_DIR>/2ftx_B.a3m
+      msa: ${ATLAS_MSA_DIR}/2ftx_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2ftx_B/protein/2ftx_B.pdb
+  pdb: ${ATLAS_DIR}/2ftx_B/protein/2ftx_B.pdb

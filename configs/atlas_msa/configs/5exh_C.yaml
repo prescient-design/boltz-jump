@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SRKKRKRCGTCDPCRRLENCGSCTSCTNRRTHQICKLRKCEVLKKKA
-      msa: <ATLAS_MSA_DIR>/5exh_C.a3m
+      msa: ${ATLAS_MSA_DIR}/5exh_C.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5exh_C/protein/5exh_C.pdb
+  pdb: ${ATLAS_DIR}/5exh_C/protein/5exh_C.pdb

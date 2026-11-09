@@ -5,4 +5,4 @@ sequences:
       sequence: MEKYCELIRKRYAEIASGDLGYVPDALGCVLKVLNEMAADDALSEAVREKAAYAAANLLVSDYVNELEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5h1n_B/protein/5h1n_B.pdb
+  pdb: ${ATLAS_DIR}/5h1n_B/protein/5h1n_B.pdb

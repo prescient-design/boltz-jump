@@ -5,4 +5,4 @@ sequences:
       sequence: GGTDRMARLLGELLVSTDDSGNLAVLRTPPGAAHYLASAIDRAALPQVVGTIAGDDTILVVAREPTTGAQLAGMFENLR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2zfz_D/protein/2zfz_D.pdb
+  pdb: ${ATLAS_DIR}/2zfz_D/protein/2zfz_D.pdb

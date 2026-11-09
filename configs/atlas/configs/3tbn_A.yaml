@@ -5,4 +5,4 @@ sequences:
       sequence: GSSHHHHHHTDPVIAQKAPYPVTVEAGKTYHWCACGRSKAQPFCDGSHKGTGLAPVAYTPDKAGTAYFCGCKASKAPPLCDGTHKTL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3tbn_A/protein/3tbn_A.pdb
+  pdb: ${ATLAS_DIR}/3tbn_A/protein/3tbn_A.pdb

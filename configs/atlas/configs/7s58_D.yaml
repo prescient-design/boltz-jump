@@ -5,4 +5,4 @@ sequences:
       sequence: DYDYGTDTCPFPVLANKTNKAKFVGCHQKCNGGDQKLTDGTACYVVERKVWDRMTPMLWYECPLGECKNGVCEDLRKKEDCRKGN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7s58_D/protein/7s58_D.pdb
+  pdb: ${ATLAS_DIR}/7s58_D/protein/7s58_D.pdb

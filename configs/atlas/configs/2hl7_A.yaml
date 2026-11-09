@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMAIDTYEFASDAERERFRNLTQELRCPKCQNQDIADSNAPIAADLRKQIYGQLQQGKSDGEIVDYMVARYGDFVRYKPPVN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2hl7_A/protein/2hl7_A.pdb
+  pdb: ${ATLAS_DIR}/2hl7_A/protein/2hl7_A.pdb

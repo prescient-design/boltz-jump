@@ -5,4 +5,4 @@ sequences:
       sequence: SNAMLAEFEDRVAGIPCLIVVTYWEPYVPAKVSGPPEYCYPAEGGCGEWEVRDRRGRPAPWLERKLTEAERERIDQAVFDRMEGR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3pes_B/protein/3pes_B.pdb
+  pdb: ${ATLAS_DIR}/3pes_B/protein/3pes_B.pdb

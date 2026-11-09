@@ -5,4 +5,4 @@ sequences:
       sequence: SMTIMEVNLLKGPKGLGFSIAGGIGNQHIPGDNSIYITKIIEGGAAQKDGRLQIGDRLLAVNNTNLQDVRHEEAVASLKNTSDMVYLKVAKPGS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2fe5_A/protein/2fe5_A.pdb
+  pdb: ${ATLAS_DIR}/2fe5_A/protein/2fe5_A.pdb

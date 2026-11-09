@@ -5,4 +5,4 @@ sequences:
       sequence: PARSVVALKTPIKVELVAGKTYRWCVCGRSKKQPFCDGSCFFQRTGLSPLKFKAQETRMVALCTCKATQRPPYCDGTCRSERVQKAEVGSPL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6avj_B/protein/6avj_B.pdb
+  pdb: ${ATLAS_DIR}/6avj_B/protein/6avj_B.pdb

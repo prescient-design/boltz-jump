@@ -5,4 +5,4 @@ sequences:
       sequence: VDCSEYPKPACTLEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2gkr_I/protein/2gkr_I.pdb
+  pdb: ${ATLAS_DIR}/2gkr_I/protein/2gkr_I.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GSASPAVAELCQNTPETFLEASKLLLTYADNILRNPNDEKYRSIRIGNTAFSTRLLPVRGAVECLFEMGFEEGETHLIFPKKASVEQLQKIRDLIAIER
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2ccq_A/protein/2ccq_A.pdb
+  pdb: ${ATLAS_DIR}/2ccq_A/protein/2ccq_A.pdb

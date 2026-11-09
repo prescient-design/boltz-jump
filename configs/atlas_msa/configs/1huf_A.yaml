@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GGGGGMNLSLSDLHRQVSRLVQQESGDCTGKLRGNVAANKETTFQGLTIASGARESEKVFAQTVLSHVANVVLTQEDTAKLLQSTVKHNLNNYDLRSVGNGNSVLVSLRSDQMTLQDAKVLLEAALRQESGARGHHHHHH
-      msa: <ATLAS_MSA_DIR>/1huf_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1huf_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1huf_A/protein/1huf_A.pdb
+  pdb: ${ATLAS_DIR}/1huf_A/protein/1huf_A.pdb

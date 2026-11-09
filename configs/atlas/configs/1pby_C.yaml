@@ -5,4 +5,4 @@ sequences:
       sequence: MNALVGCTTSFDPGWEVDAFGAVSNLCQPMEADLYGCADPCWWPAQVADTLNTYPNWSAGADDVMQDWRKLQSVFPETK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1pby_C/protein/1pby_C.pdb
+  pdb: ${ATLAS_DIR}/1pby_C/protein/1pby_C.pdb

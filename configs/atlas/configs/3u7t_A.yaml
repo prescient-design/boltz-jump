@@ -5,4 +5,4 @@ sequences:
       sequence: TTCCPSIVARSNFNVCRLPGTSEAICATYTGCIIIPGATCPGDYAN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3u7t_A/protein/3u7t_A.pdb
+  pdb: ${ATLAS_DIR}/3u7t_A/protein/3u7t_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: AVYGIDAMNPSSRDDFTEFGKLLKDKITQYEKSLYYASFLEVLVRDVCISLEIDDLKKITNSLTVLCSEKQKQEKQSKAK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3bpj_C/protein/3bpj_C.pdb
+  pdb: ${ATLAS_DIR}/3bpj_C/protein/3bpj_C.pdb

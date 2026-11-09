@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: PLEKIAPYPQAEKGMKRQVIQLTPQEDESTLKVELLIGQTLEVDCNLHRLGGKLENKTLEGWGYDYYVFDKVSSPVSTMMACPDGKKEKKFVTAYLGDAGMLRYNSKLPIVVYTPDNVDVKYRVWADGKAEEKIDNAVVR
-      msa: <ATLAS_MSA_DIR>/1ifg_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1ifg_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1ifg_A/protein/1ifg_A.pdb
+  pdb: ${ATLAS_DIR}/1ifg_A/protein/1ifg_A.pdb

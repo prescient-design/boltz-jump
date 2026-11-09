@@ -5,4 +5,4 @@ sequences:
       sequence: AEETCFDKYTGNTYRVGDTYERPKDSMIWDCTCIGAGRGRISCTIANRCHEGGQSYKIGDTWRRPHETGGYMLECVCLGNGKGEWTCKPI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2cg7_A/protein/2cg7_A.pdb
+  pdb: ${ATLAS_DIR}/2cg7_A/protein/2cg7_A.pdb

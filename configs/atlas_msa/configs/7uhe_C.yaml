@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GSASTVKGSVDLEKLAFGLTKLNEDDLVGVVQMVTDNKTPEMNVTNNVEEGEFIIDLYSLPEGLLKSLWDYVKKNT
-      msa: <ATLAS_MSA_DIR>/7uhe_C.a3m
+      msa: ${ATLAS_MSA_DIR}/7uhe_C.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7uhe_C/protein/7uhe_C.pdb
+  pdb: ${ATLAS_DIR}/7uhe_C/protein/7uhe_C.pdb

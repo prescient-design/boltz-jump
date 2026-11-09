@@ -5,4 +5,4 @@ sequences:
       sequence: KDRPKKPGLCPPRPQKPCVKECKNDDSCPGQQKCCNYGCKDECRDPIFVG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ngg_B/protein/3ngg_B.pdb
+  pdb: ${ATLAS_DIR}/3ngg_B/protein/3ngg_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: MPSGTDDPLSDAEIQKYREEINRLDREILDAVKRRTKISQTIGKTRMSSGGTRLVHTREVAIINQFREEIGEEGPALAGILLRMGRGKLG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5hub_A/protein/5hub_A.pdb
+  pdb: ${ATLAS_DIR}/5hub_A/protein/5hub_A.pdb

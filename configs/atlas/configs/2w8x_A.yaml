@@ -5,4 +5,4 @@ sequences:
       sequence: FNCNKREGPCSQRSLCECDPNLQLGRHSDQLWHYNLRTNRCERGGYRDNCNSHSSSGACVMACERIHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2w8x_A/protein/2w8x_A.pdb
+  pdb: ${ATLAS_DIR}/2w8x_A/protein/2w8x_A.pdb

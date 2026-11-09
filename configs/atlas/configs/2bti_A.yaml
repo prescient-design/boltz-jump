@@ -5,4 +5,4 @@ sequences:
       sequence: GSMLILTRRVGETLMIGDEVTVTVLGVKGNQVRIGVNAPKEVSVHREEIYQRIQAEKSQPTSY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2bti_A/protein/2bti_A.pdb
+  pdb: ${ATLAS_DIR}/2bti_A/protein/2bti_A.pdb

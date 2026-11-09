@@ -5,4 +5,4 @@ sequences:
       sequence: ESAFNQTEFNKLLLECVVKTQSSVAKILGILSLSPHVSGNSKFEYANMVEDIREKVSSEMERFFPKNDDE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2g9e_A/protein/2g9e_A.pdb
+  pdb: ${ATLAS_DIR}/2g9e_A/protein/2g9e_A.pdb

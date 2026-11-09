@@ -5,4 +5,4 @@ sequences:
       sequence: GSSAAPGAIQCMNRHKMERHGKMPAGYKGFDCNVCDQPMLKITEKAYMYRCEKCDYDVCNQCAESRKFKEVHFLCAKCGKKFPSQTKLQYHSRGCRGPS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6tly_A/protein/6tly_A.pdb
+  pdb: ${ATLAS_DIR}/6tly_A/protein/6tly_A.pdb

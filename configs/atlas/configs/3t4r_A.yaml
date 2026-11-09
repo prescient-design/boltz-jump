@@ -5,4 +5,4 @@ sequences:
       sequence: MARIRHEKEKLLADLDWEIGEIAQYTPLIVDFLVPDDILAMAADGLTPELKEKIQNEIIENHIALMALEEYSSLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3t4r_A/protein/3t4r_A.pdb
+  pdb: ${ATLAS_DIR}/3t4r_A/protein/3t4r_A.pdb

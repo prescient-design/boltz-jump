@@ -5,4 +5,4 @@ sequences:
       sequence: SNANKYNKIANELIKIIGEDNIISITHCATRLRVMVKDREIINDKKVEKVDEVKGVFFTSGQYQIILGTGIVNKVYAEVEKMGLKTLSKKEQDEL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ipj_A/protein/3ipj_A.pdb
+  pdb: ${ATLAS_DIR}/3ipj_A/protein/3ipj_A.pdb

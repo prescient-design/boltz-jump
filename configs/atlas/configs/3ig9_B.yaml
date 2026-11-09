@@ -5,4 +5,4 @@ sequences:
       sequence: MGGYVNIKTFTHPAGEGKEVKGMEVSVPFEIYSNEHRIADAHYQTFPSEKAAYTTVVTDAADWRTKNAAMFTPTPVSG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ig9_B/protein/3ig9_B.pdb
+  pdb: ${ATLAS_DIR}/3ig9_B/protein/3ig9_B.pdb

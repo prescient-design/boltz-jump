@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SKSGVPRLLTASERERLEPFIDQIHYSPRYADDEYEYRHVMLPKAMLKAIPTDYFNPETGTLRILQEEEWRGLGITQSLGWEMYEVHVPEPHILLFKREKDYQMK
-      msa: <ATLAS_MSA_DIR>/1puc_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1puc_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1puc_A/protein/1puc_A.pdb
+  pdb: ${ATLAS_DIR}/1puc_A/protein/1puc_A.pdb

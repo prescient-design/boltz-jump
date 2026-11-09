@@ -5,4 +5,4 @@ sequences:
       sequence: SQRGVLEDEQMYQRCCNLFEKFFPSSSYRRPVGISSMVEAMVSRARIDARIDFESGRIKKEEFTEIMKICSTIEELRRQK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3a1g_A/protein/3a1g_A.pdb
+  pdb: ${ATLAS_DIR}/3a1g_A/protein/3a1g_A.pdb

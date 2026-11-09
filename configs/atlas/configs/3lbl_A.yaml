@@ -5,4 +5,4 @@ sequences:
       sequence: MQIPASEQETLVRPKPLLLKLLKSVGAQKDTYTMKEVLFYLGQYIMTKRLYDEKQQHIVYCSNDLLGDLFGVPSFSVKEHRKIYTMIYRNLVVVN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3lbl_A/protein/3lbl_A.pdb
+  pdb: ${ATLAS_DIR}/3lbl_A/protein/3lbl_A.pdb

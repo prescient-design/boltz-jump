@@ -5,4 +5,4 @@ sequences:
       sequence: EPKNPCCDAATCKLTPGSQCAEGLCCDQCKFIKAGKICRRARGDNPDYRCTGQSGDCPRKHF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3c05_A/protein/3c05_A.pdb
+  pdb: ${ATLAS_DIR}/3c05_A/protein/3c05_A.pdb

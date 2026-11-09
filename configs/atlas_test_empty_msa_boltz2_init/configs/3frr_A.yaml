@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: GHMLGSGFKAERLRVNLRLVINRLKLLEKKKTELAQKARKEIADYLAAGKDERARIRVEHIIREDYLVEAMEILELYCDLLLARFGLIQSMKELDSGLAESVSTLIWAAPRLQSEVAELKIVADQLCAKYSKEYGKLCRTNQIGTVNDRLMHKLSVEAPPKILVERYLIEIAKNYNVPYEPDSVVMAEAPP
+      msa: empty
+
+initial_structure:
+  cif: ${RESULTS_DIR}/atlas_test_msa_no_init/boltz_jump_results_s=2.0_d=1.0_f=0.1_3frr_A/predictions/3frr_A/3frr_A_model_0.cif

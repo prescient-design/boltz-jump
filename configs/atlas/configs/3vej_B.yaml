@@ -5,4 +5,4 @@ sequences:
       sequence: SVDLTVPWDDIEALLKNNFENDQAAVRQVMERLQKGWSLAK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3vej_B/protein/3vej_B.pdb
+  pdb: ${ATLAS_DIR}/3vej_B/protein/3vej_B.pdb

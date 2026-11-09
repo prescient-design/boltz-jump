@@ -5,4 +5,4 @@ sequences:
       sequence: AMATRQEEMIDHRLTDREWAEEWKHLDHLLNCIMDMVEKTRRSLTVLRRCQEADREELNYWIRRYSDAEDLK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1wq6_B/protein/1wq6_B.pdb
+  pdb: ${ATLAS_DIR}/1wq6_B/protein/1wq6_B.pdb

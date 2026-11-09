@@ -5,4 +5,4 @@ sequences:
       sequence: AVCPTGLFSNPLCCATNVLDLIGVDCKTPTIAVDTGAIFQAHCASKGSKPLCCVAPVADQALLCQKAIGTF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2b97_A/protein/2b97_A.pdb
+  pdb: ${ATLAS_DIR}/2b97_A/protein/2b97_A.pdb

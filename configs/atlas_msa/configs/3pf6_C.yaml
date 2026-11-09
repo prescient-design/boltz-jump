@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GMSQFQEVRPVAQALYPTHPSTKDALEEARLLFPGGTHHDFMRALMGYHNTLVKVMEEQCGS
-      msa: <ATLAS_MSA_DIR>/3pf6_C.a3m
+      msa: ${ATLAS_MSA_DIR}/3pf6_C.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3pf6_C/protein/3pf6_C.pdb
+  pdb: ${ATLAS_DIR}/3pf6_C/protein/3pf6_C.pdb

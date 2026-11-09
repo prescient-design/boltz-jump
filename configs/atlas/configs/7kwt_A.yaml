@@ -5,4 +5,4 @@ sequences:
       sequence: SKINVNVENVSGVQGFLFHTDGKESYGHRAFINGVEIGIKDIETVQGFQQIIPSINISKSDVEAIRKAMKK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7kwt_A/protein/7kwt_A.pdb
+  pdb: ${ATLAS_DIR}/7kwt_A/protein/7kwt_A.pdb

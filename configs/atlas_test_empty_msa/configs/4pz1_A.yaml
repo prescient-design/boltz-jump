@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '1'
+      sequence: SMKQDQLIVEKMEQTYEAFSPKLANLIEALDAFKEHYEEYATLRNFYSSDEWFRLANQPWDDIPSGVLSEDLLFDMIGDHNQLAADIADLAPIMAKHM
+      msa: empty
+
+initial_structure:
+  pdb: ${ATLAS_DIR}/4pz1_A/protein/4pz1_A.pdb

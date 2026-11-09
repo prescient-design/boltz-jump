@@ -5,4 +5,4 @@ sequences:
       sequence: MEGALPKGLSDLIADPTLGPQITPDWVRTLSRIELRGKRPRDKQDWYEIYLHLKRILS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6ro6_A/protein/6ro6_A.pdb
+  pdb: ${ATLAS_DIR}/6ro6_A/protein/6ro6_A.pdb

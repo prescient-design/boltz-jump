@@ -5,4 +5,4 @@ sequences:
       sequence: VQDCYHGDGQSYRGTSSTTTTGKKCQSWSSMTPHRHQKTPENYPNAGLTMNYCRNPDADKGPWCFTTDPSVRWEYCNLKKCSGTEASV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1krn_A/protein/1krn_A.pdb
+  pdb: ${ATLAS_DIR}/1krn_A/protein/1krn_A.pdb

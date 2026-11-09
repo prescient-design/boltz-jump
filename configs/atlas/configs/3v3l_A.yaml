@@ -5,4 +5,4 @@ sequences:
       sequence: GNGEYAWYYEGRNGWWQYDERTSRELEDAFSKGKKNTEMLIAGFLYVADLENMVQYRRNEHGRRRKIKRDIIDIPKKGVAGLRLD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3v3l_A/protein/3v3l_A.pdb
+  pdb: ${ATLAS_DIR}/3v3l_A/protein/3v3l_A.pdb

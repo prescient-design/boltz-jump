@@ -5,4 +5,4 @@ sequences:
       sequence: GPHMTRIIYDRKFLMECRNSPVTKTPPRDLPTIPGVTS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ued_B/protein/4ued_B.pdb
+  pdb: ${ATLAS_DIR}/4ued_B/protein/4ued_B.pdb

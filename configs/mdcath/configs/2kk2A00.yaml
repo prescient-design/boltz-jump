@@ -5,4 +5,4 @@ sequences:
       sequence: YNPEDDYTPLTCPHTISVVWYECTENTANCGTACCDSCFELTGNTMCLLQAGAAGSGCDME
 
 initial_structure:
-  pdb: <MDCATH_DIR>/2kk2A00.pdb
+  pdb: ${MDCATH_DIR}/2kk2A00.pdb

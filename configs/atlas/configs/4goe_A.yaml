@@ -5,4 +5,4 @@ sequences:
       sequence: MKKRLAYAIIQFLHDQLRHGGLSSDAQESLEVAIQCLETAFGVTVEDSDLAL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4goe_A/protein/4goe_A.pdb
+  pdb: ${ATLAS_DIR}/4goe_A/protein/4goe_A.pdb

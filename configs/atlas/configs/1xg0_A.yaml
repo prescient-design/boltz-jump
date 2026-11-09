@@ -5,4 +5,4 @@ sequences:
       sequence: AMDKSAKAPQITIFDHRGCSRAPKESTGGKAGGQDDEMMVKVASTKVTVSESDAAKKLQEFITFEKGIDGPFTSKN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1xg0_A/protein/1xg0_A.pdb
+  pdb: ${ATLAS_DIR}/1xg0_A/protein/1xg0_A.pdb

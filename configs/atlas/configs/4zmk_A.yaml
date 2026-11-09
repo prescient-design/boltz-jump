@@ -5,4 +5,4 @@ sequences:
       sequence: DTFSERTLGLNSIDNTEISEVVSLGLVSSALDKITGLLSADNLSETVSQARDFSHTLSKSLKSRAKSLSQK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4zmk_A/protein/4zmk_A.pdb
+  pdb: ${ATLAS_DIR}/4zmk_A/protein/4zmk_A.pdb

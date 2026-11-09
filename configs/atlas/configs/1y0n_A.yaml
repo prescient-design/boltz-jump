@@ -5,4 +5,4 @@ sequences:
       sequence: GHMLIPHDLLEADTLNNLLEDFVTREGTDNGDETPLDVRVERARHALRRGEAVILFDPESQQCQLMLRSEVPAELLRD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1y0n_A/protein/1y0n_A.pdb
+  pdb: ${ATLAS_DIR}/1y0n_A/protein/1y0n_A.pdb

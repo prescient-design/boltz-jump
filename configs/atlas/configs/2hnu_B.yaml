@@ -5,4 +5,4 @@ sequences:
       sequence: VRTCLPCGPGGKGRCFGPSICCGDELGCFVGTAEALRCQEENYLPSPCQSGQKPCGSGGRCAAAGICCSPDGCHEDPACDP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2hnu_B/protein/2hnu_B.pdb
+  pdb: ${ATLAS_DIR}/2hnu_B/protein/2hnu_B.pdb

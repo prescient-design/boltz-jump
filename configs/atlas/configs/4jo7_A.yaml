@@ -5,4 +5,4 @@ sequences:
       sequence: SAPADYFRILVQQFEVQLQQYRQQIEELENHLATQANNSHITPQDLSMAMQKIYQTFVALAAQLQSIHENVKVLKEQYLGYRKMFLGDA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4jo7_A/protein/4jo7_A.pdb
+  pdb: ${ATLAS_DIR}/4jo7_A/protein/4jo7_A.pdb

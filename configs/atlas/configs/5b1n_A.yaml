@@ -5,4 +5,4 @@ sequences:
       sequence: GAMAAGVKQLADDRTLLMAGVSHDLRTPLTRIRLATEMMSEQDGYLAESINKDIEECNAIIEQFIDYLR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5b1n_A/protein/5b1n_A.pdb
+  pdb: ${ATLAS_DIR}/5b1n_A/protein/5b1n_A.pdb

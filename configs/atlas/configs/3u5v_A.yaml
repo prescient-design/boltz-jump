@@ -5,4 +5,4 @@ sequences:
       sequence: MGADKRAHHNALERKRRRDINEAFRELGRMCQMHLKSDKAQTKLLILQQAVQVILGLEQQVRERNLNPLNHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3u5v_A/protein/3u5v_A.pdb
+  pdb: ${ATLAS_DIR}/3u5v_A/protein/3u5v_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: DTTVSEPAPSCVTLYQSWRYSQADNGCAETVTVKVVYEDDTEGLCYAVAPGQITTVGDGYIGSHGHARYLARCL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1ok0_A/protein/1ok0_A.pdb
+  pdb: ${ATLAS_DIR}/1ok0_A/protein/1ok0_A.pdb

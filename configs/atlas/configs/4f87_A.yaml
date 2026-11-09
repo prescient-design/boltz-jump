@@ -5,4 +5,4 @@ sequences:
       sequence: MSKINVNVENVSGVQGFLFHTDGKESYGYRAFINGVEIGIKDIETVQGFQQIIPSINISKSDVEAIRKAMKK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4f87_A/protein/4f87_A.pdb
+  pdb: ${ATLAS_DIR}/4f87_A/protein/4f87_A.pdb

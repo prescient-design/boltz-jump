@@ -5,4 +5,4 @@ sequences:
       sequence: MDFREVIEQRYHQLLSRYIAELTETSLYQAQKFSRKTIEHQIPPEEIISIHRKVLKELYPSLPEDVFHSLDFLIEVMIGYGMAY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1w53_A/protein/1w53_A.pdb
+  pdb: ${ATLAS_DIR}/1w53_A/protein/1w53_A.pdb

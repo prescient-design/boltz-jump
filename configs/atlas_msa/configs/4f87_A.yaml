@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MSKINVNVENVSGVQGFLFHTDGKESYGYRAFINGVEIGIKDIETVQGFQQIIPSINISKSDVEAIRKAMKK
-      msa: <ATLAS_MSA_DIR>/4f87_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4f87_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4f87_A/protein/4f87_A.pdb
+  pdb: ${ATLAS_DIR}/4f87_A/protein/4f87_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: WKEPCRIELYRVVESLAKAQETSGEEISKFYLPNCNKNGFYHSRQCETSMDGEAGLCWCVYPWNGKRIPGSPEIRGDPNC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1zt5_A/protein/1zt5_A.pdb
+  pdb: ${ATLAS_DIR}/1zt5_A/protein/1zt5_A.pdb

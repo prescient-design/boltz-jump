@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GHMLYINSFLDRMGEIIRGEKSVEEADKLLDQKNIFEMFRSDCEEILNLYKSGKAEKEEVQRNFYLLKTYVVSQLSIHFERLKEFAESKGFKIEKKLDPEVINEIALYIDRVEKEV
-      msa: <ATLAS_MSA_DIR>/1yoz_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1yoz_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1yoz_A/protein/1yoz_A.pdb
+  pdb: ${ATLAS_DIR}/1yoz_A/protein/1yoz_A.pdb

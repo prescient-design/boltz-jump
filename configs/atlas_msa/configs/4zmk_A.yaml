@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: DTFSERTLGLNSIDNTEISEVVSLGLVSSALDKITGLLSADNLSETVSQARDFSHTLSKSLKSRAKSLSQK
-      msa: <ATLAS_MSA_DIR>/4zmk_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4zmk_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4zmk_A/protein/4zmk_A.pdb
+  pdb: ${ATLAS_DIR}/4zmk_A/protein/4zmk_A.pdb

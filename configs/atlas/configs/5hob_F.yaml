@@ -5,4 +5,4 @@ sequences:
       sequence: GSDEDTYYLQVRGRKNFEILMELKRSLELMELVPQPLVDSYEQQQQLLQR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5hob_F/protein/5hob_F.pdb
+  pdb: ${ATLAS_DIR}/5hob_F/protein/5hob_F.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: MNLLFQSYLDNVGVQIVRQMRSGERFLKIWSQTVEEIVSYVTVNF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3l32_B/protein/3l32_B.pdb
+  pdb: ${ATLAS_DIR}/3l32_B/protein/3l32_B.pdb

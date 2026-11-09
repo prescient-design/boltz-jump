@@ -5,4 +5,4 @@ sequences:
       sequence: MFTINAEVRKEQGKGASRRLRAANKFPAIIYGGKEAPLAIELDHDKVMNMQAKAEFYSEVLTIVVDGKEIKVKAQDVQRHPYKPKLQHIDFVRA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1dfu_P/protein/1dfu_P.pdb
+  pdb: ${ATLAS_DIR}/1dfu_P/protein/1dfu_P.pdb

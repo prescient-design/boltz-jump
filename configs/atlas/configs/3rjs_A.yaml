@@ -5,4 +5,4 @@ sequences:
       sequence: MADRKAVIKNADMPEDLQQDAIDCANQALEKYNIEKDIAAFIKKEFDRKHNPTWHCVVGRNFGSYVTHETHHFIYFYIGQVAVLLFKSG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3rjs_A/protein/3rjs_A.pdb
+  pdb: ${ATLAS_DIR}/3rjs_A/protein/3rjs_A.pdb

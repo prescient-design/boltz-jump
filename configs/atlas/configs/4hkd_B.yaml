@@ -5,4 +5,4 @@ sequences:
       sequence: GAMDDFDFLKNLSLEELQMRLKALDPMMEREIEELRQRYTAKRQPILDAMDAK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4hkd_B/protein/4hkd_B.pdb
+  pdb: ${ATLAS_DIR}/4hkd_B/protein/4hkd_B.pdb

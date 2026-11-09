@@ -5,4 +5,4 @@ sequences:
       sequence: GSSGSSGMDPNTVSSFQVDCFLWHVRKRLADQELGDAPFLDRLRRDQKSLRGRGNTLGLDIETATRAGKQIVERILEEE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2z0a_B/protein/2z0a_B.pdb
+  pdb: ${ATLAS_DIR}/2z0a_B/protein/2z0a_B.pdb

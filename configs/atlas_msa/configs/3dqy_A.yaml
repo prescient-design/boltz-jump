@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: TWTYILRQGDLPPGEMQRYEGGPEPVMVCNVDGEFFAVQDTCTHGDWALSDGYLDGDIVECTLHFGKFCVRTGKVKALPACKPIKVFPIKVEGDEVHVDLDNGELK
-      msa: <ATLAS_MSA_DIR>/3dqy_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3dqy_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3dqy_A/protein/3dqy_A.pdb
+  pdb: ${ATLAS_DIR}/3dqy_A/protein/3dqy_A.pdb

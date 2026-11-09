@@ -5,4 +5,4 @@ sequences:
       sequence: TGTTIKFNPPTGTDTMVKAGVSTNISTKHQCITAMKEYESKSLEELRLEDYQANRK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3mmy_D/protein/3mmy_D.pdb
+  pdb: ${ATLAS_DIR}/3mmy_D/protein/3mmy_D.pdb

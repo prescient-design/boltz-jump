@@ -5,4 +5,4 @@ sequences:
       sequence: GSMAQQMAFDISVNASKTINALVYFSTQQNKLVIRNEVNDTHYTVEFDRDKVVDTFISYNRHNDTIEIRGVLPEETNIGCAVNTPVSMT
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5ezu_A/protein/5ezu_A.pdb
+  pdb: ${ATLAS_DIR}/5ezu_A/protein/5ezu_A.pdb

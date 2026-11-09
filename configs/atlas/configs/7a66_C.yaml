@@ -5,4 +5,4 @@ sequences:
       sequence: MKIRAKVELTWEYEDEETAKAIANAVNVDNISIPEKLKKSLNLITFPDGARVVTKVKYEGEIESLVVALDDLIFAIKVAEEVLWSH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7a66_C/protein/7a66_C.pdb
+  pdb: ${ATLAS_DIR}/7a66_C/protein/7a66_C.pdb

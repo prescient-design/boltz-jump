@@ -5,4 +5,4 @@ sequences:
       sequence: GPALNTEKMKTMLKAGMTVDDYAAKLKLTDKIAAAANSARAMEKLGETLKMKKLLRYLNYVAEHTAV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3zrg_B/protein/3zrg_B.pdb
+  pdb: ${ATLAS_DIR}/3zrg_B/protein/3zrg_B.pdb

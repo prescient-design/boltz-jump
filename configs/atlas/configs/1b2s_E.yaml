@@ -5,4 +5,4 @@ sequences:
       sequence: MKKAVINGEQIRSISDLHQTLKKELALPEYYGENLDALWDCLAGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1b2s_E/protein/1b2s_E.pdb
+  pdb: ${ATLAS_DIR}/1b2s_E/protein/1b2s_E.pdb

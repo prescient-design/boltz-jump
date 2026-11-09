@@ -5,4 +5,4 @@ sequences:
       sequence: SNAEEELPFKVLGDGSYLFEGKTSLSDVRHYLDLPENAFGELGDEVDTLSGLFLEIKQELPHVGDTAVYEPFRFQVTQMDKRRIIEIKIFPFE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2nqw_A/protein/2nqw_A.pdb
+  pdb: ${ATLAS_DIR}/2nqw_A/protein/2nqw_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: ENESDKLNEEAAKNIMVGNRCEVTVGAQMARRGEVAYVGATKFKEGVWVGVKYDEPVGKNDGSVAGVRYFDCDPKYGGFVRPVDVKVGDFPELSIDEI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1tov_A/protein/1tov_A.pdb
+  pdb: ${ATLAS_DIR}/1tov_A/protein/1tov_A.pdb

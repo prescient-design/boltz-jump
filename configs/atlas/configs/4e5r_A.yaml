@@ -5,4 +5,4 @@ sequences:
       sequence: PPTEPLPDGWIMTFHNSGLPVYLHRETRVVTWSRPYFLGTGSIRKHDPPISSIPCL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4e5r_A/protein/4e5r_A.pdb
+  pdb: ${ATLAS_DIR}/4e5r_A/protein/4e5r_A.pdb

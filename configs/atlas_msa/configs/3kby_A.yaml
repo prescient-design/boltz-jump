@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GSHMFNMLEQQIIHSQDMAHFRSEFFYVNHEHRENYEALLIYYKNSIDNPIVDGACYILALPEIFNSVDVFESELPFSWVYDENGITETMKSLSIPLQYLVAAALEVTDVNIFKPSGFTMGMNNWNIAQMRIFWQYTAIIRKEAL
-      msa: <ATLAS_MSA_DIR>/3kby_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3kby_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3kby_A/protein/3kby_A.pdb
+  pdb: ${ATLAS_DIR}/3kby_A/protein/3kby_A.pdb

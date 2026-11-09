@@ -5,4 +5,4 @@ sequences:
       sequence: MEKDLLDKLGQHLVWRMGRAEDEDVLVVRVGLASATPRFRELPRLLNLPEAEMRRLVQEGRVRVEWVEE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2e6x_D/protein/2e6x_D.pdb
+  pdb: ${ATLAS_DIR}/2e6x_D/protein/2e6x_D.pdb

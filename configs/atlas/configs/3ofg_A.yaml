@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMSKKGQTLMLFVGVVDPSQPDRSDIRPFTEKWTQIWQSQLYNNHVDLQVFVIDDNRAIFMFKNGEQAFEAKKFLLKQEFVSEVTIEGQSFDG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ofg_A/protein/3ofg_A.pdb
+  pdb: ${ATLAS_DIR}/3ofg_A/protein/3ofg_A.pdb

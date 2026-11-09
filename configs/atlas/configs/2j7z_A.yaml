@@ -5,4 +5,4 @@ sequences:
       sequence: KPVSLSYRCPCRFFESHVARANVKHLKILNTPNCALQIVARLKNNNRQVCIDPKLKWIQEYLEKALNK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2j7z_A/protein/2j7z_A.pdb
+  pdb: ${ATLAS_DIR}/2j7z_A/protein/2j7z_A.pdb

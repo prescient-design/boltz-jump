@@ -5,4 +5,4 @@ sequences:
       sequence: NLAKGKEESLDSDLYAELRCMCIKTTSGIHPKNIQSLEVIGKGTHCNQVEVIATLKDGRKICLDPDAPRIKKIVQKKLAGDESAD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1f9p_A/protein/1f9p_A.pdb
+  pdb: ${ATLAS_DIR}/1f9p_A/protein/1f9p_A.pdb

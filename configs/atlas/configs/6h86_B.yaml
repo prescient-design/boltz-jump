@@ -5,4 +5,4 @@ sequences:
       sequence: MADSDPGERSYDNMLKMLSDLNKDLEKLLEEMEKISVQATWMAYDMVVMRTNPTLAESMRRLEDAFLNCKEEMEKNWQELLTETKRKQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6h86_B/protein/6h86_B.pdb
+  pdb: ${ATLAS_DIR}/6h86_B/protein/6h86_B.pdb

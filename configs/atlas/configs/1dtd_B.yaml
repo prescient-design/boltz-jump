@@ -5,4 +5,4 @@ sequences:
       sequence: DESFLCYQPDQVCCFICRGAAPLPSEGECNPHPTAPWCREGAVEWVPYSTGQCRTTCIPYV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1dtd_B/protein/1dtd_B.pdb
+  pdb: ${ATLAS_DIR}/1dtd_B/protein/1dtd_B.pdb

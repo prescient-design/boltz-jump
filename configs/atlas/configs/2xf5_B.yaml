@@ -5,4 +5,4 @@ sequences:
       sequence: GSESLLYGYFLDSWLDGTASEEMMRVAVNAGDLTQEEADKIMSYPWGAWND
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2xf5_B/protein/2xf5_B.pdb
+  pdb: ${ATLAS_DIR}/2xf5_B/protein/2xf5_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GPETLCGAELVDALQFVCGDRGFYFNKPTGYGSSSRRAPQTGIVDECCFRSCDLRRLEMYCAPLKPAKSA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1h02_B/protein/1h02_B.pdb
+  pdb: ${ATLAS_DIR}/1h02_B/protein/1h02_B.pdb

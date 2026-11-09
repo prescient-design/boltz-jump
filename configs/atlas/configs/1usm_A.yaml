@@ -5,4 +5,4 @@ sequences:
       sequence: MDWEERENLKRLVKTFAFPNFREALDFANRVGALAERENHHPRLTVEWGRVTVEWWTHSAGGVTEKDREMARLTDALLQR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1usm_A/protein/1usm_A.pdb
+  pdb: ${ATLAS_DIR}/1usm_A/protein/1usm_A.pdb

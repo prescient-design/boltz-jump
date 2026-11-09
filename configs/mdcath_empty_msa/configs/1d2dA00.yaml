@@ -1,0 +1,9 @@
+version: 1
+sequences:
+  - protein:
+      id: '01'
+      sequence: MVYDKIAAQGEVVRKLKAEKAPKAKVTEAVECLLSLKAEYKEKTGKEYVPGLEHHH
+      msa: empty
+
+initial_structure:
+  pdb: ${MDCATH_DIR}/1d2dA00.pdb

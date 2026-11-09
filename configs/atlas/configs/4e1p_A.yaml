@@ -5,4 +5,4 @@ sequences:
       sequence: MAKKVTVTLVDDFDGSGAADETVEFGLDGVTYEIDLSTKNATKLRGDLKQWVAAGRRVGGR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4e1p_A/protein/4e1p_A.pdb
+  pdb: ${ATLAS_DIR}/4e1p_A/protein/4e1p_A.pdb

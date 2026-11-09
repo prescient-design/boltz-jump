@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SVRKFTEKHEWVTTENGVGTVGISNFAQEALGDVVYCSLPEVGTKLNKQEEFGALESVKAASELYSPLSGEVTEINKALAENPGLVNKSCYEDGWLIKMTFSNPSELDELMSEEAYEKYIKSIEE
-      msa: <ATLAS_MSA_DIR>/3klr_A.a3m
+      msa: ${ATLAS_MSA_DIR}/3klr_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3klr_A/protein/3klr_A.pdb
+  pdb: ${ATLAS_DIR}/3klr_A/protein/3klr_A.pdb

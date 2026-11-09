@@ -5,4 +5,4 @@ sequences:
       sequence: GSKTISESELSASATELLQDYMLTLRTKLSSQEIQQFAALLHEYRNGASIHEFCINLRQLYGDSRKFLLLGLRPFIPEKDSQHFENFLETIGVKDGRG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4fqn_B/protein/4fqn_B.pdb
+  pdb: ${ATLAS_DIR}/4fqn_B/protein/4fqn_B.pdb

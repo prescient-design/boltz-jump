@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: VSGQAQLEQLASVAAGARYLKNKCNRSDLPADEAINRAAINVGKKRGWANIDANLLSQRSAQLYQQLQQDSTPEATKCSQFNRQLAPFIDSLR
-      msa: <ATLAS_MSA_DIR>/4a56_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4a56_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4a56_A/protein/4a56_A.pdb
+  pdb: ${ATLAS_DIR}/4a56_A/protein/4a56_A.pdb

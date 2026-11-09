@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GAMDPRKVSELRAFVKMCRQDPSVLHTEEMRFLREWVESMGGKVPP
-      msa: <ATLAS_MSA_DIR>/4j8c_A.a3m
+      msa: ${ATLAS_MSA_DIR}/4j8c_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4j8c_A/protein/4j8c_A.pdb
+  pdb: ${ATLAS_DIR}/4j8c_A/protein/4j8c_A.pdb

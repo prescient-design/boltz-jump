@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: AERGELDLTGAKQNTGVWLVKVPKYLSQQWAKASGRGEVGKLRIAKTQGRTEVSFTLNEDLANIHDIGGKPASVSAPREHPFVLQSVGGQTLTVFTESSSDKLSLEGIVVQRAECRPA
-      msa: <ATLAS_MSA_DIR>/1f3u_G.a3m
+      msa: ${ATLAS_MSA_DIR}/1f3u_G.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1f3u_G/protein/1f3u_G.pdb
+  pdb: ${ATLAS_DIR}/1f3u_G/protein/1f3u_G.pdb

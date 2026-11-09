@@ -5,4 +5,4 @@ sequences:
       sequence: GSSGSSGGYFDAHALAMDYRSLGFRECLAEVARYLSIIEGLDASDPLRVRLVSHLNNYASQREA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2db7_B/protein/2db7_B.pdb
+  pdb: ${ATLAS_DIR}/2db7_B/protein/2db7_B.pdb

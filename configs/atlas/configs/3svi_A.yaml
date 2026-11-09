@@ -5,4 +5,4 @@ sequences:
       sequence: LYTGAVPRANRIVQQLVEAGADLANIRTMFRNMLRGEEMILSRAEQNVFLQHFPDMLPCGIDRNSELAIALREALRRADSQQA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3svi_A/protein/3svi_A.pdb
+  pdb: ${ATLAS_DIR}/3svi_A/protein/3svi_A.pdb

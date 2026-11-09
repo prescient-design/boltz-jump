@@ -5,4 +5,4 @@ sequences:
       sequence: GEHIPGTLRFRLSPAARNILEKHSLDASQGTATGPRGIFTKEDALKLVQLKQTGKILEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2f60_K/protein/2f60_K.pdb
+  pdb: ${ATLAS_DIR}/2f60_K/protein/2f60_K.pdb

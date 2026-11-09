@@ -5,4 +5,4 @@ sequences:
       sequence: GPLGSMAHKQIYYSDKYFDEHYEYRHVMLPRELSKQVPKTHLMSEEEWRRLGVQQSLGWVHYMIHEPEPHILLFRRPLPKDQQK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6gu2_C/protein/6gu2_C.pdb
+  pdb: ${ATLAS_DIR}/6gu2_C/protein/6gu2_C.pdb

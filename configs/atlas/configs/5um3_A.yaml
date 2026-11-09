@@ -5,4 +5,4 @@ sequences:
       sequence: GPLGSLCGRVFKVGEPTYSCRDCAVDPTCLLCMECFLGSIHRDHRYRMTTSGGGGFCDCGDTEAWKEGPYCQKHE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5um3_A/protein/5um3_A.pdb
+  pdb: ${ATLAS_DIR}/5um3_A/protein/5um3_A.pdb

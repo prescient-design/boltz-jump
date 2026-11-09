@@ -5,4 +5,4 @@ sequences:
       sequence: GSNFCDSKCKLRCSKAGLADRCLKFCGICCEECKCVPSGTYGNKHECPCYRDKKNSKGKSKCP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5e5y_C/protein/5e5y_C.pdb
+  pdb: ${ATLAS_DIR}/5e5y_C/protein/5e5y_C.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GAQNTDGAIWQWRDDRGLWHPYNRIDSRIIEAAHQVGEDEISLSTLGRVYTIDFNSMQQINEDTGTARAIQRKPNPLANS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7uw7_A/protein/7uw7_A.pdb
+  pdb: ${ATLAS_DIR}/7uw7_A/protein/7uw7_A.pdb

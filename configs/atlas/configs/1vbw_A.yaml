@@ -5,4 +5,4 @@ sequences:
       sequence: SRCQGKSSWPQLVGSTGAAAKAVIERENPRVRAVIIKVGSGATKDFRCDRVRVWVTERGIVARPPTIG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1vbw_A/protein/1vbw_A.pdb
+  pdb: ${ATLAS_DIR}/1vbw_A/protein/1vbw_A.pdb

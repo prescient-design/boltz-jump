@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GAMARVGPKIEITHGGKKYTVFSKVTHLVPRTENGEEAEYVVFGPEKEGVISVVVLAPKDLNEEALALRVKWFNDTKPRCVKCGAAYNGKNHFRVVAIRNGTYYLDAVCDKCEPRITWLSAIVIGRS
-      msa: <ATLAS_MSA_DIR>/2x5r_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2x5r_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2x5r_A/protein/2x5r_A.pdb
+  pdb: ${ATLAS_DIR}/2x5r_A/protein/2x5r_A.pdb

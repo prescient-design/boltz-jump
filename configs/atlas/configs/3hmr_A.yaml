@@ -5,4 +5,4 @@ sequences:
       sequence: GSEGQKKRRNTLHEFKKSAKTTLTKEDPLLKIKTKKVNSADECANRCIRNRGFTFTCKAFVFDKSRKRCYWYPFNSMSSGVKKGFGHEFDLYENKDYIR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3hmr_A/protein/3hmr_A.pdb
+  pdb: ${ATLAS_DIR}/3hmr_A/protein/3hmr_A.pdb

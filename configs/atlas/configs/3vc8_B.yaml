@@ -5,4 +5,4 @@ sequences:
       sequence: GPLGSTFEEMALTTFMITKESYCKLKNSVSDVAFNRYLSLYNKYRYFSGKMDTAAYREAACSQLAKAMETFNHNNGNDVLYQPPTASVTTSFLQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3vc8_B/protein/3vc8_B.pdb
+  pdb: ${ATLAS_DIR}/3vc8_B/protein/3vc8_B.pdb

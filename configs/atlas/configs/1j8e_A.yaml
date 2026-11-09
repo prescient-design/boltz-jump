@@ -5,4 +5,4 @@ sequences:
       sequence: GSHSCSSTQFKCNSGRCIPEHWTCDGDNDCGDYSDETHANCTNQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1j8e_A/protein/1j8e_A.pdb
+  pdb: ${ATLAS_DIR}/1j8e_A/protein/1j8e_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: SNAMEKKPIAFKVPPNSKLKVTFFGPYNEVITNVSIINQLSTPKCQTITRYPNYTKYETEVRSLSSC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4h4n_A/protein/4h4n_A.pdb
+  pdb: ${ATLAS_DIR}/4h4n_A/protein/4h4n_A.pdb

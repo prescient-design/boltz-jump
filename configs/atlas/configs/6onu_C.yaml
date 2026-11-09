@@ -5,4 +5,4 @@ sequences:
       sequence: MDWRHKAVCRDEDPELFFPVGNSGPALAQIADAKLVCNRCPVTTECLSWALNTGQDSGVWGGMSEDERRALKRRNA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6onu_C/protein/6onu_C.pdb
+  pdb: ${ATLAS_DIR}/6onu_C/protein/6onu_C.pdb

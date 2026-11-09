@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: HMMPSEDYAIWYARATIAALQAAEYRLAMPSASYTAWFTDAVSDKLDKISESLNTLVECVIDKRLAVSVPEPLPVRVENKVQVEVEDEVRVRVENKVDVEVKN
-      msa: <ATLAS_MSA_DIR>/5w82_E.a3m
+      msa: ${ATLAS_MSA_DIR}/5w82_E.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5w82_E/protein/5w82_E.pdb
+  pdb: ${ATLAS_DIR}/5w82_E/protein/5w82_E.pdb

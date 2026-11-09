@@ -5,4 +5,4 @@ sequences:
       sequence: GRKKIQITRIMDERNRQVTFTKRKFGLMKKAYELSVLCDCEIALIIFNSSNKLFQYASTDMDKVLLKYTEYNEPHES
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1egw_C/protein/1egw_C.pdb
+  pdb: ${ATLAS_DIR}/1egw_C/protein/1egw_C.pdb

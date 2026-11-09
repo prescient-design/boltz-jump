@@ -5,4 +5,4 @@ sequences:
       sequence: GPMRAIDLSRERDPNFFDNADIPVPECFWFMFKNNVRQDAGTCYSSWKMDKKVGPNWVHIKSDDNCNLSGDFPPGWIVLGKKRPGF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/8b2r_B/protein/8b2r_B.pdb
+  pdb: ${ATLAS_DIR}/8b2r_B/protein/8b2r_B.pdb

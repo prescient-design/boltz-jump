@@ -5,4 +5,4 @@ sequences:
       sequence: SEFEAVIKVISSACKTYCGKTSPSKKEIGAMLSLLQKEGLLMSPSDLYSPGSWDPITAALSQRAMILGKSGELKTWGLVLGALKAAREEQVTSEQAKFWLGLGG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5kza_A/protein/5kza_A.pdb
+  pdb: ${ATLAS_DIR}/5kza_A/protein/5kza_A.pdb

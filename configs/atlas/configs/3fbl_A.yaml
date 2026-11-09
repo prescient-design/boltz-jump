@@ -5,4 +5,4 @@ sequences:
       sequence: YHKLRLAIKEICKTDGIPNIKWGMYIAFGEKLLKSYLKMKAGSASSDMIAEYINNAISAFSSRTGISQETAQKIADFITSNY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3fbl_A/protein/3fbl_A.pdb
+  pdb: ${ATLAS_DIR}/3fbl_A/protein/3fbl_A.pdb

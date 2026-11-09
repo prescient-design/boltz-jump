@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SNAEEELPFKVLGDGSYLFEGKTSLSDVRHYLDLPENAFGELGDEVDTLSGLFLEIKQELPHVGDTAVYEPFRFQVTQMDKRRIIEIKIFPFE
-      msa: <ATLAS_MSA_DIR>/2nqw_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2nqw_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2nqw_A/protein/2nqw_A.pdb
+  pdb: ${ATLAS_DIR}/2nqw_A/protein/2nqw_A.pdb

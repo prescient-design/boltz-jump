@@ -5,4 +5,4 @@ sequences:
       sequence: NKREETDMRDFFVITNSEYTFAGVHYAKGAVLHVSPTQKRAFWVIADQENFIKQVNKNIEYVEKNASPAFLQRIVEIYQVKFEGKNVH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3l9a_X/protein/3l9a_X.pdb
+  pdb: ${ATLAS_DIR}/3l9a_X/protein/3l9a_X.pdb

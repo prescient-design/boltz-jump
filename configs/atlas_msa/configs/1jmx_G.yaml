@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MSAVAGCTATTDPGWEVDAFGGVSSLCQPMEADLYGCSDPCWWPAQVPDMMSTYQDWNAQASNSAEDWRNLGTVFPKDK
-      msa: <ATLAS_MSA_DIR>/1jmx_G.a3m
+      msa: ${ATLAS_MSA_DIR}/1jmx_G.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1jmx_G/protein/1jmx_G.pdb
+  pdb: ${ATLAS_DIR}/1jmx_G/protein/1jmx_G.pdb

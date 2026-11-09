@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GHMAELYVSDREGSDATGDGTKEKPFKTGLKALMTVGKEPFPTIYVDSQKENERWNVISKSQLKNIKKMWHREQMKS
-      msa: <ATLAS_MSA_DIR>/4zya_B.a3m
+      msa: ${ATLAS_MSA_DIR}/4zya_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4zya_B/protein/4zya_B.pdb
+  pdb: ${ATLAS_DIR}/4zya_B/protein/4zya_B.pdb

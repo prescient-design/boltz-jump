@@ -5,4 +5,4 @@ sequences:
       sequence: MRALFYKDGKLFTDNNFLNPVSDDNPAYEVLQHVKIPTHLTDVVVYEQTWEEALTRLIFVGSDSKGRRQYFYGKMHV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1vcc_A/protein/1vcc_A.pdb
+  pdb: ${ATLAS_DIR}/1vcc_A/protein/1vcc_A.pdb

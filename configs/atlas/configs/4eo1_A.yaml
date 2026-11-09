@@ -5,4 +5,4 @@ sequences:
       sequence: PSEQTPEEICEAKPPIDGVFNNVFKGDEGGFYINYNGCEYEATGVTVCQNDGTVCSSSAWKPTGYVPESG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4eo1_A/protein/4eo1_A.pdb
+  pdb: ${ATLAS_DIR}/4eo1_A/protein/4eo1_A.pdb

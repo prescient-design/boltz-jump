@@ -5,4 +5,4 @@ sequences:
       sequence: GHMTSVFDRDDIQFQVVVNHEEQYSIWPEYKEIPQGWRAAGKSGLKKDCLAYIEEVWTDMRPLSLRQHMDKAAG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2pst_X/protein/2pst_X.pdb
+  pdb: ${ATLAS_DIR}/2pst_X/protein/2pst_X.pdb

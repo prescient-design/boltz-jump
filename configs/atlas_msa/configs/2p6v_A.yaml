@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: TVPGATTTSSAATETMENVKKCKNFLSTLIKLASSGKQSTETAANVKELVQNLLDGKIEAEDFTSRLYRELNSSPQPYLVPFLKRSLPALRQLTPDSAAFIQQSQQQPPPPTSQ
-      msa: <ATLAS_MSA_DIR>/2p6v_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2p6v_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2p6v_A/protein/2p6v_A.pdb
+  pdb: ${ATLAS_DIR}/2p6v_A/protein/2p6v_A.pdb

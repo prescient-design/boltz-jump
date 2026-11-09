@@ -5,4 +5,4 @@ sequences:
       sequence: QRWVQFMKEAGQGSRDMWRAYSDMKKANWKNSDKYFHARGNYDAARRGPGGAWAAKVISDAREAVQKFTGHGAEDSRADQFANEWGRSGKDPNHFRPAGLPKRY
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6pxz_B/protein/6pxz_B.pdb
+  pdb: ${ATLAS_DIR}/6pxz_B/protein/6pxz_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: MNQPIELSLEQQFSIRSFATQVQNMSHDQAKDFLVKLYEQMVVREATYQELLKHQWGLDSGSTPA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1ojh_C/protein/1ojh_C.pdb
+  pdb: ${ATLAS_DIR}/1ojh_C/protein/1ojh_C.pdb

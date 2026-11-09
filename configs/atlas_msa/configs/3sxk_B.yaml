@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GAMDEKFIRETIETRIMMEVFCLENYFDKIAGSEELLEIKGEIDDVAASAAREIFDDSDERLHKLFIRASGNELIISLYEKIWDRIDLVRHLNERYVVSNREHKELIERIISGDKEGAIEKLKEHLKNVEAETIKNLYTY
-      msa: <ATLAS_MSA_DIR>/3sxk_B.a3m
+      msa: ${ATLAS_MSA_DIR}/3sxk_B.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3sxk_B/protein/3sxk_B.pdb
+  pdb: ${ATLAS_DIR}/3sxk_B/protein/3sxk_B.pdb

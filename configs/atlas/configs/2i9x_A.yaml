@@ -5,4 +5,4 @@ sequences:
       sequence: SNAMKVTDVRLRKIQTDGRMKALVSITLDEAFVIHDLRVIEGNSGLFVAMPSKRTPDGEFRDIAHPINSDMRQEIQDAVMKVYDETD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2i9x_A/protein/2i9x_A.pdb
+  pdb: ${ATLAS_DIR}/2i9x_A/protein/2i9x_A.pdb

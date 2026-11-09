@@ -5,4 +5,4 @@ sequences:
       sequence: RRKPGKCPVTYGQCLMLNPPNFCEMDGQCKRDLKCCMGMCGKSCVSPVKA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2z7f_I/protein/2z7f_I.pdb
+  pdb: ${ATLAS_DIR}/2z7f_I/protein/2z7f_I.pdb

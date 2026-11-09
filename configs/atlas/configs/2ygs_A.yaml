@@ -5,4 +5,4 @@ sequences:
       sequence: MDAKARNCLLQHREALEKDIKTSYIMDHMISDGFLTISEEEKVRNEPTQQQRAAMLIKMILKKDNDSYVSFYNALLHEGYKDLAALLHDGIP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2ygs_A/protein/2ygs_A.pdb
+  pdb: ${ATLAS_DIR}/2ygs_A/protein/2ygs_A.pdb

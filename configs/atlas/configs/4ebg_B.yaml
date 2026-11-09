@@ -5,4 +5,4 @@ sequences:
       sequence: GYQKDIDKVYKEQNQMNKIASKVQNTIKTDIKQEDSNTHVYKDGKVIVIGIQLYKDREKMYYFAYEIKDGKAEINREIDPIKYMKDHKADYEDENVEVEKD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ebg_B/protein/4ebg_B.pdb
+  pdb: ${ATLAS_DIR}/4ebg_B/protein/4ebg_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GSGPTYCWNEANNPGGPNRCSNNKQCDGARTCSSSGFCQGTSRKPDPGPKGPTYCWDEAKNPGGPNRCSNSKQCDGARTCSSSGFCQGTAGHAAA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2qsk_A/protein/2qsk_A.pdb
+  pdb: ${ATLAS_DIR}/2qsk_A/protein/2qsk_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GPTEKAAVKKMAKAIMADPSKADDVYQKWADKGYTLTQLSDFLKSKTRGKYDRVYNGYMTYRDYV
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3zr8_X/protein/3zr8_X.pdb
+  pdb: ${ATLAS_DIR}/3zr8_X/protein/3zr8_X.pdb

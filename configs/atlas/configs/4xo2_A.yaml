@@ -5,4 +5,4 @@ sequences:
       sequence: MNIEELKKQAETEIADFIAQKIAELNKNTGKEVSEIRFTAREKMTGLESYDVKIKIMLEH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4xo2_A/protein/4xo2_A.pdb
+  pdb: ${ATLAS_DIR}/4xo2_A/protein/4xo2_A.pdb

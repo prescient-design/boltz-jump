@@ -5,4 +5,4 @@ sequences:
       sequence: MVFKKVLLTGTSEESFTAAADDAIDRAEDTLDNVVWAEVVDQGVEIGAVEERTYQTEVQVAFELDGSQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2cc6_A/protein/2cc6_A.pdb
+  pdb: ${ATLAS_DIR}/2cc6_A/protein/2cc6_A.pdb

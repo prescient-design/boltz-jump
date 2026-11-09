@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMPDWRQFCELHAQAAAVDFAHKFCRFLRDNPAYDTPDAGASFSRHFAANFLDVFGEEVRRVLVAGP
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1q2h_A/protein/1q2h_A.pdb
+  pdb: ${ATLAS_DIR}/1q2h_A/protein/1q2h_A.pdb

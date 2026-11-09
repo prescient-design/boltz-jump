@@ -5,4 +5,4 @@ sequences:
       sequence: YDGTKCKAAGNCWEPKPGFPEKIAGSKYDPKHDPKELNKQADSIKQMEERNKKRVENFKKTGKFEYDVAKISAN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1w6s_D/protein/1w6s_D.pdb
+  pdb: ${ATLAS_DIR}/1w6s_D/protein/1w6s_D.pdb

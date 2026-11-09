@@ -5,4 +5,4 @@ sequences:
       sequence: VPMDCSRYPNTTSEEGKVMILCNKALNPVCGTDGVTYDNECVLCAHNLEQGTSVGKKHDGEC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1z7k_B/protein/1z7k_B.pdb
+  pdb: ${ATLAS_DIR}/1z7k_B/protein/1z7k_B.pdb

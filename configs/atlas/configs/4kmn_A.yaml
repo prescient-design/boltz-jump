@@ -5,4 +5,4 @@ sequences:
       sequence: AAASISNLSMQTHAARMRTFMYWPSSVPVQPEQLASAGFYYVGRNDDVKCFCCDGGLRCWESGDDPWVEHAKWFPRCEFLIRMKGQEFVDEIQGRYPHLLEAA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4kmn_A/protein/4kmn_A.pdb
+  pdb: ${ATLAS_DIR}/4kmn_A/protein/4kmn_A.pdb

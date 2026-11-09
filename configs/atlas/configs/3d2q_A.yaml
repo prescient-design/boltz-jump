@@ -5,4 +5,4 @@ sequences:
       sequence: SRTDRLEVCREYQRGNCNRGENDCRFAHPADSTMIDTNDNTVTVCMDYIKGRCSREKCKYFHPPAHLQAK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3d2q_A/protein/3d2q_A.pdb
+  pdb: ${ATLAS_DIR}/3d2q_A/protein/3d2q_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: TQGNTCGGETCSAAQVCLKGKCVCNEVHCRIRCKYGLKKDENGCEYPCSCAKASQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1bx7_A/protein/1bx7_A.pdb
+  pdb: ${ATLAS_DIR}/1bx7_A/protein/1bx7_A.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GHMENSLNALSQEALYKNWLTSRCIGKSTDSERTKQDAFRSASAYLELSKLPMDAFEQGEKLAEQYANKNSQGSVQGTYHTLDCLSLQNASEAETIFERYSK
-      msa: <ATLAS_MSA_DIR>/4b6i_D.a3m
+      msa: ${ATLAS_MSA_DIR}/4b6i_D.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4b6i_D/protein/4b6i_D.pdb
+  pdb: ${ATLAS_DIR}/4b6i_D/protein/4b6i_D.pdb

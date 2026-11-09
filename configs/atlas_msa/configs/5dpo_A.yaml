@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MMSREKAAGTFFKDYQKKNVMRLLQDSLEKIINEWLKTDDESHTKLKSLQELSEMDINATSFAEHSPLPDFVTRLWLDPHKALDAMDKNISKNEIRKLIKETAREIELVFTHQKAPDYS
-      msa: <ATLAS_MSA_DIR>/5dpo_A.a3m
+      msa: ${ATLAS_MSA_DIR}/5dpo_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5dpo_A/protein/5dpo_A.pdb
+  pdb: ${ATLAS_DIR}/5dpo_A/protein/5dpo_A.pdb

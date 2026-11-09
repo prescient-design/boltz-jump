@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SNAMKVTDVRLRKIQTDGRMKALVSITLDEAFVIHDLRVIEGNSGLFVAMPSKRTPDGEFRDIAHPINSDMRQEIQDAVMKVYDETD
-      msa: <ATLAS_MSA_DIR>/2i9x_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2i9x_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2i9x_A/protein/2i9x_A.pdb
+  pdb: ${ATLAS_DIR}/2i9x_A/protein/2i9x_A.pdb

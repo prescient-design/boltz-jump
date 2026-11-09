@@ -5,4 +5,4 @@ sequences:
       sequence: GSHMSTITRPIIELSNTIDKIAEGNLEAEVPHQNRADEIGILAKSIERLRRSLKVAME
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2y20_A/protein/2y20_A.pdb
+  pdb: ${ATLAS_DIR}/2y20_A/protein/2y20_A.pdb

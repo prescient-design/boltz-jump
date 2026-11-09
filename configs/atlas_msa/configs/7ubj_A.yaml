@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SDKQKAINYLMQFAHKVSGKYRGVAKLEGNTKAKVLQVLATFAYADYCRSAATPGARCRDCHGTGRAVDIAKTKLWGRVVEKECGRCKGVGYSRMPASAAYRAVTMLIPNLTQPTWSRTVKPLYDALVVQCHKEESIADNILNAVTR
-      msa: <ATLAS_MSA_DIR>/7ubj_A.a3m
+      msa: ${ATLAS_MSA_DIR}/7ubj_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7ubj_A/protein/7ubj_A.pdb
+  pdb: ${ATLAS_DIR}/7ubj_A/protein/7ubj_A.pdb

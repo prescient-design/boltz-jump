@@ -5,4 +5,4 @@ sequences:
       sequence: MTSYTYQATPMDGTLKTMLERWAADSNMQLSYNLPSDYTLIGPVSAISTTSVQQAATELSAVYAAQGVSVSVSANKLLVQPVPVS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3ov5_A/protein/3ov5_A.pdb
+  pdb: ${ATLAS_DIR}/3ov5_A/protein/3ov5_A.pdb

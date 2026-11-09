@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: MKIEEVRFGLVKIDGKEFDHDIVIYPSGRIERRMKEISKKKHGTSHKLDPEELEKYLVEDFDVLLVGTGIYGMLSLLPESKKLVEDKEVIEKPTKEALKLLEELWGKKRILAIIHVTC
-      msa: <ATLAS_MSA_DIR>/2cyj_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2cyj_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2cyj_A/protein/2cyj_A.pdb
+  pdb: ${ATLAS_DIR}/2cyj_A/protein/2cyj_A.pdb

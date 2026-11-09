@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: SHRNEAGHGDLHEILHEAVPLDANEREILELKEDAFAQRRREIETRLRAANGKLADAIAKNPAWSPEVEAATQEVERAAGDLQRATLVHVFEMRAGLKPEHRPAYDRVLIDALRRGSQ
-      msa: <ATLAS_MSA_DIR>/2y39_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2y39_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2y39_A/protein/2y39_A.pdb
+  pdb: ${ATLAS_DIR}/2y39_A/protein/2y39_A.pdb

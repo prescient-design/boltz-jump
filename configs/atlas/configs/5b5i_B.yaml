@@ -5,4 +5,4 @@ sequences:
       sequence: GSLFDPSCTGVFDRQLLRRLGRVCDDCFNVFREPNVATECRSNCYNNPVFRQCMAYVVPAHLHNEHREAVQMVG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5b5i_B/protein/5b5i_B.pdb
+  pdb: ${ATLAS_DIR}/5b5i_B/protein/5b5i_B.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: SNAIQQSDGSMIIDGSANLRDLNKMFNWELDTEDARTFNGLILEHLEEIPDEGTICEIDGLLITILEVGDNMIKQAKVVKL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3lae_A/protein/3lae_A.pdb
+  pdb: ${ATLAS_DIR}/3lae_A/protein/3lae_A.pdb

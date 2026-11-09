@@ -5,4 +5,4 @@ sequences:
       sequence: MSHIQIPPGLTELLQGYTVEVLRQQPPDLVDFAVEYFTRLREARR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2hwn_D/protein/2hwn_D.pdb
+  pdb: ${ATLAS_DIR}/2hwn_D/protein/2hwn_D.pdb

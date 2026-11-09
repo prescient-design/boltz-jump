@@ -5,4 +5,4 @@ sequences:
       sequence: AAKELTLAQTESLREVCETNMACDEMADAQGIVAAYQAFYGPIPF
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1vzm_B/protein/1vzm_B.pdb
+  pdb: ${ATLAS_DIR}/1vzm_B/protein/1vzm_B.pdb

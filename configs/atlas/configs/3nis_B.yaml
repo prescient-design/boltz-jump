@@ -5,4 +5,4 @@ sequences:
       sequence: GSVHKHTGRNCGRKFKIGEPLYRCHECGCDDTCVLCIHCFNPKDHVNHHVCTDICTEFTSGICDCGDEEAWNSPLHCKAEEQ
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3nis_B/protein/3nis_B.pdb
+  pdb: ${ATLAS_DIR}/3nis_B/protein/3nis_B.pdb

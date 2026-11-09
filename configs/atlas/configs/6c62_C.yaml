@@ -5,4 +5,4 @@ sequences:
       sequence: MTETEIFAYIEAASIAIGIPLEPARARAVAHHFSRTALLAEMLESVPLSPESELAEIYRPAPFPAEDI
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6c62_C/protein/6c62_C.pdb
+  pdb: ${ATLAS_DIR}/6c62_C/protein/6c62_C.pdb

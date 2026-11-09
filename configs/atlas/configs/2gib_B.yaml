@@ -5,4 +5,4 @@ sequences:
       sequence: SANVTQAFGRRGPEQTQGNFGDQDLIRQGTDYKHWPQIAQFAPSASAFFGMSRIGMEVTPSGTWLTYHGAIKLDDKDPQFKDNVILLNKHIDAYKTFPPTEPK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2gib_B/protein/2gib_B.pdb
+  pdb: ${ATLAS_DIR}/2gib_B/protein/2gib_B.pdb

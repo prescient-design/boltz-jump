@@ -5,4 +5,4 @@ sequences:
       sequence: GAMSEQLEQMASIVSATRYLKMRCNRSDLPDEQSILNVANRIAIGKGWQSLTQEDIRKHSDDIYVRLTRDSTPEYIKCREFNRRLVPFIGELLA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3sol_A/protein/3sol_A.pdb
+  pdb: ${ATLAS_DIR}/3sol_A/protein/3sol_A.pdb

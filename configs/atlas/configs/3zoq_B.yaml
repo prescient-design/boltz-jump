@@ -5,4 +5,4 @@ sequences:
       sequence: MVQNDFVDSYDVTMLLQDDDGKQYYEYHKGLSLSDFEVLYGNTADEIIKLRLDKVL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3zoq_B/protein/3zoq_B.pdb
+  pdb: ${ATLAS_DIR}/3zoq_B/protein/3zoq_B.pdb

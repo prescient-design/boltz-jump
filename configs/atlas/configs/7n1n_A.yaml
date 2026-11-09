@@ -5,4 +5,4 @@ sequences:
       sequence: MLYIDEFKEAIDKGYILGDTVAIVRKNGKIFDYVLPHEKVRDDEVVTVERVEEVMVELDKLEHHHHHH
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7n1n_A/protein/7n1n_A.pdb
+  pdb: ${ATLAS_DIR}/7n1n_A/protein/7n1n_A.pdb

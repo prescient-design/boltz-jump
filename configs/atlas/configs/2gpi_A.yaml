@@ -5,4 +5,4 @@ sequences:
       sequence: GMNQSIIFTEQLTWDVQLSAIHFTAQQQGMVIDCYIGQKVLEHLAAEKINNSEQALSLFEQFRFDIEEQAEKLIEQEAFDVQGHIQVERVD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2gpi_A/protein/2gpi_A.pdb
+  pdb: ${ATLAS_DIR}/2gpi_A/protein/2gpi_A.pdb

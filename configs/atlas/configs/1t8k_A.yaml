@@ -5,4 +5,4 @@ sequences:
       sequence: STIEERVKKIIGEQLGVKQEEVTNNASFVEDLGADSLDTVELVMALEEEFDTEIPDEEAEKITTVQAAIDYINGHQA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1t8k_A/protein/1t8k_A.pdb
+  pdb: ${ATLAS_DIR}/1t8k_A/protein/1t8k_A.pdb

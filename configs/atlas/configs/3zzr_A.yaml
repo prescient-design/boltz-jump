@@ -5,4 +5,4 @@ sequences:
       sequence: ECCTSRELVEFKMDRGDCEAVRAIENYPNGCEVTICADGVAQLGAYCGQGPCNIFGCNCDGGCLSGDWSQEFVRRNQQYGIQIIKVTRLPFWRPL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3zzr_A/protein/3zzr_A.pdb
+  pdb: ${ATLAS_DIR}/3zzr_A/protein/3zzr_A.pdb

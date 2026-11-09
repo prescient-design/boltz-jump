@@ -5,4 +5,4 @@ sequences:
       sequence: MSAVAGCTATTDPGWEVDAFGGVSSLCQPMEADLYGCSDPCWWPAQVPDMMSTYQDWNAQASNSAEDWRNLGTVFPKDK
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1jmx_G/protein/1jmx_G.pdb
+  pdb: ${ATLAS_DIR}/1jmx_G/protein/1jmx_G.pdb

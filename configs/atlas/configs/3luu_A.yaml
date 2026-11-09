@@ -5,4 +5,4 @@ sequences:
       sequence: GMSDPRTQPLEIRPLMISRVMEVDWADGHTSRLTFEHLRVECPCAECKGHTPDQAQIVTGKEHVSVVEVVPVGHYAVQLHFSDGHNTGIFTWEYLRRLDAE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3luu_A/protein/3luu_A.pdb
+  pdb: ${ATLAS_DIR}/3luu_A/protein/3luu_A.pdb

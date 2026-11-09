@@ -5,4 +5,4 @@ sequences:
       sequence: ACWKANSCPGSAFESKDRLRSFALLYCRYNYKPPYGQGAFGYASAVSTHGWETEAQCINTFEQIITSCHGQSNGGTLELNSGRLSLAFGNCEEL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4ndt_A/protein/4ndt_A.pdb
+  pdb: ${ATLAS_DIR}/4ndt_A/protein/4ndt_A.pdb

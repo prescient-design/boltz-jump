@@ -5,4 +5,4 @@ sequences:
       sequence: AISCGQVASAIAPCISYARGQGSGPSAGCCSGVRSLNNAARTTADRRAACNCLKNAAAGVSGLNAGNAASIPSKCGVSIPYTISTSTDCSRVN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1fk5_A/protein/1fk5_A.pdb
+  pdb: ${ATLAS_DIR}/1fk5_A/protein/1fk5_A.pdb

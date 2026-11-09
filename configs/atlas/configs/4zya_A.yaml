@@ -5,4 +5,4 @@ sequences:
       sequence: GHMAELYVSDREGSDATGDGTKEKPFKTGLKALMTVGKEPFPTIYVDSQKENERWNVISKSQLKNIKKMWHREQMKS
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4zya_A/protein/4zya_A.pdb
+  pdb: ${ATLAS_DIR}/4zya_A/protein/4zya_A.pdb

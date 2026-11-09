@@ -5,4 +5,4 @@ sequences:
       sequence: PAAPSIRRLARELGVDLTRLRGTGLAGRITEEDVRRAAGL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2eq8_C/protein/2eq8_C.pdb
+  pdb: ${ATLAS_DIR}/2eq8_C/protein/2eq8_C.pdb

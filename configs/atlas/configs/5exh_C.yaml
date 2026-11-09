@@ -5,4 +5,4 @@ sequences:
       sequence: SRKKRKRCGTCDPCRRLENCGSCTSCTNRRTHQICKLRKCEVLKKKA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5exh_C/protein/5exh_C.pdb
+  pdb: ${ATLAS_DIR}/5exh_C/protein/5exh_C.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: MWMPPRPEEVARKLRRLGFVERMAKGGHRLYTHPDGRIVVVPFHSGELPKGTFKRILRDAGLTEEEFHNL
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1whz_A/protein/1whz_A.pdb
+  pdb: ${ATLAS_DIR}/1whz_A/protein/1whz_A.pdb

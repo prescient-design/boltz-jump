@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: ISKCMAKIAASMNAKFYLNDRFVSFDEVFSETGLLPAIAKRADQLCSLCLGYGLGATYDESEGALLGIRVVFDEVTPNVLRLLCMTDVMNELIQGGPSRDYTPLDELMYD
-      msa: <ATLAS_MSA_DIR>/5x1e_A.a3m
+      msa: ${ATLAS_MSA_DIR}/5x1e_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/5x1e_A/protein/5x1e_A.pdb
+  pdb: ${ATLAS_DIR}/5x1e_A/protein/5x1e_A.pdb

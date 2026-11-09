@@ -5,4 +5,4 @@ sequences:
       sequence: GHMNVKRRTHNVLERQRRNELKRSFFALRDQIPELENNEKAPKVVILKKATAYILSVQAEEQKLISEEDLLRKRREQLKHKLEQLGGC
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1nkp_D/protein/1nkp_D.pdb
+  pdb: ${ATLAS_DIR}/1nkp_D/protein/1nkp_D.pdb

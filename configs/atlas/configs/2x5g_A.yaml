@@ -5,4 +5,4 @@ sequences:
       sequence: GASLKEIIDELGKQAKEQNKIASRILKIKGIKRIVVQLNAVPQDGKIRYSMTIHSQNNFRKQIGITPQDAEDLKLIAEFLEKYSDFLNEYVKFTPR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2x5g_A/protein/2x5g_A.pdb
+  pdb: ${ATLAS_DIR}/2x5g_A/protein/2x5g_A.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GSSAAPGAIQCMNRHKMERHGKMPAGYKGFDCNVCDQPMLKITEKAYMYRCEKCDYDVCNQCAESRKFKEVHFLCAKCGKKFPSQTKLQYHSRGCRGPS
-      msa: <ATLAS_MSA_DIR>/6tly_A.a3m
+      msa: ${ATLAS_MSA_DIR}/6tly_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6tly_A/protein/6tly_A.pdb
+  pdb: ${ATLAS_DIR}/6tly_A/protein/6tly_A.pdb

@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: QEAQTELPQARISCPEGTNAYRSYCYYFNEDRETWVDADLYCQNMNSGNLVSVLTQAEGAFVASLIKESGTDDFNVWIGLHDPKKNRAWHWSSGSLVSYKSWGIGAPSSVNPGYCVSLTSSTGFQKWKDVPCEDKFSFVCKFKN
-      msa: <ATLAS_MSA_DIR>/1qdd_A.a3m
+      msa: ${ATLAS_MSA_DIR}/1qdd_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1qdd_A/protein/1qdd_A.pdb
+  pdb: ${ATLAS_DIR}/1qdd_A/protein/1qdd_A.pdb

@@ -5,4 +5,4 @@ sequences:
       sequence: GPHMQPSAALQSLRSARFLPGIVQDIYPPGIKSPNPALNEAVQKKGRIFKYDVQFLLQFQNVFTEKPSPDFDQQVKALIGD
 
 initial_structure:
-  pdb: <ATLAS_DIR>/6fbz_B/protein/6fbz_B.pdb
+  pdb: ${ATLAS_DIR}/6fbz_B/protein/6fbz_B.pdb

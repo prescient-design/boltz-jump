@@ -5,4 +5,4 @@ sequences:
       sequence: SALQDLLRTLKSPSSPQQQQQVLNILKSNPQLMAAFIKQRTAKYVAN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/7jfl_C/protein/7jfl_C.pdb
+  pdb: ${ATLAS_DIR}/7jfl_C/protein/7jfl_C.pdb

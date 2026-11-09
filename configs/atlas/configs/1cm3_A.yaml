@@ -5,4 +5,4 @@ sequences:
       sequence: MFQQEVTITAPNGLDTRPAAQFVKEAKGFTSEITVTSNGKSASAKSLFKLQTLGLTQGTVVTISAEGEDEQKAVEHLVKLMAELE
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1cm3_A/protein/1cm3_A.pdb
+  pdb: ${ATLAS_DIR}/1cm3_A/protein/1cm3_A.pdb

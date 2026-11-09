@@ -5,4 +5,4 @@ sequences:
       sequence: VDMSNVVKTYDLQDGSKVHVFKDGKMGMENKFGKSMNMPEGKVMETRDGTKIIMKGNEIFRLDEALRKGHSEGG
 
 initial_structure:
-  pdb: <ATLAS_DIR>/3dso_A/protein/3dso_A.pdb
+  pdb: ${ATLAS_DIR}/3dso_A/protein/3dso_A.pdb

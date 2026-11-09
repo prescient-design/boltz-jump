@@ -5,4 +5,4 @@ sequences:
       sequence: GRDYRTCLTIVQKLKKMVDKPTQRSVSNAATRVCRTGRSRWRDVCRNFMRRYQSRVIQGLVAGETAQQICEDLR
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1l9l_A/protein/1l9l_A.pdb
+  pdb: ${ATLAS_DIR}/1l9l_A/protein/1l9l_A.pdb

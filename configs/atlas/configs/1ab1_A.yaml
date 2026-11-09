@@ -5,4 +5,4 @@ sequences:
       sequence: TTCCPSIVARSNFNVCRLPGTSEAICATYTGCIIIPGATCPGDYAN
 
 initial_structure:
-  pdb: <ATLAS_DIR>/1ab1_A/protein/1ab1_A.pdb
+  pdb: ${ATLAS_DIR}/1ab1_A/protein/1ab1_A.pdb

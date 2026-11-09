@@ -5,4 +5,4 @@ sequences:
       sequence: MRRRYRVVVERDEEGYFVAHVPELHAHTQAQSFEELLRRLQEAIAVSLEEERAEVVGLEGALEIEAA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2yzt_A/protein/2yzt_A.pdb
+  pdb: ${ATLAS_DIR}/2yzt_A/protein/2yzt_A.pdb

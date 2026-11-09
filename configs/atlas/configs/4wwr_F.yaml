@@ -5,4 +5,4 @@ sequences:
       sequence: PQVWQLISKVLARHFSAADASRVLEQLQRDYERSLSRLTLDDIERLA
 
 initial_structure:
-  pdb: <ATLAS_DIR>/4wwr_F/protein/4wwr_F.pdb
+  pdb: ${ATLAS_DIR}/4wwr_F/protein/4wwr_F.pdb

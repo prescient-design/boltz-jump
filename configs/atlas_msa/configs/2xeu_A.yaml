@@ -3,7 +3,7 @@ sequences:
   - protein:
       id: '1'
       sequence: GAMVSCPICMDGYSEIVQNGRLIVSTECGHVFCSQCLRDSLKNANTCPTCRKKINHKRYHPIYI
-      msa: <ATLAS_MSA_DIR>/2xeu_A.a3m
+      msa: ${ATLAS_MSA_DIR}/2xeu_A.a3m
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2xeu_A/protein/2xeu_A.pdb
+  pdb: ${ATLAS_DIR}/2xeu_A/protein/2xeu_A.pdb

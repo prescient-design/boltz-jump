@@ -5,4 +5,4 @@ sequences:
       sequence: GAMEKDRFSVNLDVKHFSPEELKVKVLGDVIEVHGKHEERQDEHGFISREFHRKYRIPADVDPLTITSSMSSDGVLTVNGPRKQVSGPER
 
 initial_structure:
-  pdb: <ATLAS_DIR>/2y1y_A/protein/2y1y_A.pdb
+  pdb: ${ATLAS_DIR}/2y1y_A/protein/2y1y_A.pdb
