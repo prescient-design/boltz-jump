@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ASRYLTDMTLEEMSRDWFMLMPKQKVAGSLCIRMDQAIMDKNIILKANFSVIFDRLETLILLRAFTEEGAIVGEISPLPSLPGHTDEDVKNAVGVLIGGLEANDNTVRVSETLQRFAWRS
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/6dgk_B/protein/6dgk_B.pdb

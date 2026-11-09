@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GAMWHTHSEREKRVSNAVEFLLDSRVRRTPTSSKVHFLKSKGLSAEEICEAFTKVGQPKTLNEIKRILS
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5l87_A/protein/5l87_A.pdb

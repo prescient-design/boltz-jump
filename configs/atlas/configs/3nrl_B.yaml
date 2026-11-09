@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MSEHREGTLFYDTETGRYDIRFDLESFYGGLHCGECFDVKVKDVWVPVRIEMGDDWYLVGLNVSRLDGLRVRMLEHHHHHH
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/3nrl_B/protein/3nrl_B.pdb

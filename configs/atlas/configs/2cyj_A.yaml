@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MKIEEVRFGLVKIDGKEFDHDIVIYPSGRIERRMKEISKKKHGTSHKLDPEELEKYLVEDFDVLLVGTGIYGMLSLLPESKKLVEDKEVIEKPTKEALKLLEELWGKKRILAIIHVTC
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2cyj_A/protein/2cyj_A.pdb

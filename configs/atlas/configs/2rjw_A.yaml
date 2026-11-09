@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: PTKLETFPLDVLVNTAAEDLPRGVDPSRKENYLSDEDFKAVFGMTRSAFANLPLWKQQNLKKEKGLF
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2rjw_A/protein/2rjw_A.pdb

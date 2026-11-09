@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ASNQVTLAFANDAEISAFGFCTASEAVSYYSEAAASGFMQCRFVSFDLADTVEGLLPEDYVMVVVGTTKLSAYVDTFGSRPRNICGWLLFSNCNYFLEELELTFGRRGGLEHHHHHHH
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5xbc_B/protein/5xbc_B.pdb

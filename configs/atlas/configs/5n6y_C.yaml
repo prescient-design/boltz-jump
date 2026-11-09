@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MSQSHLDDLFAYVEERCLWQFFSRTWDREENIEGVLNQVGRLLTGQEPLRGTPQERLFYADALAMANDVRERFPWASQVNKEEIEFLLDGLKSRLVDVTITRSTNRELNHHLY
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5n6y_C/protein/5n6y_C.pdb

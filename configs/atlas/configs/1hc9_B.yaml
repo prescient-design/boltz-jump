@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1hc9_B/protein/1hc9_B.pdb

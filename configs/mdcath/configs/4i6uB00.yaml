@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: SFLLSKVSFVIKKIRLEKGMTQEDLAYKSNLDRTFISGIERNSRNLTIKSLELIMKGLEVSDVVFFEMLIKEILKHD
-
-initial_structure:
-  pdb: ${MDCATH_DIR}/4i6uB00.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: AMFQIGKMRYVSVRDFKGKVLIDIREYWMDPEGEMKPGRKGISLNPEQWSQLKEQISDIDDAVRKL
-      msa: ${ATLAS_MSA_DIR}/1pcf_C.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1pcf_C/protein/1pcf_C.pdb

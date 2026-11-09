@@ -36,7 +36,7 @@ boltz-jump predict <input.yaml> --walk_jump_sigma <sigma> --walk_jump_steps <ste
 For example:
 
 ```bash
-boltz-jump predict examples/1a62_A.yaml --walk_jump_sigma 0.1 --walk_jump_steps 100 --use_msa_server
+boltz-jump predict examples/6XR6.yaml --walk_jump_sigma 2.0 --walk_jump_steps 100 --use_msa_server
 ```
 
 See `boltz-jump predict --help` for all options.

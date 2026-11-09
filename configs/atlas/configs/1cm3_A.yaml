@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MFQQEVTITAPNGLDTRPAAQFVKEAKGFTSEITVTSNGKSASAKSLFKLQTLGLTQGTVVTISAEGEDEQKAVEHLVKLMAELE
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1cm3_A/protein/1cm3_A.pdb

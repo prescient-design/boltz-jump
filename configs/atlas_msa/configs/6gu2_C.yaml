@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPLGSMAHKQIYYSDKYFDEHYEYRHVMLPRELSKQVPKTHLMSEEEWRRLGVQQSLGWVHYMIHEPEPHILLFRRPLPKDQQK
-      msa: ${ATLAS_MSA_DIR}/6gu2_C.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/6gu2_C/protein/6gu2_C.pdb

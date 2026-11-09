@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: YDGQNCKEPGNCWENKPGYPEKIAGSKYDPKHDPVELNKQEESIKAMDARNAKRIANAKSSGNFVFDVK
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2ad6_D/protein/2ad6_D.pdb

@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: DWSGPIEQPLWSLPAAPGLSRWLIVHNLSSAAADGLYHVEVLERRQGQQPWQFQRLAAHLALTEQALRASIVAPLKRGGVYPESYQFAYRQWQERQAAGQAPVCRRTVDECLRAPD
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2xu8_B/protein/2xu8_B.pdb

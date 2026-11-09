@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSSCTPGTTFRNRCNTCRCGSNGRSASCTLMACPPGSY
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/7sao_A/protein/7sao_A.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SYYSTLQCRNNHGHCRRLCFHGEQWIGNCNGRHQHCCK
-      msa: ${ATLAS_MSA_DIR}/7t9q_A.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/7t9q_A/protein/7t9q_A.pdb

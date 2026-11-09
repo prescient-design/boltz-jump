@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MKTLTGADALEFHKKLKERNKALHASDLELALVHADAVGKERFDLEELEKICDTSDAGRLTDAKERNDIYERMYYVEYPNVMTLKEFAHIVETLFSWS
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/4z8q_B/protein/4z8q_B.pdb

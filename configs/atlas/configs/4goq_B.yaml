@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GMLLSTDIWVAALIRRAELGGAFATVARKGDARAGAVLVKAVDRREGTARLFSEATRGDGERFWMQPVRSTFEPDLDAYAERAARIDPDIWVVEIEDRDGRHFLTEPVES
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/4goq_B/protein/4goq_B.pdb

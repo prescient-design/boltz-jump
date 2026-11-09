@@ -3,21 +3,20 @@
 #SBATCH --output=logs/boltz_jump_%A_%a.out
 #SBATCH --error=logs/boltz_jump_%A_%a.err
 #SBATCH --time=01:00:00
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=32G
-#SBATCH --partition=g6e
-#SBATCH --gres=gpu:1
-#SBATCH --array=0-4
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=64G
+#SBATCH --array=0-3
 
 # Create logs directory if it doesn't exist
 mkdir -p logs
 
 # Set up paths
-cd ${BOLTZ_JUMP_DIR}
-source "${BOLTZ_JUMP_DIR}/.venv/bin/activate"
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
+[ -f .env ] && { set -a; source .env; set +a; }
+source .venv/bin/activate
 
-CONFIGS_DIR="${BOLTZ_JUMP_DIR}/configs/fast_folding/configs"
-OUT_DIR="${BOLTZ_JUMP_DIR}/results/fast_folding"
+CONFIGS_DIR="configs/fast_folding"
+OUT_DIR="${RESULTS_DIR}/fast_folding${RUN_TAG:-}"
 
 mkdir -p ${OUT_DIR}
 
@@ -30,13 +29,13 @@ TOTAL_CONFIGS=${#CONFIG_FILES[@]}
 echo "Found ${TOTAL_CONFIGS} config files"
 
 # Check if array index is within bounds
-if [ ${SLURM_ARRAY_TASK_ID} -gt ${TOTAL_CONFIGS} ]; then
+if [ ${SLURM_ARRAY_TASK_ID} -ge ${TOTAL_CONFIGS} ]; then
     echo "Array index ${SLURM_ARRAY_TASK_ID} exceeds number of configs (${TOTAL_CONFIGS})"
     exit 0
 fi
 
-# Get the config file for this array task (subtract 1 for 0-based indexing)
-CONFIG_FILE=${CONFIG_FILES[$((SLURM_ARRAY_TASK_ID - 1))]}
+# Get the config file for this array task (0-based)
+CONFIG_FILE=${CONFIG_FILES[$SLURM_ARRAY_TASK_ID]}
 CONFIG_BASENAME=$(basename "${CONFIG_FILE}" .yaml)
 
 echo "Processing config ${SLURM_ARRAY_TASK_ID}/${TOTAL_CONFIGS}: ${CONFIG_FILE}"
@@ -46,6 +45,8 @@ CMD="boltz-jump predict ${CONFIG_FILE} --no_kernels --override --walk_jump_steps
 echo "Running command: ${CMD}"
 
 # Run the command
+# Optional: SEED=<int> makes the run reproducible; RUN_TAG=<suffix> writes to a separate results directory.
+[ -n "${SEED:-}" ] && CMD="${CMD} --seed ${SEED}"
 if ${CMD}; then
     echo "Successfully processed ${CONFIG_BASENAME}"
 else

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ARARKGALVQCDPSIKALILQIDAKMSDIVLEELDDTHLLVNPSKVEFVKHELNRLLSKNIYNPMDEEENQ
-      msa: ${ATLAS_MSA_DIR}/3dgp_B.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/3dgp_B/protein/3dgp_B.pdb

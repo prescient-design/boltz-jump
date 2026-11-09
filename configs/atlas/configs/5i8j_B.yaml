@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SMSKLTKVTFIGWFKSGEMFTKDIMLSGDREEIEWVTVQLAEVNNALVKAFINDEKVFEADFRG
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5i8j_B/protein/5i8j_B.pdb

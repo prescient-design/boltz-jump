@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: PNIVIRKGELQYKVMKKNKIDINQLQSMLRQAGSFSIQEVEYAIMETNGMVSVLPKSDFDKP
-
-initial_structure:
-  pdb: ${MDCATH_DIR}/3c6fA01.pdb

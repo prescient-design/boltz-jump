@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: NKTLAAMKNFAEQYAKRTDTYFCSDLSVTAVVIEGLARHKEELGSPLCPCRHYEDKEAEVKNTFWNCPCVPMRERKECHCMLFLTPDNDFAGDAQDIPMETLEEVKASMA
-      msa: ${ATLAS_MSA_DIR}/2pu9_A.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2pu9_A/protein/2pu9_A.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ALGVVGVLESYIGSINNITKQSACVAMSKLLTELNSDDIKKLRDNEELNSPKIRVYNTVISYIESNRKNNKQTIHLLKRLPADVLKKTIKNTLDIHKSITINN
-      msa: ${ATLAS_MSA_DIR}/5noh_B.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5noh_B/protein/5noh_B.pdb

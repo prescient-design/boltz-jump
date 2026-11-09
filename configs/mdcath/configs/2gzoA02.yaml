@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: KPLGIEVNSLLEQMDLPTEQVSADLAMGSQVLMGGPVSQDRGFVLHTSQPYWANSTELGSGLMLTTSRDVLTAIGSKRSPDKFLVALGY
-
-initial_structure:
-  pdb: ${MDCATH_DIR}/2gzoA02.pdb

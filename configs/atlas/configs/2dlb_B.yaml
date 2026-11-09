@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MAGYLNNIALNLEIVLKNKADSPEVSETLVTRICENLLLSKEVSFLKADGSVENFKLSDMEYEITNTEELPELEHHHHHH
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2dlb_B/protein/2dlb_B.pdb

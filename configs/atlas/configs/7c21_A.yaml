@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: WTASNEADDESVEAEIAHQIAESFSKKYKFPSRSSGIFLWNFEQLKMNLDEIVREVKEIPGVIKMAKDGMKLPLRCMLGGVASTHSRRFQILVNPEKLGKVMQEDLDKYLTY
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/7c21_A/protein/7c21_A.pdb

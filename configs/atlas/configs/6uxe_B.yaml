@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MAASSRAQVLALYRAMLRESKRFSAYNYRTYAVRRIRDAFRENKNVKDPVEIQTLVNKAKRDLGVIRRQVHIGQLYSTDKLIIENRDMPRT
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/6uxe_B/protein/6uxe_B.pdb

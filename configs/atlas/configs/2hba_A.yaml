@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MKVIFLKDVKGMGKKGEIKNVADGYANNFLFKQGLAIEATPANLKALEAQKQ
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2hba_A/protein/2hba_A.pdb

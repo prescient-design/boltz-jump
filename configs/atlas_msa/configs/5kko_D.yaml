@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SNAMKYFQIDELTLNAMLRITTIESLTPEQRLELIKAHLLNIKTPSDDNEPWDEF
-      msa: ${ATLAS_MSA_DIR}/5kko_D.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5kko_D/protein/5kko_D.pdb

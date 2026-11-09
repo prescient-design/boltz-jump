@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GHMNVKRRTHNVLERQRRNELKRSFFALRDQIPELENNEKAPKVVILKKATAYILSVQAEEQKLISEEDLLRKRREQLKHKLEQLGGC
-      msa: ${ATLAS_MSA_DIR}/1nkp_D.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1nkp_D/protein/1nkp_D.pdb

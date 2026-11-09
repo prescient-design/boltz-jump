@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GASLKEIIDELGKQAKEQNKIASRILKIKGIKRIVVQLNAVPQDGKIRYSMTIHSQNNFRKQIGITPQDAEDLKLIAEFLEKYSDFLNEYVKFTPR
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2x5g_A/protein/2x5g_A.pdb

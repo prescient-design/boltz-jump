@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GAVVGGLGGYMLGSAMSRPIIHFGSDYEDRYYRENMHRYPNQVYYRPMDEYSNQNNFVHDCVNITIKQHTVTTTTKGENFTETDVKMMERVVEQMCITQYERESQAYY
-      msa: ${ATLAS_MSA_DIR}/1i4m_A.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1i4m_A/protein/1i4m_A.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MVQNDFVDSYDVTMLLQDDDGKQYYEYHKGLSLSDFEVLYGNTADEIIKLRLDKVL
-      msa: ${ATLAS_MSA_DIR}/3zoq_C.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/3zoq_C/protein/3zoq_C.pdb

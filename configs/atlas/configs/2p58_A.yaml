@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TQLEEQLHNVETVRSITMQLEMALTKLKKDMMRGGDAKQYQVWQRESKALESAIAIIHYVAGDLK
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/2p58_A/protein/2p58_A.pdb

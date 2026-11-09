@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSNFCDSKCKLRCSKAGLADRCLKFCGICCEECKCVPSGTYGNKHECPCYRDKKNSKGKSKCP
-      msa: ${ATLAS_MSA_DIR}/5e5y_C.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/5e5y_C/protein/5e5y_C.pdb

@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: NKREETDMRDFFVITNSEYTFAGVHYAKGAVLHVSPTQKRAFWVIADQENFIKQVNKNIEYVEKNASPAFLQRIVEIYQVKFEGKNVH
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/3l9a_X/protein/3l9a_X.pdb

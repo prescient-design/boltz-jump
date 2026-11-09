@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPLGSTFEEMALTTFMITKESYCKLKNSVSDVAFNRYLSLYNKYRYFSGKMDTAAYREAACSQLAKAMETFNHNNGNDVLYQPPTASVTTSFLQ
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/3vc8_A/protein/3vc8_A.pdb

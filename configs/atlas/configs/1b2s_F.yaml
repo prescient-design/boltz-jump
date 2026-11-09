@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MKKAVINGEQIRSISDLHQTLKKELALPEYYGENLDALWDCLAGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1b2s_F/protein/1b2s_F.pdb

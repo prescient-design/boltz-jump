@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: VSGSSSVGEMSGRSVSQQTSDQYANNLAGRTESPQGSSLASRIIERLSSVAHSVIGFIQRMFSEGSHKP
-      msa: ${ATLAS_MSA_DIR}/1l2w_J.a3m
-
-initial_structure:
-  pdb: ${ATLAS_DIR}/1l2w_J/protein/1l2w_J.pdb
