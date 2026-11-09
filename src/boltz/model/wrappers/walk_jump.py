@@ -132,12 +132,15 @@ class WalkJumpWrapper(Boltz2Wrapper):
                 gamma_0 = self.model.structure_module.gamma_0
                 gamma_min = self.model.structure_module.gamma_min
                 
+                # Karras schedule from the walk noise level down to the model's
+                # minimum noise level, both in Angstroms (sigma_min is in units
+                # of sigma_data, as in AtomDiffusion.sample_schedule).
+                sigma_end = sigma_min * sigma_data
                 steps = torch.arange(num_denoising_steps, device=y.device, dtype=torch.float32)
                 sigmas = (
                     sigma ** inv_rho
-                    + steps / (num_denoising_steps - 1) * (sigma_min ** inv_rho - sigma ** inv_rho)
+                    + steps / (num_denoising_steps - 1) * (sigma_end ** inv_rho - sigma ** inv_rho)
                 ) ** (1.0 / inv_rho)
-                sigmas = sigmas * sigma_data
                 sigmas = torch.cat([sigmas, torch.zeros(1, device=y.device)])
                 
                 atom_mask = feats["atom_pad_mask"]

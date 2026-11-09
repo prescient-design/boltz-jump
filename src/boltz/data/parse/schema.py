@@ -1828,7 +1828,11 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
             )
             raise ValueError(msg)
 
-        if np.any(initial_structure.residues != data.residues):
+        if (
+            len(initial_structure.residues) != len(data.residues)
+            or np.any(initial_structure.residues["name"] != data.residues["name"])
+            or np.any(initial_structure.residues["res_type"] != data.residues["res_type"])
+        ):
             msg = (
                 f"Initial structure has a different set of residues ({initial_structure.residues}) "
                 f"than the input structure ({data.residues})!"
