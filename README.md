@@ -41,31 +41,107 @@ boltz-jump predict examples/1a62_A.yaml --walk_jump_sigma 0.1 --walk_jump_steps 
 
 See `boltz-jump predict --help` for all options.
 
-### Analyse the ensemble
+### Configuration
+
+Input configs and job scripts refer to machine-specific locations through
+environment variables such as `${ATLAS_DIR}`. Put them in a `.env` file at the
+repository root (never commit it); `boltz-jump` and the scripts load it
+automatically, and variables exported in your shell take precedence:
 
 ```bash
-python scripts/eval/analyse_ensembles.py \
-  --dataset atlas_test \
-  --reference_dir <ATLAS_DIR> \
-  --predictions_dir <PRED_DIR> \
-  --name <PROTEIN_NAME>
+ATLAS_DIR=/path/to/data/atlas                 # ATLAS, as <name>/protein/ (see below)
+MDCATH_DIR=/path/to/data/mdcath/converted     # mdCATH 320 K, <domain>.pdb + <domain>_320_<rep>.xtc
+ATLAS_MSA_DIR=/path/to/data/atlas_msa         # <name>.a3m
+MDCATH_MSA_DIR=/path/to/data/mdcath_msa       # <domain>.a3m
+RESULTS_DIR=/path/to/boltz-jump/results       # raw sampling outputs
+# Only to re-organize baseline ensembles from their raw outputs:
+ALPHAFLOW_OUTPUT_DIR=/path/to/alphaflow/output
+BIOEMU_OUTPUT_DIR=/path/to/bioemu/output
+# Used by scripts/slurm/submit.sh (unset values are omitted):
+SLURM_ACCOUNT=
+SLURM_QOS=
+SLURM_GPU_PARTITION=
+SLURM_GPU_GRES=gpu:1
+SLURM_CPU_PARTITION=
 ```
 
-### Plot results
+A config that uses an unset variable fails with an error naming it.
+
+## Reproducing the paper
+
+All steps run from the repository root. Each SLURM script is an array job over one
+config directory; submit it with `scripts/slurm/submit.sh {gpu,cpu} <script>`, which
+adds the account/partition settings from `.env`.
+
+### 1. Data
 
 ```bash
-python scripts/eval/plot.py --pred_root_dir <PRED_DIR>
+# ATLAS reference trajectories (official ATLAS server, ~12 GB)
+python scripts/data/download_atlas.py --names data/splits/atlas_test.txt --out_dir $ATLAS_DIR
+# mdCATH at 320 K (official Hugging Face dataset), converted to PDB + XTC
+python scripts/data/download_mdcath.py --convert-dir $MDCATH_DIR
 ```
 
-### Running on a SLURM cluster
+MSAs for all targets are included in the Zenodo archive (unpack to `$ATLAS_MSA_DIR`
+and `$MDCATH_MSA_DIR`). Then check that every file referenced by the configs exists:
 
-See `scripts/slurm/` for example job scripts. Each script requires environment variables to be set for your cluster (paths are documented inline).
+```bash
+python scripts/data/check_configs.py configs/atlas_test_* configs/mdcath_*
+```
+
+### 2. Sampling
+
+| Paper result | ATLAS script | mdCATH script |
+|---|---|---|
+| Boltz-Jump, MSA, crystal init (δ=1 and δ=2) | `boltz_jump_atlas.sh` | `boltz_jump_mdcath.sh` |
+| Ablation: no MSA, crystal init | `boltz_jump_atlas_empty_msa.sh` | `boltz_jump_mdcath_empty_msa.sh` |
+| Ablation: MSA, Boltz-2 init | `boltz_jump_atlas_msa_no_init.sh` | `boltz_jump_mdcath_msa_no_init.sh` |
+| Ablation: no MSA, Boltz-2 init | `boltz_jump_atlas_empty_msa_no_init.sh` | `boltz_jump_mdcath_empty_msa_no_init.sh` |
+| Ablation: no MSA, Boltz-2 + MSA init\* | `boltz_jump_atlas_empty_msa_boltz2_init.sh` | `boltz_jump_mdcath_empty_msa_boltz2_init.sh` |
+| Boltz-2 full MSA | `boltz_diffusion_atlas.sh` | `boltz_diffusion_mdcath.sh` |
+| Boltz-2 MSA subsampling (32 / 64) | `boltz_msa_subsample_{32,64}_atlas.sh` | `boltz_msa_subsample_{32,64}_mdcath.sh` |
+| Noised-seed baselines (SDE / ODE / one-step) | `boltz_noised_seed_{sde,ode,one_step}_atlas.sh` | `boltz_noised_seed_{sde,ode,one_step}_mdcath.sh` |
+
+\*Seeds from the Boltz-2 structures written by the "MSA, Boltz-2 init" run, so run that first.
+
+Pass `--export=ALL,SEED=<n>` to `submit.sh` to seed a run (`--seed`), and `RUN_TAG=<suffix>`
+to write it to a separate results directory. The paper's runs were not seeded, so
+re-running reproduces them up to sampling noise.
+
+Walk-denoise (multi-step jump) is available with `--num_denoising_steps N`; see
+`scripts/slurm/boltz_walk_denoise.sh`.
+
+Walk-jump uses σ = 2.0 Å, friction γ = 0.1 and 100 steps; the step size defaults to
+δ = 1.0 (pass `--walk_jump_delta 2.0` for the δ = 2 results). Diffusion baselines on
+three ATLAS targets (3djl_A, 5znj_A, 7wab_A) ran out of memory on 24 GB GPUs.
+
+### 3. Evaluation
+
+```bash
+python scripts/organize_results.py                                # -> results_organized/
+scripts/slurm/submit.sh cpu scripts/slurm/analyse_ensembles_atlas.sh   # -> results_analysis/
+scripts/slurm/submit.sh cpu scripts/slurm/analyse_ensembles_mdcath.sh
+python scripts/eval/plot.py --predictions_root_dir results_analysis/atlas_test --output_dir results_plots/atlas
+python scripts/eval/plot.py --predictions_root_dir results_analysis/mdcath --output_dir results_plots/mdcath
+```
+
+`plot.py` writes `summary_table.csv`, from which the paper's ensemble tables are taken.
+To compare a reproduction against the tables in the paper's LaTeX source:
+
+```bash
+python scripts/eval/check_paper_tables.py --tex main.tex \
+    --atlas results_plots/atlas/summary_table.csv --mdcath results_plots/mdcath/summary_table.csv
+```
+
+### Using our results
+
+The Zenodo archive (link to be added) contains the organized ensembles (`results_organized/`) for every
+model in the paper, including AlphaFlow and BioEmu, and the per-target metrics
+(`results_analysis/`). Unpack it at the repository root and start from step 3.
 
 ## Datasets
 
-We evaluate on the [ATLAS](https://academic.oup.com/nar/article/52/D1/D384/7438909), [mdCATH](https://www.nature.com/articles/s41597-024-04140-z) and the benchmarks from [ConforMix](https://arxiv.org/abs/2512.03312). 
-
-Config files for the test sets are provided in `configs/`.
+We evaluate on [ATLAS](https://academic.oup.com/nar/article/52/D1/D384/7438909) and [mdCATH](https://www.nature.com/articles/s41597-024-04140-z), using the 40 test targets per dataset from the Boltz-2 MD evaluation (`data/splits/`). Config files for all experiments are in `configs/`.
 
 ## Citation
 

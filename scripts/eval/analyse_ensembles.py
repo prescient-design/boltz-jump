@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from multiprocessing import Pool
 from scipy.optimize import linear_sum_assignment
+from scipy.spatial import cKDTree
 
 import logging
 
@@ -50,47 +51,28 @@ def get_lddt(
     )  # (n_frames1, n_atoms, n_atoms)
 
     # Create masks for valid neighbors: (n_frames2, n_atoms, n_atoms)
-    # For each reference frame and atom i, which atoms j are valid neighbors
     masks = (ref_distmats > 0.5) & (ref_distmats < cutoff)
 
-    # Broadcast to compare all frame pairs
-    # ref_distmats: (1, n_frames2, n_atoms, n_atoms)  ← SWAPPED
-    # pred_distmats: (n_frames1, 1, n_atoms, n_atoms)  ← SWAPPED
-    # masks: (1, n_frames2, n_atoms, n_atoms)  ← SWAPPED
     ref_dists_bc = ref_distmats[None, :, :, :]  # (1, n_frames2, n_atoms, n_atoms)
     pred_dists_bc = pred_distmats[:, None, :, :]  # (n_frames1, 1, n_atoms, n_atoms)
     masks_bc = masks[None, :, :, :]  # (1, n_frames2, n_atoms, n_atoms)
 
-    # Compute distance differences: (n_frames1, n_frames2, n_atoms, n_atoms)
     dist_diff = np.abs(pred_dists_bc - ref_dists_bc)
+    valid_diff = np.where(masks_bc, dist_diff, np.inf)
 
-    # Apply masks to only consider valid neighbors
-    # Shape: (n_frames1, n_frames2, n_atoms, n_atoms)
-    valid_diff = np.where(masks_bc, dist_diff, np.inf)  # Set invalid pairs to inf
-
-    # Count preserved distances at each threshold
     thresholds = [0.5, 1.0, 2.0, 4.0]
     preserved_counts = np.stack(
         [(valid_diff < threshold).sum(axis=-1) for threshold in thresholds], axis=-1
     )  # (n_frames1, n_frames2, n_atoms, 4)
 
-    # Count valid neighbors per atom: (n_frames1, n_frames2, n_atoms)
-    valid_neighbor_counts = masks_bc.sum(axis=-1)
-
-    # Avoid division by zero
-    valid_neighbor_counts = np.maximum(valid_neighbor_counts, 1)
-
-    # Compute fractions and average across thresholds
-    # (n_frames1, n_frames2, n_atoms, 4) / (n_frames1, n_frames2, n_atoms, 1)
+    valid_neighbor_counts = np.maximum(masks_bc.sum(axis=-1), 1)
     fractions = preserved_counts / valid_neighbor_counts[..., None]
-    lddt_per_atom = fractions.mean(axis=-1)  # Average across 4 thresholds
+    lddt_per_atom = fractions.mean(axis=-1)
 
-    # Handle atoms with no valid neighbors
     no_neighbors = masks_bc.sum(axis=-1) == 0
     lddt_per_atom = np.where(no_neighbors, 0.0, lddt_per_atom)
 
-    # Return mean across atoms: (n_frames1, n_frames2)
-    return lddt_per_atom.mean(axis=-1)
+    return lddt_per_atom.mean(axis=-1)  # (n_frames1, n_frames2)
 
 
 def calculate_lddt_precision(
@@ -131,7 +113,7 @@ def condense_sidechain_sasas(sasas: np.ndarray, top: mdtraj.Topology) -> np.ndar
     assert top.n_residues > 1
 
     if top.n_atoms != sasas.shape[1]:
-        raise exception.DataInvalid(
+        raise ValueError(
             f"The number of atoms in top ({top.n_atoms}) didn't match the "
             f"number of SASAs provided ({sasas.shape[1]}). Make sure you "
             f"computed atom-level SASAs (mode='atom') and that you've passed "
@@ -325,18 +307,25 @@ def main(args):
     predtraj = predtraj.superpose(ref)
 
     logging.info("Computing lDDT metrics")
-    pred_lddts_to_ref = get_lddt(predtraj, ref)
+    # Randomly subsample both pred and ref for lDDT to keep (n_pred, n_ref, n_atoms, n_atoms) tractable.
+    max_lddt_frames = args.max_pred_frames if args.max_pred_frames is not None else 100
+    pred_lddt_idx = np.random.choice(predtraj.n_frames, min(max_lddt_frames, predtraj.n_frames), replace=False)
+    ref_lddt_idx = np.random.choice(len(traj), min(max_lddt_frames, len(traj)), replace=False)
+    predtraj_lddt = predtraj[pred_lddt_idx]
+    traj_lddt = traj[ref_lddt_idx]
+
+    pred_lddts_to_ref = get_lddt(predtraj_lddt, ref)
     out["mean_pred_lddt_to_ref"] = pred_lddts_to_ref.mean(0)
     out["var_pred_lddt_to_ref"] = pred_lddts_to_ref.var(0)
 
-    traj_lddts_to_ref = get_lddt(traj[RAND1], ref)
+    traj_lddts_to_ref = get_lddt(traj_lddt, ref)
     out["mean_ref_lddt_to_ref"] = traj_lddts_to_ref.mean(0)
     out["var_ref_lddt_to_ref"] = traj_lddts_to_ref.var(0)
 
-    out["pred_lddt_precision"] = calculate_lddt_precision(predtraj, traj[RAND1])
-    out["pred_lddt_recall"] = calculate_lddt_recall(predtraj, traj[RAND1])
-    out["pred_lddt_diversity"] = calculate_lddt_diversity(predtraj)
-    out["ref_lddt_diversity"] = calculate_lddt_diversity(traj[RAND1])
+    out["pred_lddt_precision"] = calculate_lddt_precision(predtraj_lddt, traj_lddt)
+    out["pred_lddt_recall"] = calculate_lddt_recall(predtraj_lddt, traj_lddt)
+    out["pred_lddt_diversity"] = calculate_lddt_diversity(predtraj_lddt)
+    out["ref_lddt_diversity"] = calculate_lddt_diversity(traj_lddt)
 
     logging.info(f"Doing PCA")
     n_atoms = predtraj.n_atoms
@@ -387,15 +376,23 @@ def main(args):
     out["ref_sa_prob"] = (ref_sasa > sasa_thresh).mean(0)
     out["ref_mi_mat"] = sasa_mi(ref_sasa > sasa_thresh)
 
-    # Check if any atoms are too close
-    if mdtraj.compute_distances(predtraj_aa, np.array([[i, i + 1] for i in range(predtraj_aa.n_atoms - 1)])).min() < 0.05:
-        out["pred_sa_prob"] = None
-        out["pred_mi_mat"] = None
-    else:
-        pred_sasa = mdtraj.shrake_rupley(predtraj_aa, probe_radius=0.28)
+    # mdtraj's Shrake-Rupley calls exit() (uncatchable) on coincident atoms,
+    # so drop such frames from the SASA computation only.
+    sasa_frames = [
+        i for i in range(predtraj_aa.n_frames)
+        if not cKDTree(predtraj_aa.xyz[i]).query_pairs(1e-4)
+    ]
+    out["sasa_excluded_frames"] = predtraj_aa.n_frames - len(sasa_frames)
+    if out["sasa_excluded_frames"]:
+        logging.info(f"Excluding {out['sasa_excluded_frames']} frames with coincident atoms from SASA")
+    if sasa_frames:
+        pred_sasa = mdtraj.shrake_rupley(predtraj_aa[sasa_frames], probe_radius=0.28)
         pred_sasa = condense_sidechain_sasas(pred_sasa, predtraj_aa.top)
         out["pred_sa_prob"] = (pred_sasa > sasa_thresh).mean(0)
         out["pred_mi_mat"] = sasa_mi(pred_sasa > sasa_thresh)
+    else:
+        out["pred_sa_prob"] = None
+        out["pred_mi_mat"] = None
     
     ref_distmat = np.linalg.norm(
         traj[RAND1].xyz[:, None, :] - traj[RAND1].xyz[:, :, None], axis=-1
@@ -535,6 +532,8 @@ if __name__ == "__main__":
     parser.add_argument("--name", type=str, required=True)
     parser.add_argument("--bb_only", action="store_true")
     parser.add_argument("--ca_only", action="store_true")
+    parser.add_argument("--max_pred_frames", type=int, default=None,
+                        help="Subsample predicted trajectory to this many frames before analysis.")
 
     args = parser.parse_args()
 

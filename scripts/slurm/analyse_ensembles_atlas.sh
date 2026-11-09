@@ -5,13 +5,14 @@
 #SBATCH --array=0-50
 #SBATCH --time=02:00:00
 #SBATCH --mem=64G
-#SBATCH --cpus-per-task=2
-#SBATCH --partition=cpu
+#SBATCH --cpus-per-task=8
 
 # Create logs and output directories
 mkdir -p logs
 
-source ${BOLTZ_JUMP_DIR}/.venv/bin/activate
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
+[ -f .env ] && { set -a; source .env; set +a; }
+source .venv/bin/activate
 
 # Number of entries to process per job
 ENTRIES_PER_JOB=1
@@ -19,7 +20,7 @@ ENTRIES_PER_JOB=1
 # Directories
 DATASET="atlas_test"
 REFERENCE_DIR="${ATLAS_DIR}"
-PRED_DIR="${BOLTZ_JUMP_DIR}/results_organized/atlas_test_msa/"
+PRED_DIR="results_organized/atlas_test_msa/"
 OUTPUT_DIR="results_analysis/"
 
 mkdir -p "$OUTPUT_DIR/"
@@ -31,9 +32,28 @@ MODELS=(
     "bioemu"
     "boltz2_jump"
     "boltz2_diffusion"
+    "boltz2_diffusion_empty_msa"
     "boltz2_msa_subsample_32"
     "boltz2_msa_subsample_64"
     "boltz2_full_msa"
+    "boltz2_jump_msa"
+    "boltz2_jump_empty_msa"
+    "boltz2_jump_msa_no_init"
+    "boltz2_jump_empty_msa_no_init"
+    "boltz2_jump_empty_msa_boltz2_init"
+    "boltz2_jump_msa_d2_100"
+    "boltz2_jump_empty_msa_d2_100"
+    "boltz2_jump_msa_no_init_d2_100"
+    "boltz2_jump_empty_msa_no_init_d2_100"
+    "boltz2_jump_empty_msa_boltz2_init_d2_100"
+    "boltz2_jump_msa_d1"
+    "boltz2_jump_empty_msa_d1"
+    "boltz2_jump_msa_no_init_d1"
+    "boltz2_jump_empty_msa_no_init_d1"
+    "boltz2_jump_empty_msa_boltz2_init_d1"
+    "boltz2_noised_seed_sde"
+    "boltz2_noised_seed_ode"
+    "boltz2_noised_seed_one_step"
 )
 
 # ===================================================================
@@ -86,8 +106,14 @@ for (( i=START_IDX; i<=END_IDX; i++ )); do
     
     # Loop through the defined models
     for MODEL in "${MODELS[@]}"; do
+        OUTPUT_FILE="${OUTPUT_DIR}/${DATASET}/${NAME}/${MODEL}/analysis.pkl"
+        if [ -f "$OUTPUT_FILE" ]; then
+            echo ">> Skip (exists): $MODEL for $NAME"
+            continue
+        fi
+
         echo "Running analysis for $NAME using model: $MODEL..."
-        
+
         if python scripts/eval/analyse_ensembles.py \
             --dataset "$DATASET" \
             --reference_dir "$REFERENCE_DIR" \
@@ -95,7 +121,7 @@ for (( i=START_IDX; i<=END_IDX; i++ )); do
             --output_dir "$OUTPUT_DIR" \
             --name "${NAME}" \
             --model "$MODEL"; then
-            
+
             echo ">> Success: $MODEL for $NAME"
         else
             echo ">> Failed: $MODEL for $NAME"
