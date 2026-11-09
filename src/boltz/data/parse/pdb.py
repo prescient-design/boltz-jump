@@ -70,7 +70,6 @@ def parse_pdb(
 ) -> ParsedStructure:
     with NamedTemporaryFile(suffix=".cif") as tmp_cif_file:
         tmp_cif_path = tmp_cif_file.name
-        tmp_cif_path = "tmp.cif"
         structure = gemmi.read_structure(str(path))
         structure.setup_entities()
 

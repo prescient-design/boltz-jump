@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MLYIDEFKEAIDKGYILGDTVAIVRKNGKIFDYVLPHEKVRDDEVVTVERVEEVMVELDKLEHHHHHH
-      msa: <ATLAS_MSA_DIR>/6cka_B.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/6cka_B/protein/6cka_B.pdb

@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: VSGQAQLEQLASVAAGARYLKNKCNRSDLPADEAINRAAINVGKKRGWANIDANLLSQRSAQLYQQLQQDSTPEATKCSQFNRQLAPFIDSLR
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4a56_A/protein/4a56_A.pdb

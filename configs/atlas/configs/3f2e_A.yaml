@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MQTNVPKFTAVAEQVSAVLSQYGITGPNRAIYQGFGLKVARALNRLGGGPALVNMINGLKAYYISAFNANPTVLDAVTDIITGSPTGYVSGGSGHHHHHH
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3f2e_A/protein/3f2e_A.pdb

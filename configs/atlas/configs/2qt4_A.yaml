@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSGPTYCWNEANNPGGPNRCSNNKQCDGARTCSSSGFCQGTSRKPDPGPKGPTYCWDEAKNPGGPNRCSNSKQCDGARTCSSSGFCQGTAGHAAA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2qt4_A/protein/2qt4_A.pdb

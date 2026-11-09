@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: LDPAALMQIGVIPTNVRQLMYYTEASSAFIVVKLMPTIDSPISGCNITSISSYNATVTKLLQPIGENLETIRNQLIPTRRR
-      msa: <ATLAS_MSA_DIR>/4gip_B.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4gip_B/protein/4gip_B.pdb

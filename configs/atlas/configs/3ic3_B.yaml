@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SNAMTGPKQQPLPPDVEGREDAIEVLRAFVLDGGLSIAFMRAFEDPEMWGLLLVDIARHAARSYARESEYTEDEALERIVEMFEAELSRPTDTGATTERTQ
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3ic3_B/protein/3ic3_B.pdb

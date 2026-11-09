@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GKPKRPRSAYNVYVAERFQEAKGDSPQEKLKTVKENWKNLSDSEKELYIQHAKEDETRYHNEMKSWA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3fgh_A/protein/3fgh_A.pdb

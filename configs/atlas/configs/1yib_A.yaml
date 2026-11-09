@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPLGSGVGNGDDEAAELMQQVNVLKLTVEDLEKERDFYFGKLRNIELICQENEGENDPVLQRIVDILYATDEGFVI
-
-initial_structure:
-  pdb: <ATLAS_DIR>/1yib_A/protein/1yib_A.pdb

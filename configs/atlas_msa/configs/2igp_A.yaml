@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSHMKDPRPLNDKAFIQQCIRQLCEFLTENGYAHNVSMKSLQAPSVKDFLKIFTFLYGFLCPSYELPDTKFEEEVPRIFKDLGYPFALSKSSMYTVGAPHTWPHIVAALVWLIDCIKIHT
-      msa: <ATLAS_MSA_DIR>/2igp_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2igp_A/protein/2igp_A.pdb

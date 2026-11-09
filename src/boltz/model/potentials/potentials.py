@@ -1123,6 +1123,7 @@ def get_potentials(steering_args, boltz2=False):
                         if steering_args["contact_guidance_update"]
                         else 0.0,
                         "resampling_weight": 1.0,
+                        "check_template_input": False,
                     }
                 ),
             ]

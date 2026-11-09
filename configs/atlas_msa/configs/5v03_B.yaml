@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MGRKLELTKAEKHVHNFMMDTQLTKRVKNAAANVLRETWLIYKNTKLVKKIDHAKVRKHQRKFLQAIHQLRSVKMEQRKLNDQANTLVDLAKTQLEHHHHHH
-      msa: <ATLAS_MSA_DIR>/5v03_B.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/5v03_B/protein/5v03_B.pdb

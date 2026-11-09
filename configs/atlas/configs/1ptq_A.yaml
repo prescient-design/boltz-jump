@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: HRFKVYNYMSPTFCDHCGSLLWGLVKQGLKCEDCGMNVHHKCREKVANLC
-
-initial_structure:
-  pdb: <ATLAS_DIR>/1ptq_A/protein/1ptq_A.pdb

@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ESAFNQTEFNKLLLECVVKTQSSVAKILGILSLSPHVSGNSKFEYANMVEDIREKVSSEMERFFPKNDDE
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2g9e_A/protein/2g9e_A.pdb

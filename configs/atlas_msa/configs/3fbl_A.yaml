@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: YHKLRLAIKEICKTDGIPNIKWGMYIAFGEKLLKSYLKMKAGSASSDMIAEYINNAISAFSSRTGISQETAQKIADFITSNY
-      msa: <ATLAS_MSA_DIR>/3fbl_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3fbl_A/protein/3fbl_A.pdb

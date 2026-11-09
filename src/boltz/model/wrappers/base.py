@@ -67,6 +67,7 @@ class Boltz2Wrapper:
         for _ in range(self.predict_args["recycling_steps"] + 1):
             s = s_init + self.model.s_recycle(self.model.s_norm(s))
             z = z_init + self.model.z_recycle(self.model.z_norm(z))
+            z = z + self.model.msa_module(z, s_inputs, feats, use_kernels=self.use_kernels)
             s, z = self.model.pairformer_module(
                 s, z, mask=mask, pair_mask=pair_mask, use_kernels=self.use_kernels
             )

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: MSPFKKTYVLKLYVAGNTPNSVRALKMLKNILEQEFQGVYALKVIDVLKNPQLAEEDKILATPTLAKILPPPVRKIIGDLSDREKVLIGLDLLYDEIRE
-      msa: <MDCATH_MSA_DIR>/1wwjA00.a3m
-
-initial_structure:
-  pdb: <MDCATH_DIR>/1wwjA00.pdb

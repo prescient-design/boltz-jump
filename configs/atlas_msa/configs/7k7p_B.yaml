@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: EKTHVQLSLPVLQVRDVLVRGFGDSVEEVLSEARQHLKDGTCGLVEVEKGVLPQLEQPYVFIKRSDARTAPHGHVMVELVAELEGIQYGRSGETLGVLVPHVGEIPVAYRKVLLRKNG
-      msa: <ATLAS_MSA_DIR>/7k7p_B.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/7k7p_B/protein/7k7p_B.pdb

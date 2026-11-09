@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MSASKEEIAALIVNYFSSIVEKKEISEDGADSLNVAMDCISEAFGFEREAVSGILGKSEFKGQHLADILNSA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3zdm_A/protein/3zdm_A.pdb

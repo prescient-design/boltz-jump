@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TQGNTCGGETCSAAQVCLKGKCVCNEVHCRIRCKYGLKKDENGCEYPCSCAKASQ
-
-initial_structure:
-  pdb: <ATLAS_DIR>/1bx7_A/protein/1bx7_A.pdb

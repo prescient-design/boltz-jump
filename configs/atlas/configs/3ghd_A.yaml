@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: KAIVVQPKDTVDRVAKILSRNKAGSAVVMEGDEILGVVTERDILDKVVAKGKNPKEVKVEEIMTKNPVKI
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3ghd_A/protein/3ghd_A.pdb

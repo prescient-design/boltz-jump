@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: DILTVEKLYRPSHEYGFLRETDTVKDYLDLVRKNRSSRFPVINQHQVVVGVVTMRDAGDKSPSTTIDKVMSRSLFLVGLSTNIANVSQRMIAEDFEMVPVVRSNQTLLGVVTRRDVMEK
-
-initial_structure:
-  pdb: <ATLAS_DIR>/6uof_A/protein/6uof_A.pdb

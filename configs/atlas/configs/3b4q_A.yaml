@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SNALNSAPTPRDVVANAPAPVQAAVAGAQEYAAQAGLNTEELAVDALYNAIKVRLAGTGLGIPPQIEAFYQANRTNFNGFYMANRGAIDFIFSM
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3b4q_A/protein/3b4q_A.pdb

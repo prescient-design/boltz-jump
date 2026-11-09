@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TGTTIKFNPPTGTDTMVKAGVSTNISTKHQCITAMKEYESKSLEELRLEDYQANRK
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3mmy_F/protein/3mmy_F.pdb

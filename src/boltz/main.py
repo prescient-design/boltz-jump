@@ -35,7 +35,13 @@ from boltz.data.write.writer import BoltzAffinityWriter, BoltzWriter
 from boltz.model.models.boltz1 import Boltz1
 from boltz.model.models.boltz2 import Boltz2
 from boltz.model.models.boltz2 import Boltz2
-from boltz.model.wrappers import WalkJumpWrapper, DiffusionWrapper, TransitionPathWrapper
+from boltz.model.wrappers import WalkJumpWrapper, DiffusionWrapper, NoisedSeedWrapper, TransitionPathWrapper
+from dotenv import find_dotenv, load_dotenv
+
+# Machine-specific paths (datasets, MSAs, results) are referenced as ${VAR} in
+# input configs and resolved from a .env file; variables already set in the
+# shell take precedence.
+load_dotenv(find_dotenv(usecwd=True), override=False)
 
 CCD_URL = "https://huggingface.co/boltz-community/boltz-1/resolve/main/ccd.pkl"
 MOL_URL = "https://huggingface.co/boltz-community/boltz-2/resolve/main/mols.tar"
@@ -1643,7 +1649,7 @@ def boltz_jump_cli():
 @click.option(
     "--walk_jump_delta",
     type=float,
-    default=2.0,
+    default=1.0,
     help="Step size for the BAOAB integrator.",
 )
 @click.option(
@@ -1671,6 +1677,27 @@ def boltz_jump_cli():
 )
 @click.option(
     "--num_diffusion_samples", type=int, default=100, help="Number of diffusion samples to generate per input when using full diffusion."
+)
+@click.option(
+    "--use_noised_seed",
+    is_flag=True,
+    help="Shortened reverse diffusion baseline: noise seed to sigma, then denoise. Mutually exclusive with --use_full_diffusion.",
+)
+@click.option(
+    "--num_noised_seed_samples",
+    type=int,
+    default=100,
+    help="Number of independent noised seeds to generate and denoise. Used with --use_noised_seed.",
+)
+@click.option(
+    "--noised_seed_ode",
+    is_flag=True,
+    help="Use deterministic ODE (DDIM-style) instead of stochastic SDE. Used with --use_noised_seed.",
+)
+@click.option(
+    "--noised_seed_one_step",
+    is_flag=True,
+    help="Single Tweedie denoising step at sigma (walk without the jump). Used with --use_noised_seed.",
 )
 @click.option(
     "--structure_guidance",
@@ -1723,6 +1750,11 @@ def predict_walk_jump(
     num_denoising_steps: int,
     use_full_diffusion: bool = False,
     num_diffusion_samples: Optional[int] = None,
+    use_noised_seed: bool = False,
+    num_noised_seed_samples: int = 100,
+
+    noised_seed_ode: bool = False,
+    noised_seed_one_step: bool = False,
     structure_guidance: bool = False,
     structure_guidance_weight: float = 0.1,
 ) -> None:
@@ -1779,8 +1811,19 @@ def predict_walk_jump(
     out_dir = Path(out_dir).expanduser()
     if use_full_diffusion:
         out_dir = out_dir / f"boltz_diffusion_results_{data.stem}"
+    elif use_noised_seed:
+        if noised_seed_one_step:
+            mode_tag = "one_step"
+        elif noised_seed_ode:
+            mode_tag = "ode"
+        else:
+            mode_tag = "sde"
+        out_dir = out_dir / f"boltz_noised_seed_{mode_tag}_s={walk_jump_sigma}_n={num_noised_seed_samples}_{data.stem}"
     else:
-        out_dir = out_dir / f"boltz_jump_results_s={walk_jump_sigma}_d={walk_jump_delta}_f={walk_jump_friction}_{data.stem}"
+        # Walk-denoise (multi-step jump) runs get their own directory; single-step
+        # runs keep the original name.
+        denoise_tag = f"_n={num_denoising_steps}" if num_denoising_steps > 1 else ""
+        out_dir = out_dir / f"boltz_jump_results_s={walk_jump_sigma}_d={walk_jump_delta}_f={walk_jump_friction}{denoise_tag}_{data.stem}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     data = check_inputs(data)
@@ -1903,6 +1946,19 @@ def predict_walk_jump(
             num_samples=num_diffusion_samples,
             use_kernels=not no_kernels,
         )
+    elif use_noised_seed:
+        wrapper = NoisedSeedWrapper(
+            model=model,
+            predict_args=predict_args,
+            steering_args=asdict(steering_args),
+            noised_seed_args={
+                "sigma": walk_jump_sigma,
+                "num_samples": num_noised_seed_samples,
+                "deterministic": noised_seed_ode,
+                "one_step": noised_seed_one_step,
+            },
+            use_kernels=not no_kernels,
+        )
     else:
         wrapper = WalkJumpWrapper(
             model=model,
@@ -1922,13 +1978,20 @@ def predict_walk_jump(
             click.echo(
                 f"Starting full diffusion sampling for {num_diffusion_samples} samples..."
             )
+        elif use_noised_seed:
+            if noised_seed_one_step:
+                click.echo(f"Starting noised-seed one-step sampling: {num_noised_seed_samples} samples at sigma={walk_jump_sigma} Å...")
+            else:
+                mode = "ODE" if noised_seed_ode else "SDE"
+                click.echo(f"Starting noised-seed {mode} sampling: {num_noised_seed_samples} samples from sigma={walk_jump_sigma} Å...")
         else:
             click.echo(f"Starting walk-jump sampling for {walk_jump_steps} steps...")
-        
-        x_init, xhat_traj, y_traj = wrapper.process_batch(
-            feats,
-        )
-        click.echo("Walk-jump sampling complete.")
+
+        result = wrapper.process_batch(feats)
+        # DiffusionWrapper returns (x_init, xhat_traj); WalkJumpWrapper returns (x_init, xhat_traj, y_traj)
+        x_init, xhat_traj = result[0], result[1]
+        y_traj = result[2] if len(result) > 2 else None
+        click.echo("Sampling complete.")
 
         pred_out_dir = out_dir / "predictions"
         writer = BoltzWriter(
@@ -1964,7 +2027,7 @@ def predict_walk_jump(
             )
             continue
 
-        # Loads topology from the initial file to save the walk-jump trajectory.
+        # Write xhat trajectory (denoised samples).
         output_trajectory_file = pred_out_dir / record_id / f"{record_id}_model_0.xtc"
         wrapper.write_trajectory(
             traj=xhat_traj,
@@ -1973,18 +2036,21 @@ def predict_walk_jump(
             trajectory_file=output_trajectory_file,
         )
 
-        output_y_trajectory_file = pred_out_dir / record_id / f"{record_id}_model_0_y.xtc"
-        wrapper.write_trajectory(
-            traj=y_traj,
-            feats=feats,
-            topology_file=output_topology_file,
-            trajectory_file=output_y_trajectory_file,
-        )
+        # Write noisy y trajectory only for walk-jump (not noised-seed or full diffusion).
+        if y_traj is not None:
+            output_y_trajectory_file = pred_out_dir / record_id / f"{record_id}_model_0_y.xtc"
+            wrapper.write_trajectory(
+                traj=y_traj,
+                feats=feats,
+                topology_file=output_topology_file,
+                trajectory_file=output_y_trajectory_file,
+            )
 
         click.echo(f"Predictions for {record_id} written to disk:")
         click.echo(f"- Topology: {output_topology_file.absolute()}")
         click.echo(f"- Trajectory: {output_trajectory_file.absolute()}")
-        click.echo(f"- Y Trajectory: {output_y_trajectory_file.absolute()}")
+        if y_traj is not None:
+            click.echo(f"- Y Trajectory: {output_y_trajectory_file.absolute()}")
         end_time = time.perf_counter()
         elapsed = end_time - start_time
         click.echo(f"Elapsed time for {record_id}: {elapsed:.2f} seconds\n")

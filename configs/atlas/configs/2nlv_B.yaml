@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GMDKLVKYQELVKKLLTNYASDDVSDQDVEVQLILDTERNHYQWMNVGWQGLNRIYRCVIHFDIKDGKIWLQQNLTDRNPAEELVMMGVPREDIVLGLQAPYKRQYTDYGVA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2nlv_B/protein/2nlv_B.pdb

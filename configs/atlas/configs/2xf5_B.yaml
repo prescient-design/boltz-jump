@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSESLLYGYFLDSWLDGTASEEMMRVAVNAGDLTQEEADKIMSYPWGAWND
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2xf5_B/protein/2xf5_B.pdb

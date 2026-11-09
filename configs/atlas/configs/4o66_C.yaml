@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPGSPQNTGFLRGACIKTGDRFRVKIGYNQELIAVFKSLPSRHYDSFTKTWDFSMSDYRALMKAVERLSTVSLKPL
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4o66_C/protein/4o66_C.pdb

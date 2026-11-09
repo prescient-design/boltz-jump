@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TIPGNFAAYHELWRNAFQEIMNDPRHQLHRNDVEYKKIHAIRTVLDDYTKGGNTWWAKFRRIFTFHWNRHHVKVVDDIVKEIDAGNYTTSRALVDRLDNLAISLGSKLNPKGTLKEQIGFIK
-      msa: <ATLAS_MSA_DIR>/4wrp_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4wrp_A/protein/4wrp_A.pdb

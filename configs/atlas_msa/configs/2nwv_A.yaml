@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GMDNVAEYRKLIKQVLTEYDNLSRQSPETNYETCLVFDENHDNYLWLAVDWQGSKRIKYTYVHIRIKNEKIYIEEDYTEEGIATELMRLGVTNNDIVLAFHPPDVRKFTDFATA
-      msa: <ATLAS_MSA_DIR>/2nwv_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2nwv_A/protein/2nwv_A.pdb

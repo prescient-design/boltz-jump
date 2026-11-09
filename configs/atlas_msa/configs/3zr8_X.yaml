@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPTEKAAVKKMAKAIMADPSKADDVYQKWADKGYTLTQLSDFLKSKTRGKYDRVYNGYMTYRDYV
-      msa: <ATLAS_MSA_DIR>/3zr8_X.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3zr8_X/protein/3zr8_X.pdb

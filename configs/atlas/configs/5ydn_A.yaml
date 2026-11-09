@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MNYATVNDLCARYTRTRLDILTRPKTADGQPDDAVAEQALADASAFIDGYLAARFVLPLTVVPSLLKRQCCVVAWFYLNESQPTEQITATYRDTVRWLEQVRDGKTDPG
-
-initial_structure:
-  pdb: <ATLAS_DIR>/5ydn_A/protein/5ydn_A.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TAVPRDVNGGTPPKSCSSGPVYCCNKTEDSKHLDKGTTALLGLLNIKIGDLKDLVGLNCSPLSVIGVGGNSCSAQTVCCTNTYQHGLVNVGCTPINIGL
-      msa: <ATLAS_MSA_DIR>/7s86_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/7s86_A/protein/7s86_A.pdb

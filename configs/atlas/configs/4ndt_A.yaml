@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: ACWKANSCPGSAFESKDRLRSFALLYCRYNYKPPYGQGAFGYASAVSTHGWETEAQCINTFEQIITSCHGQSNGGTLELNSGRLSLAFGNCEEL
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4ndt_A/protein/4ndt_A.pdb

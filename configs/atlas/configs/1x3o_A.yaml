@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MTEQEIFEKVKAVIADKLQVEPEKVTLEARFIEDLGADSLDTVELIMGLEDEFGLEISDEEAEKIRTVKDAVEYIKAKLG
-
-initial_structure:
-  pdb: <ATLAS_DIR>/1x3o_A/protein/1x3o_A.pdb

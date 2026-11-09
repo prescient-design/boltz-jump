@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: EPKNPCCDAATCKLTPGSQCAEGLCCDQCKFIKAGKICRRARGDNPDYRCTGQSGDCPRKHF
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3c05_A/protein/3c05_A.pdb

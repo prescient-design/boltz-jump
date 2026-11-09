@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GRKKIQITRIMDERNRQVTFTKRKFGLMKKAYELSVLCDCEIALIIFNSSNKLFQYASTDMDKVLLKYTEYNEPHES
-      msa: <ATLAS_MSA_DIR>/1egw_C.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/1egw_C/protein/1egw_C.pdb

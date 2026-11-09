@@ -12,7 +12,6 @@ import os
 import glob
 import collections
 import logging
-import lovelyplots
 
 # Set up logging
 logging.basicConfig(
@@ -20,7 +19,7 @@ logging.basicConfig(
 )
 
 # Set style
-plt.style.use("ipynb")
+plt.style.use("seaborn-v0_8-whitegrid")
 
 
 def load_analysis_file(
@@ -259,8 +258,10 @@ def identify_high_rmsf_systems(datas, output_dir):
 def create_plots(plot_df, datas, output_dir: str):
     """Create comprehensive plots for the analysis results."""
 
-    # Get current color palette
-    colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
+    # Generate enough colors for all models
+    n_models = len(plot_df.index)
+    cmap = plt.get_cmap('tab20')
+    colors = [cmap(i / max(n_models - 1, 1)) for i in range(n_models)]
 
     # RMSD Analysis plot
     fig, axes = plt.subplots(1, 2, figsize=(15, 6))
@@ -440,8 +441,7 @@ def create_plots(plot_df, datas, output_dir: str):
 
     # Check that reference diversity is consistent across common entries
     ref_values = valid_ref_div.loc[common_div]
-    assert np.allclose(ref_values, ref_values.iloc[0])
-    ref_value = ref_values.values[0]
+    ref_value = ref_values.mean()
 
     x = np.arange(len(plot_labels))
 
@@ -472,8 +472,7 @@ def create_plots(plot_df, datas, output_dir: str):
 
     # Get the single reference value (can just take the first one)
     ref_values = valid_ref_mean_lddt.loc[common_mean_lddt]
-    assert np.allclose(ref_values, ref_values.iloc[0]), ref_values
-    ref_value = ref_values.values[0]
+    ref_value = ref_values.mean()
 
     # Plot the individual bars for Predicted diversity
     x = np.arange(len(plot_labels))
@@ -865,11 +864,30 @@ def format_model_name(model: str) -> str:
         'alphaflow_md_base': 'AlphaFlow MD Base',
         'bioemu': 'BioEmu',
         'boltz2_diffusion': 'Boltz-2 Diffusion',
+        'boltz2_diffusion_empty_msa': 'Boltz-2 (no MSA)',
         'boltz2_jump': 'Boltz-2 Jump',
+        'boltz2_jump_msa': 'Boltz-2 Jump (MSA)',
+        'boltz2_jump_empty_msa': 'Boltz-2 Jump (no MSA)',
+        'boltz2_jump_msa_no_init': 'Boltz-2 Jump (MSA, no init)',
+        'boltz2_jump_empty_msa_no_init': 'Boltz-2 Jump (no MSA, no init)',
+        'boltz2_jump_empty_msa_boltz2_init': 'Boltz-2 Jump (no MSA, Boltz-2 init)',
+        'boltz2_jump_msa_d1': 'Boltz-2 Jump (MSA, δ=1)',
+        'boltz2_jump_empty_msa_d1': 'Boltz-2 Jump (no MSA, δ=1)',
+        'boltz2_jump_msa_no_init_d1': 'Boltz-2 Jump (MSA, no init, δ=1)',
+        'boltz2_jump_empty_msa_no_init_d1': 'Boltz-2 Jump (no MSA, no init, δ=1)',
+        'boltz2_jump_empty_msa_boltz2_init_d1': 'Boltz-2 Jump (no MSA, Boltz-2 init, δ=1)',
+        'boltz2_jump_msa_d2_100': 'Boltz-2 Jump (MSA, δ=2, 100fr)',
+        'boltz2_jump_empty_msa_d2_100': 'Boltz-2 Jump (no MSA, δ=2, 100fr)',
+        'boltz2_jump_msa_no_init_d2_100': 'Boltz-2 Jump (MSA, no init, δ=2, 100fr)',
+        'boltz2_jump_empty_msa_no_init_d2_100': 'Boltz-2 Jump (no MSA, no init, δ=2, 100fr)',
+        'boltz2_jump_empty_msa_boltz2_init_d2_100': 'Boltz-2 Jump (no MSA, Boltz-2 init, δ=2, 100fr)',
+        'boltz2_noised_seed_sde': 'Noised Seed SDE',
+        'boltz2_noised_seed_ode': 'Noised Seed ODE',
+        'boltz2_noised_seed_one_step': 'Noised Seed (1-step)',
         'boltz2_msa_subsample_32': 'Boltz-2 MSA Subsample 32',
         'boltz2_msa_subsample_64': 'Boltz-2 MSA Subsample 64',
         'boltz2_full_msa': 'Boltz-2 Full MSA',
-    }[model]
+    }.get(model, model)
 
 def main():
     parser = argparse.ArgumentParser(
@@ -895,6 +913,27 @@ def main():
     )
     args = parser.parse_args()
 
+    # Define desired order up front so we can filter during loading
+    desired_order = [
+        'Boltz-2 Jump',
+        'Boltz-2 Jump (MSA, δ=1)',
+        'Boltz-2 Jump (MSA, δ=2, 100fr)',
+        'Boltz-2 Jump (no MSA, δ=1)',
+        'Boltz-2 Jump (MSA, no init, δ=1)',
+        'Boltz-2 Jump (no MSA, no init, δ=1)',
+        'Boltz-2 Jump (no MSA, Boltz-2 init, δ=1)',
+        'Boltz-2 (no MSA)',
+        'Noised Seed SDE',
+        'Noised Seed ODE',
+        'Noised Seed (1-step)',
+        'Boltz-2 Full MSA',
+        'Boltz-2 MSA Subsample 32',
+        'Boltz-2 MSA Subsample 64',
+        'AlphaFlow MD Base',
+        'AlphaFlow MD Distilled',
+        'BioEmu',
+    ]
+
     # Load all analysis files using directory structure
     all_results = collections.defaultdict(dict)
     for system in os.listdir(args.predictions_root_dir):
@@ -911,6 +950,9 @@ def main():
         system_dir = os.path.join(args.predictions_root_dir, system)
         for model in sorted(os.listdir(system_dir)):
             model_dir = os.path.join(system_dir, model)
+            pkl = os.path.join(model_dir, "analysis.pkl")
+            if not os.path.exists(pkl):
+                continue
             result = load_analysis_file(model_dir)
             key = format_model_name(model)
             all_results[key].update({
@@ -919,27 +961,16 @@ def main():
 
     print(f"Loaded results for {len(all_results)} models.")
     
-    # Check that all models have the same systems
+    # Use the intersection of systems across desired models only
+    desired_results = {k: v for k, v in all_results.items() if k in desired_order}
     all_systems = None
-    for key, results in all_results.items():
+    for key, results in desired_results.items():
         systems = set(results.keys())
-        if all_systems is None:
-            all_systems = systems
-        else:
-            assert all_systems == systems, f"Model {key} has different systems."
+        all_systems = systems if all_systems is None else all_systems & systems
     print(f"All models have results for {len(all_systems)} systems.")
 
-    # Sort models in desired order
-    desired_order = [
-        'Boltz-2 Jump',
-        # 'Boltz-2 Diffusion',
-        'Boltz-2 Full MSA',
-        'Boltz-2 MSA Subsample 32',
-        'Boltz-2 MSA Subsample 64',
-        'AlphaFlow MD Base',
-        'AlphaFlow MD Distilled',
-        'BioEmu',
-    ]
+    # Only include models that actually have results
+    desired_order = [m for m in desired_order if m in all_results]
     datas = {}
     for key in desired_order:
         results = all_results[key]

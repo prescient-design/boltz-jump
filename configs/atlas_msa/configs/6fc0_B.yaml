@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GPHMQPSAALQSLRSARFLPGIVQDIYPPGIKSPNPALNEAVQKKGRIFKYDVQFLLQFQNVFTEKPSPDFDQQVKALIGD
-      msa: <ATLAS_MSA_DIR>/6fc0_B.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/6fc0_B/protein/6fc0_B.pdb

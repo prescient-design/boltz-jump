@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GAMSEQLEQMASIVSATRYLKMRCNRSDLPDEQSILNVANRIAIGKGWQSLTQEDIRKHSDDIYVRLTRDSTPEYIKCREFNRRLVPFIGELLA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3sol_A/protein/3sol_A.pdb

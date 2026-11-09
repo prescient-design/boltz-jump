@@ -9,6 +9,7 @@ requires-python = ">=3.10,<3.13"
 description = "Walk-jump sampling for conformational ensemble generation with Boltz-2"
 readme = "README.md"
 dependencies = [
+    "python-dotenv>=1.0",
     "mdtraj>=1.11.0",
     "torch>=2.2",
     "numpy>=1.26,<2.0",

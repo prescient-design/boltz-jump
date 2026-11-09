@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GMQNRGQEAATYQAVLKVDNKVIKVFDLKKDGPHYTYKYEAKDGDYNLIEVDGDRIRVKEANCADLVDVRRGWISKPGETPIACLPHNLFITVEASDGSEDGSLIY
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4obi_A/protein/4obi_A.pdb

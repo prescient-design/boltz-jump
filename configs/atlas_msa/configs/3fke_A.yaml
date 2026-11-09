@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GHMGKPDISAKDLRNIMYDHLPGFGTAFHQLVQVICKLGKDSNSLDIIHAEFQASLAEGDSPQCALIQITKRVPIFQDAAPPVIHIRSRGDIPRACQKSLRPVPPSPKIDRGWVCVFQLQDGKTLGLKI
-      msa: <ATLAS_MSA_DIR>/3fke_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3fke_A/protein/3fke_A.pdb

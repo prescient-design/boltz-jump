@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: GSHMATIRNLKIKTSTCKRIVKELHSYEKEVEREAAKTADMKDKGADPYDLKQQENVLGESRMMIPDCHKRLESALADLKSTLAELEETDEKEGPEIEDAKKTVADVEKQFPTEDA
-      msa: <ATLAS_MSA_DIR>/3mxz_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3mxz_A/protein/3mxz_A.pdb

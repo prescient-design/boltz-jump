@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: SAPADYFRILVQQFEVQLQQYRQQIEELENHLATQANNSHITPQDLSMAMQKIYQTFVALAAQLQSIHENVKVLKEQYLGYRKMFLGDA
-
-initial_structure:
-  pdb: <ATLAS_DIR>/4jo7_C/protein/4jo7_C.pdb

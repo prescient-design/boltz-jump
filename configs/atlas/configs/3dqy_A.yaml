@@ -1,8 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TWTYILRQGDLPPGEMQRYEGGPEPVMVCNVDGEFFAVQDTCTHGDWALSDGYLDGDIVECTLHFGKFCVRTGKVKALPACKPIKVFPIKVEGDEVHVDLDNGELK
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3dqy_A/protein/3dqy_A.pdb

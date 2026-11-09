@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MARIRHEKEKLLADLDWEIGEIAQYTPLIVDFLVPDDILAMAADGLTPELKEKIQNEIIENHIALMALEEYSSLEHHHHHH
-      msa: <ATLAS_MSA_DIR>/3t4r_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/3t4r_A/protein/3t4r_A.pdb

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: MRRRYRVVVERDEEGYFVAHVPELHAHTQAQSFEELLRRLQEAIAVSLEEERAEVVGLEGALEIEAA
-      msa: <ATLAS_MSA_DIR>/2yzt_A.a3m
-
-initial_structure:
-  pdb: <ATLAS_DIR>/2yzt_A/protein/2yzt_A.pdb

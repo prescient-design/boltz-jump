@@ -3,11 +3,8 @@
 #SBATCH --output=boltz_jump_conformix.log
 #SBATCH --error=logs/boltz_jump_conformix_%A_%a.err
 #SBATCH --time=02:00:00
-#SBATCH --account=ai4dd
-#SBATCH --partition=gpu
 #SBATCH --mem=0
 #SBATCH --cpus-per-task=10
-#SBATCH --gres=gpu:a10g:1
 #SBATCH --array=0-103            # 38 + 15 + 34 + 15 = 102 (0-indexed)
 
 # ============================================================
