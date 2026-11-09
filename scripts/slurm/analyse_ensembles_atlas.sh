@@ -54,6 +54,13 @@ MODELS=(
     "boltz2_noised_seed_sde"
     "boltz2_noised_seed_ode"
     "boltz2_noised_seed_one_step"
+    "boltz2_jump_empty_msa_boltz2_init_d1_v2"
+    "boltz2_noised_seed_sde_v2"
+    "boltz2_noised_seed_ode_v2"
+    "boltz2_jump_msa_d1_rep1"
+    "boltz2_jump_msa_d1_rep2"
+    "boltz2_walk_denoise_n10"
+    "boltz2_walk_denoise_n53"
 )
 
 # ===================================================================

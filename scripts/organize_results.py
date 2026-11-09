@@ -103,7 +103,9 @@ def process_experiment(results_subdir, organized_dataset, model_name, prefix, ma
             continue
         # Walk-denoise runs ("..._f=0.1_n=10_<target>") share the single-step
         # prefix; only match them when the prefix asks for them explicitly.
-        if "n=" not in prefix and result_dir[len(prefix):].lstrip("_").startswith("n="):
+        # (Noised-seed directories also contain "_n=<samples>_" and are not affected.)
+        if (prefix.startswith("boltz_jump_results") and "n=" not in prefix
+                and result_dir[len(prefix):].lstrip("_").startswith("n=")):
             continue
 
         predictions_dir = os.path.join(dataset_dir, result_dir, "predictions")
