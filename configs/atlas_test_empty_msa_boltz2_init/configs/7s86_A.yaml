@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '1'
-      sequence: TAVPRDVNGGTPPKSCSSGPVYCCNKTEDSKHLDKGTTALLGLLNIKIGDLKDLVGLNCSPLSVIGVGGNSCSAQTVCCTNTYQHGLVNVGCTPINIGL
-      msa: empty
-
-initial_structure:
-  cif: ${RESULTS_DIR}/atlas_test_msa_no_init/boltz_jump_results_s=2.0_d=1.0_f=0.1_7s86_A/predictions/7s86_A/7s86_A_model_0.cif

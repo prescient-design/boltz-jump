@@ -83,11 +83,17 @@ python scripts/data/download_mdcath.py --convert-dir $MDCATH_DIR
 ```
 
 MSAs for all targets are included in the Zenodo archive (unpack to `$ATLAS_MSA_DIR`
-and `$MDCATH_MSA_DIR`). Then check that every file referenced by the configs exists:
+and `$MDCATH_MSA_DIR`). Then generate the input configs (one directory per MSA and
+initial-structure condition, plus the ConforMix benchmark) from the sequences in
+`data/splits/` and `conformix_benchmark/`, and check that every file they reference exists:
 
 ```bash
+python scripts/data/make_configs.py
 python scripts/data/check_configs.py configs/atlas_test_* configs/mdcath_*
 ```
+
+The `*_boltz2_init` configs point to the seeds written by the `*_msa_no_init` runs,
+so run those first.
 
 ### 2. Sampling
 

@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: EFQINEQVLACWSDCRFYPAKVTAVNKDGTYTVKFYDGVVQTVKHIHVKAFS
-      msa: empty
-
-initial_structure:
-  pdb: ${MDCATH_DIR}/3qiiA00.pdb

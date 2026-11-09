@@ -1,9 +1,0 @@
-version: 1
-sequences:
-  - protein:
-      id: '01'
-      sequence: ELPLILADDGTYEITKLNGGRRFLFRMKNLGIESGKKIQVSGRRYYIEGREIDLGYGEATKIWVRRVSDAGEESHPQK
-      msa: empty
-
-initial_structure:
-  cif: ${RESULTS_DIR}/mdcath_msa_no_init/boltz_jump_results_s=2.0_d=1.0_f=0.1_2k5iA02/predictions/2k5iA02/2k5iA02_model_0.cif
