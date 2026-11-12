@@ -1790,6 +1790,12 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
             mask=mask,
         )
 
+    # Structures written by Boltz name SMILES-defined ligands LIG{n}; those
+    # molecules live in extra_mols, not in the CCD. Merge the two so a Boltz
+    # prediction with a SMILES ligand can be used as an initial/final structure.
+    struct_mols = dict(ccd)
+    struct_mols.update(extra_mols)
+
     # Initial structure for sampling.
     initial_structure_info = schema.get("initial_structure", None)
     if initial_structure_info is not None:
@@ -1806,7 +1812,7 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
         if pdb:
             initial_structure = parse_pdb(
                 path,
-                mols=ccd,
+                mols=struct_mols,
                 moldir=mol_dir,
                 use_assembly=False,
                 compute_interfaces=False,
@@ -1814,7 +1820,7 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
         else:
             initial_structure = parse_mmcif(
                 path,
-                mols=ccd,
+                mols=struct_mols,
                 moldir=mol_dir,
                 use_assembly=False,
                 compute_interfaces=False,
@@ -1877,7 +1883,7 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
         if pdb:
             final_structure = parse_pdb(
                 path,
-                mols=ccd,
+                mols=struct_mols,
                 moldir=mol_dir,
                 use_assembly=False,
                 compute_interfaces=False,
@@ -1885,7 +1891,7 @@ def parse_boltz_schema(  # noqa: C901, PLR0915, PLR0912
         else:
             final_structure = parse_mmcif(
                 path,
-                mols=ccd,
+                mols=struct_mols,
                 moldir=mol_dir,
                 use_assembly=False,
                 compute_interfaces=False,
