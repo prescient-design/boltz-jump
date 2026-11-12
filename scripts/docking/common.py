@@ -366,5 +366,7 @@ class PoseScorer:
                 fitted, fit_rmsd = self.ideal.fit(aligned[self.ideal_map])
                 best["ideal_rmsd"] = self._best(self.ideal_crystal_maps, fitted)
                 best["ideal_fit_rmsd"] = fit_rmsd
+                # Idealized pose in the crystal frame, for label-free selection.
+                best["ideal_xyz"] = fitted
         del best["R"], best["t"]
         return best

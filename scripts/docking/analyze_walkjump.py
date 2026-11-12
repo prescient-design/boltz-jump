@@ -37,7 +37,7 @@ def target_info(dataset, root, name):
         entry = json.load(open(root / "manifest.json"))["entries"][name]
         ref = Reference.posebusters(docking_dir() / "data/posebusters/posebusters_benchmark_set" / name)
         return name, ref, entry["ligand_smiles"]
-    system, start = name.split("__")
+    system, start = name.rsplit("__", 1)
     row = next(r for r in csv.DictReader(open(root / "starts.csv")) if r["system"] == system and r["start"] == start)
     gt = docking_dir() / "data/runs_n_poses/ground_truth" / system
     return system, Reference.runs_n_poses(gt, row["crystal_ligand_chain"]), row["smiles"]
@@ -57,13 +57,15 @@ def analyze_run(task):
     scorer = PoseScorer(ref, top, _IDEAL[smiles])
     start = scorer.score(md.load(str(top)).xyz[0] * 10.0)
     traj = md.load(str(pred / f"{name}_model_0.xtc"), top=str(top))
-    rows = []
+    rows, poses = [], []
     for k in range(traj.n_frames):
         s = scorer.score(traj.xyz[k] * 10.0, idealize=True)
+        pose = s.pop("ideal_xyz", None)
         rows.append({"target": target, "start": name, "sigma": sigma, "seed": seed, "frame": k,
                      "start_lig_rmsd": round(start["lig_rmsd"], 3), **{
                          key: (round(v, 3) if isinstance(v, float) else v) for key, v in s.items()}})
-    return name, sigma, seed, rows
+        poses.append(pose)
+    return name, sigma, seed, rows, poses
 
 
 def main():
@@ -77,10 +79,18 @@ def main():
     tasks = [(args.dataset, root, *line.rstrip("\n").split("\t")) for line in open(root / args.tasks_name)]
     with Pool(args.workers) as pool:
         results = pool.map(analyze_run, tasks, chunksize=1)
-    missing = [(n, s, sd) for n, s, sd, rows in results if rows is None]
+    missing = [(n, s, sd) for n, s, sd, rows, _ in results if rows is None]
     if missing:
         print(f"{len(missing)} runs missing, e.g. {missing[:5]}")
-    frames = [r for *_, rows in results if rows for r in rows]
+    frames, pose_of = [], {}
+    for _, _, _, rows, poses in results:
+        if not rows:
+            continue
+        for r, pose in zip(rows, poses):
+            key = (r["target"], float(r["sigma"]), r["start"], r["frame"])
+            if pose is not None:
+                pose_of[key] = pose
+            frames.append(r)
     out = root / "analysis"
     out.mkdir(exist_ok=True)
     fields = ["target", "start", "sigma", "seed", "frame", "start_lig_rmsd", "lig_rmsd", "pocket_ca", "jaccard",
@@ -90,6 +100,23 @@ def main():
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(frames)
+
+    def medoid_rmsd(rs):
+        """RMSD of the medoid pose: the valid pose closest to all the others.
+
+        This is a label-free selector -- it uses only agreement between sampled
+        poses, never the crystal structure -- so it measures what is actually
+        deployable, unlike the oracle.
+        """
+        pts = [(r, pose_of.get((r["target"], float(r["sigma"]), r["start"], r["frame"])))
+               for r in rs]
+        pts = [(r, p) for r, p in pts if p is not None]
+        if not pts:
+            return None, None
+        xyz = np.stack([p for _, p in pts])
+        d = np.sqrt((((xyz[:, None] - xyz[None]) ** 2).sum(-1)).mean(-1))
+        i = int(d.sum(1).argmin())
+        return round(float(pts[i][0]["ideal_rmsd"]), 3), len(pts)
 
     by_target = defaultdict(list)
     for r in frames:
@@ -102,7 +129,8 @@ def main():
                         "best_raw_rmsd": min(r["lig_rmsd"] for r in rs),
                         "best_valid_rmsd": min(r["lig_rmsd"] for r in valid) if valid else None,
                         "best_ideal_rmsd": min(r["ideal_rmsd"] for r in valid) if valid else None,
-                        "frac_valid": round(len(valid) / len(rs), 3)})
+                        "frac_valid": round(len(valid) / len(rs), 3),
+                        "medoid_rmsd": medoid_rmsd(valid)[0]})
     with open(out / "targets.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(targets[0]))
         w.writeheader()
@@ -115,7 +143,9 @@ def main():
     sigmas = []
     for sigma, ts in sorted(by_sigma.items()):
         best = np.array([t["best_ideal_rmsd"] if t["best_ideal_rmsd"] is not None else np.inf for t in ts])
+        med = np.array([t["medoid_rmsd"] if t["medoid_rmsd"] is not None else np.inf for t in ts])
         sigmas.append({"sigma": sigma, "n_targets": len(ts), "rescued": int((best < SUCCESS_RMSD_A).sum()),
+                       "rescued_medoid": int((med < SUCCESS_RMSD_A).sum()),
                        "median_best_ideal_rmsd": round(float(np.median(best)), 2),
                        "mean_frac_valid": round(float(np.mean([t["frac_valid"] for t in ts])), 3)})
     with open(out / "sigmas.csv", "w", newline="") as f:
