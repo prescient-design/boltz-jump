@@ -90,10 +90,14 @@ def main():
     df = pd.DataFrame(rows)
     out = HERE / "eval_kabsch" / f"diversity_{args.split}.csv"
     df.to_csv(out, index=False)
-    common = df.dropna(subset=["best_frac"]).groupby("target").strategy.nunique()
-    keep = common[common == len(strategies)].index  # only targets every strategy covers
-    d = df[df.target.isin(keep)]
-    print(f"{len(keep)} {args.split} targets covered by all {len(strategies)} strategies\n")
+    scored = df.dropna(subset=["best_frac"])
+    run = sorted(scored.strategy.unique())  # strategies actually run on this split
+    # A protein can appear in two subsets with different reference states, so a
+    # benchmark system is (subset, target), not the target name alone.
+    common = scored.groupby(["subset", "target"]).strategy.nunique()
+    keep = set(common[common == len(run)].index)  # systems every strategy covers
+    d = scored[[k in keep for k in zip(scored.subset, scored.target)]]
+    print(f"{len(keep)} {args.split} systems covered by all {len(run)} strategies run on this split: {run}\n")
     print(f"{'strategy':<20}{'best@50%':>10}{'alt@50%':>10}{'valid frames':>14}")
     for strategy, g in d.groupby("strategy"):
         print(f"{strategy:<20}{(g.best_frac <= 0.5).mean():>10.2f}{(g.alt_frac <= 0.5).mean():>10.2f}"

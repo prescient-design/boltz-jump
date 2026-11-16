@@ -25,8 +25,10 @@ Native-exchange experiments label amides STRONG or MEDIUM protection. The XML
 does not list which other amides were probed, so an unlabelled residue may be
 fast-exchanging or simply unmeasured; only labelled residues are compared. The
 test is the AUC for STRONG above MEDIUM (equivalently a rank test on the two
-levels). The AUC of labelled versus unlabelled residues is reported as a weaker,
-secondary check, since the unlabelled set mixes fast and unmeasured amides.
+levels). The secondary check is protected (STRONG or MEDIUM) above the rest:
+above WEAK residues where the entry reports them (probed, little protection),
+otherwise above unlabelled residues, a weaker comparison because that set mixes
+fast-exchanging and unmeasured amides.
 
 Usage:
     python scripts/hdx/protection_factors.py --entry STF0040.xml \
@@ -125,18 +127,20 @@ def auc(pos, neg):
 
 
 def compare(pred, levels):
-    """AUCs: STRONG above MEDIUM (primary), labelled above unlabelled (secondary)."""
+    """AUCs: STRONG above MEDIUM (primary); protected above WEAK, or above unlabelled (secondary)."""
     pred = pred.copy()
     pred["hdx_level"] = pred.residue.map(lambda i: levels.get(i, "unlabelled"))
-    strong = pred[pred.hdx_level == "STRONG"].lnP
-    medium = pred[pred.hdx_level == "MEDIUM"].lnP
-    labelled = pred[pred.hdx_level != "unlabelled"].lnP
-    unlabelled = pred[pred.hdx_level == "unlabelled"].lnP
-    # Some entries report only one protection class; the primary test then does not apply.
-    a1, p1 = auc(strong, medium) if len(strong) and len(medium) else (float("nan"), float("nan"))
-    a2, p2 = auc(labelled, unlabelled)
-    return pred, {"auc_strong_vs_medium": a1, "p1": p1, "auc_labelled_vs_unlabelled": a2, "p2": p2,
-                  "n_strong": len(strong), "n_medium": len(medium), "n_unlabelled": len(unlabelled)}
+    lv = pred.hdx_level
+    strong, medium = pred[lv == "STRONG"].lnP, pred[lv == "MEDIUM"].lnP
+    protected = pred[lv.isin(["STRONG", "MEDIUM"])].lnP
+    weak, unlabelled = pred[lv == "WEAK"].lnP, pred[lv == "unlabelled"].lnP
+    negative, versus = (weak, "WEAK") if len(weak) else (unlabelled, "unlabelled")
+    nan = (float("nan"), float("nan"))
+    a1, p1 = auc(strong, medium) if len(strong) and len(medium) else nan
+    a2, p2 = auc(protected, negative) if len(protected) and len(negative) else nan
+    return pred, {"auc_strong_vs_medium": a1, "p1": p1, "auc_protected_vs_rest": a2, "p2": p2,
+                  "secondary_versus": versus, "n_strong": len(strong), "n_medium": len(medium),
+                  "n_weak": len(weak), "n_unlabelled": len(unlabelled)}
 
 
 def main():
@@ -171,10 +175,11 @@ def main():
     pred, stats = compare(pred, levels)
     if args.out:
         pred.to_csv(args.out, index=False)
-    print(f"{traj.n_frames} frames; STRONG {stats['n_strong']}, MEDIUM {stats['n_medium']}, "
+    print(f"{traj.n_frames} frames; STRONG {stats['n_strong']}, MEDIUM {stats['n_medium']}, WEAK {stats['n_weak']}, "
           f"unlabelled {stats['n_unlabelled']}; probes per experiment {probes}")
     print(f"  AUC STRONG > MEDIUM (primary):          {stats['auc_strong_vs_medium']:.2f} (p={stats['p1']:.2g})")
-    print(f"  AUC labelled > unlabelled (secondary):  {stats['auc_labelled_vs_unlabelled']:.2f} (p={stats['p2']:.2g})")
+    print(f"  AUC protected > {stats['secondary_versus']} (secondary): "
+          f"{stats['auc_protected_vs_rest']:.2f} (p={stats['p2']:.2g})")
 
 
 if __name__ == "__main__":
