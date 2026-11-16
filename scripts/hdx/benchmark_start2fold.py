@@ -43,6 +43,7 @@ WJ_ARGS = ("--walk_jump_sigma 2.0 --walk_jump_delta 1.0 --walk_jump_friction 0.1
 
 
 def auc(x, y):
+    x, y = np.asarray(x, dtype=float), np.asarray(y, dtype=float)
     return float((x[:, None] > y[None]).mean() + 0.5 * (x[:, None] == y[None]).mean())
 
 
