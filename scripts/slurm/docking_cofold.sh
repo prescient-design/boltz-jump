@@ -35,12 +35,23 @@ OUT_DIR="${DOCKING_DIR}/posebusters/cofold${RUN_TAG:-}"
 mkdir -p ${OUT_DIR}
 
 CMD="boltz predict ${CONFIG_FILE} --no_kernels --override --out_dir ${OUT_DIR} \
-    --diffusion_samples ${DIFFUSION_SAMPLES:-5} --max_parallel_samples 5 --recycling_steps 3 \
+    --diffusion_samples ${DIFFUSION_SAMPLES:-5} --max_parallel_samples ${MAX_PARALLEL:-2} --recycling_steps 3 \
     --sampling_steps 200 --output_format mmcif --seed ${SEED:-0}"
+NAME=$(basename "${CONFIG_FILE}" .yaml)
 echo "Running command: ${CMD}"
-if ${CMD}; then
-    echo "Successfully processed $(basename ${CONFIG_FILE} .yaml)"
-else
-    echo "Failed to process $(basename ${CONFIG_FILE} .yaml)"
+LOG=$(mktemp)
+set -o pipefail   # otherwise the status below is tee's, not the command's
+if ! ${CMD} 2>&1 | tee "${LOG}"; then
+    echo "Failed to process ${NAME}"
     exit 1
 fi
+# boltz exits 0 even when an example fails (e.g. GPU OOM), so check its report
+if grep -qE "Number of failed examples: [1-9]" "${LOG}"; then
+    echo "Failed to process ${NAME}: boltz reported failed examples"
+    exit 1
+fi
+if [ -z "$(ls -d ${OUT_DIR}/boltz_results_*${NAME}/predictions/${NAME} 2>/dev/null)" ]; then
+    echo "Failed to process ${NAME}: no predictions written"
+    exit 1
+fi
+echo "Successfully processed ${NAME}"
