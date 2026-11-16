@@ -11,6 +11,9 @@
 #   <config>  <out_dir>  <seed>  <extra boltz-jump arguments>
 #   TASKS=conformix_benchmark/diversity_tasks_dev.tsv \
 #       scripts/slurm/submit.sh gpu scripts/slurm/conformix_diversity.sh --array=0-<n-1>
+# When GPUs are contended, ACCELERATOR=cpu runs on the CPU partition instead:
+#   ACCELERATOR=cpu TASKS=... scripts/slurm/submit.sh cpu scripts/slurm/conformix_diversity.sh \
+#       --cpus-per-task=16 --mem=64G --time=12:00:00 --array=0-<n-1>
 
 mkdir -p logs
 cd "${SLURM_SUBMIT_DIR:-$PWD}"
@@ -26,7 +29,7 @@ IFS=$'\t' read -r CONFIG_FILE OUT_DIR RUN_SEED EXTRA <<< "${LINE}"
 NAME=$(basename "${CONFIG_FILE}" .yaml)
 mkdir -p "${OUT_DIR}"
 
-CMD="boltz-jump predict ${CONFIG_FILE} --out_dir ${OUT_DIR} --seed ${RUN_SEED} ${EXTRA}"
+CMD="boltz-jump predict ${CONFIG_FILE} --out_dir ${OUT_DIR} --seed ${RUN_SEED} --accelerator ${ACCELERATOR:-gpu} ${EXTRA}"
 echo "Running command: ${CMD}"
 set -o pipefail
 if ! ${CMD}; then
