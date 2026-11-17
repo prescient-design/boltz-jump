@@ -90,10 +90,11 @@ def ensembles(out):
 
 
 def noised_seed(out):
+    # The three noised-seed baselines are one family: shades of green, dark to light.
     models = [("Boltz-2 Jump (MSA, δ=1)", "Boltz-Jump (walk + jump)", BLUE),
-              ("Noised Seed SDE (fixed)", "noise seed, denoise: SDE", ORANGE),
-              ("Noised Seed ODE (fixed)", "noise seed, denoise: ODE", AQUA),
-              ("Noised Seed (1-step)", "noise seed, denoise: 1 step", YELLOW)]
+              ("Noised Seed SDE (fixed)", "noise seed, denoise: SDE", "#0b6b47"),
+              ("Noised Seed ODE (fixed)", "noise seed, denoise: ODE", "#1baf7a"),
+              ("Noised Seed (1-step)", "noise seed, denoise: 1 step", "#8fdcb8")]
     metrics = METRICS
     fig, axes = plt.subplots(1, 2, figsize=(14, 4.6), facecolor=SURFACE)
     for ax, (ds, title) in zip(axes, [("atlas", "ATLAS"), ("mdcath", "mdCATH, 320 K")]):
