@@ -8,7 +8,7 @@
     figures/talk/1d_convergence.png RMWD to the MD reference vs number of samples
                                     (from scripts/slurm/convergence.sh; _all = every heavy atom)
     figures/talk/2_ligand.png       Runs N' Poses: rescue vs seed distance (oracle)
-    figures/talk/4_hdx.png          Start2Fold: AUC gain over the static structure, per protein
+    figures/talk/4_hdx.png          Start2Fold: STRONG > MEDIUM AUC gain over the static structure, per protein
 
 Folding figures (3): figures/talk/3_guidance_sweep.png is written by
 scripts/hdx/plot_guidance_sweep.py; the others are in figures/folding/.
@@ -252,8 +252,8 @@ def hdx(out, hdx_dir):
     series = []
     for name, label, color in [("native", "Boltz-Jump", BLUE), ("repel_h0.15", "Boltz-Jump +\nRMSD diversity", AQUA)]:
         d = pd.read_csv(s2f / f"benchmark_{name}_vs_static.csv")
-        cols = [c for c in d if c.endswith("_gain")]
-        per = d.set_index("uniprot")[cols].stack().dropna().groupby(level=0).mean()
+        # STRONG > MEDIUM only (the pair nearly every protein has); entries of one protein averaged
+        per = d.dropna(subset=["strong_vs_medium_gain"]).groupby("uniprot")["strong_vs_medium_gain"].mean()
         series.append((label, color, per))
     fig, ax = plt.subplots(figsize=(11, 5), facecolor=SURFACE)
     style(ax, grid="x")
@@ -267,10 +267,11 @@ def hdx(out, hdx_dir):
     ax.set_yticks(range(len(series)))
     ax.set_yticklabels([s[0] for s in series], color=INK2)
     ax.set_xlim(-0.3, 0.45)
+    ax.set_title(f"Native-state HDX protection (Start2Fold, {len(series[0][2])} proteins)",
+                 color=INK, fontsize=18, loc="left")
     ax.set_xlabel("AUC gain over the static crystal structure (per protein)", color=INK2)
-    ax.set_title("Native-state HDX protection (Start2Fold, 22 proteins)", color=INK, fontsize=18, loc="left")
-    caption(fig, -0.05, "Ranking measured protection classes (STRONG > MEDIUM > WEAK) with a Best-Vendruscolo "
-             "protection model averaged over the ensemble.", ha="center", color=INK2, fontsize=12.5)
+    caption(fig, -0.05, "AUC: how often a STRONG-protection amide is predicted more protected than a MEDIUM one "
+            "(Best-Vendruscolo ln P, averaged over the ensemble); 0.5 = chance.", ha="center", color=INK2, fontsize=12.5)
     fig.tight_layout()
     fig.savefig(out, dpi=200, bbox_inches="tight", facecolor=SURFACE)
     plt.close(fig)
