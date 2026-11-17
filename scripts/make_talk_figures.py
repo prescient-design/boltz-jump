@@ -7,11 +7,11 @@
     figures/talk/1d_convergence_nfe.png the same against network function evaluations
     figures/talk/1d_convergence.png RMWD to the MD reference vs number of samples
                                     (from scripts/slurm/convergence.sh; _all = every heavy atom)
-    figures/talk/2_ligand.png       Runs N' Poses: rescue vs seed distance; oracle vs blind
+    figures/talk/2_ligand.png       Runs N' Poses: rescue vs seed distance (oracle)
     figures/talk/4_hdx.png          Start2Fold: AUC gain over the static structure, per protein
 
-Folding figures (3) come from scripts/hdx/plot_guidance_sweep.py and the
-rendered structures in figures/folding/.
+Folding figures (3): figures/talk/3_guidance_sweep.png is written by
+scripts/hdx/plot_guidance_sweep.py; the others are in figures/folding/.
 
 Usage:
     python scripts/make_talk_figures.py --hdx_dir $HDX_DIR --docking_dir $DOCKING_DIR
@@ -225,8 +225,7 @@ def ligand(out, docking_dir):
     t = pd.read_csv(Path(docking_dir) / "runs_n_poses" / "analysis" / "targets.csv")
     t = t[t.sigma == 4.0].dropna(subset=["best_ideal_rmsd"])
     seed, best = t.best_start_lig_rmsd.values, t.best_ideal_rmsd.values
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5), facecolor=SURFACE, gridspec_kw={"width_ratios": [1.1, 1]})
-    ax = axes[0]
+    fig, ax = plt.subplots(figsize=(8, 5), facecolor=SURFACE)
     style(ax)
     bands = [("< 4 Å", seed < 4), ("4-7 Å", (seed >= 4) & (seed < 7)), ("> 7 Å", seed >= 7)]
     for k, (label, m) in enumerate(bands):
@@ -235,25 +234,14 @@ def ligand(out, docking_dir):
         ax.text(k, ok / n + 0.02, f"{ok}/{n}", ha="center", color=INK2, fontsize=16)
     ax.set_xticks(range(3))
     ax.set_xticklabels([b for b, _ in bands], color=INK2)
-    ax.set_xlabel("distance of the best co-folded seed from the crystal pose", color=INK2)
+    ax.set_xlabel("distance of the best co-folded seed\nfrom the crystal pose", color=INK2)
     ax.set_ylabel("fraction rescued (< 2 Å)", color=INK2)
     ax.set_ylim(0, 0.8)
-    ax.set_title("Walk-jump relaxes poses locally", color=INK, fontsize=18, loc="left")
-    ax = axes[1]
-    style(ax)
-    cats = [("co-folding\n(25 samples)", 0, MUTED), ("walk-jump\n1 seed", 12, BLUE),
-            ("walk-jump\n5 diverse seeds", int((best < 2).sum()), BLUE), ("blind pick\n(medoid)", 0, ORANGE)]
-    for k, (label, v, c) in enumerate(cats):
-        ax.bar(k, v, 0.6, color=c, zorder=2)
-        ax.text(k, v + 0.6, f"{v}/81", ha="center", color=INK2, fontsize=16)
-    ax.set_xticks(range(len(cats)))
-    ax.set_xticklabels([c[0] for c in cats], color=INK2, fontsize=13)
-    ax.set_ylabel("targets with a pose < 2 Å", color=INK2)
-    ax.set_ylim(0, 30)
-    ax.set_title("Sampling vs selection", color=INK, fontsize=18, loc="left")
-    caption(fig, -0.03, "Runs N' Poses: all 81 single-ligand co-folding failures (right pocket, wrong pose). "
-             "σ = 4 Å, 200 frames per seed. Counts are oracle (best pose chosen with the crystal) except the blind pick.",
-             ha="center", color=INK2, fontsize=12.5)
+    ax.set_title(f"Boltz-Jump relaxes poses locally: {int((best < 2).sum())}/{len(best)} rescued",
+                 color=INK, fontsize=18, loc="left")
+    caption(fig, -0.03, f"Runs N' Poses: all {len(best)} single-ligand co-folding failures (right pocket, wrong pose). "
+            "σ = 4 Å, 5 seeds × 200 frames; oracle (best pose chosen with the crystal).",
+            ha="center", color=INK2, fontsize=12.5)
     fig.tight_layout()
     fig.savefig(out, dpi=200, bbox_inches="tight", facecolor=SURFACE)
     plt.close(fig)
@@ -262,7 +250,7 @@ def ligand(out, docking_dir):
 def hdx(out, hdx_dir):
     s2f = Path(hdx_dir) / "start2fold"
     series = []
-    for name, label, color in [("native", "walk-jump", BLUE), ("repel_h0.15", "walk-jump + RMSD diversity", AQUA)]:
+    for name, label, color in [("native", "Boltz-Jump", BLUE), ("repel_h0.15", "Boltz-Jump +\nRMSD diversity", AQUA)]:
         d = pd.read_csv(s2f / f"benchmark_{name}_vs_static.csv")
         cols = [c for c in d if c.endswith("_gain")]
         per = d.set_index("uniprot")[cols].stack().dropna().groupby(level=0).mean()
