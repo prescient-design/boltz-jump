@@ -887,6 +887,13 @@ def format_model_name(model: str) -> str:
         'boltz2_msa_subsample_32': 'Boltz-2 MSA Subsample 32',
         'boltz2_msa_subsample_64': 'Boltz-2 MSA Subsample 64',
         'boltz2_full_msa': 'Boltz-2 Full MSA',
+        'boltz2_jump_empty_msa_boltz2_init_d1_v2': 'Boltz-2 Jump (no MSA, Boltz-2 + MSA init, δ=1)',
+        'boltz2_noised_seed_sde_v2': 'Noised Seed SDE (fixed)',
+        'boltz2_noised_seed_ode_v2': 'Noised Seed ODE (fixed)',
+        'boltz2_jump_msa_d1_rep1': 'Boltz-2 Jump (MSA, δ=1, rep 1)',
+        'boltz2_jump_msa_d1_rep2': 'Boltz-2 Jump (MSA, δ=1, rep 2)',
+        'boltz2_walk_denoise_n10': 'Boltz-2 Walk-Denoise (MSA, δ=1, N=10)',
+        'boltz2_walk_denoise_n53': 'Boltz-2 Walk-Denoise (MSA, δ=1, N=53)',
     }.get(model, model)
 
 def main():
@@ -932,6 +939,13 @@ def main():
         'AlphaFlow MD Base',
         'AlphaFlow MD Distilled',
         'BioEmu',
+        'Boltz-2 Jump (no MSA, Boltz-2 + MSA init, δ=1)',
+        'Noised Seed SDE (fixed)',
+        'Noised Seed ODE (fixed)',
+        'Boltz-2 Jump (MSA, δ=1, rep 1)',
+        'Boltz-2 Jump (MSA, δ=1, rep 2)',
+        'Boltz-2 Walk-Denoise (MSA, δ=1, N=10)',
+        'Boltz-2 Walk-Denoise (MSA, δ=1, N=53)',
     ]
 
     # Load all analysis files using directory structure
