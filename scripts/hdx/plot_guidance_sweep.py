@@ -51,11 +51,15 @@ def main():
     parser.add_argument("--hdx_dir", required=True)
     parser.add_argument("--out", required=True)
     parser.add_argument("--stride", type=int, default=10)
+    parser.add_argument("--proteins", nargs="+", default=[p for p, _ in PROTEINS], help="PDB ids, one panel each")
     args = parser.parse_args()
     h = Path(args.hdx_dir)
 
-    fig, axes = plt.subplots(1, 2, figsize=(13, 4.6), sharey=True, facecolor=SURFACE)
-    for ax, (p, title) in zip(axes, PROTEINS):
+    proteins = [(p, t) for p, t in PROTEINS if p in args.proteins]
+    fig, axes = plt.subplots(1, len(proteins), figsize=(6.5 * len(proteins) + 1.5, 4.6), sharey=True,
+                             facecolor=SURFACE, squeeze=False)
+    axes = axes[0]
+    for ax, (p, title) in zip(axes, proteins):
         ref = md.load(str(h / "structures" / f"{p}.cif"))
         ref = ref.atom_slice(ref.topology.select("protein"))
         ii, jj, d0 = native_contacts(ref)
@@ -82,10 +86,16 @@ def main():
         ax.tick_params(colors=INK2, labelsize=15)
     axes[0].set_ylabel("native contacts Q\n(median of 3 starts)", color=INK2, fontsize=16)
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="upper center", ncol=6, frameon=False, fontsize=14, labelcolor=INK2,
-               bbox_to_anchor=(0.5, 1.04))
-    fig.suptitle("Folding from random coil: guidance towards the crystal structure at several weights",
-                 color=INK, fontsize=18, y=1.1)
+    if len(proteins) > 1:
+        fig.legend(handles, labels, loc="upper center", ncol=6, frameon=False, fontsize=14, labelcolor=INK2,
+                   bbox_to_anchor=(0.5, 1.04))
+        fig.suptitle("Folding from random coil: guidance towards the crystal structure at several weights",
+                     color=INK, fontsize=18, y=1.1)
+    else:
+        axes[0].legend(handles, labels, loc="center left", bbox_to_anchor=(1.02, 0.5), frameon=False, fontsize=14,
+                       labelcolor=INK2, title="guidance", title_fontsize=14, alignment="left")
+        axes[0].set_title(f"{proteins[0][1]} from random coil,\nguided towards the crystal structure",
+                          color=INK, fontsize=17, loc="left")
     fig.tight_layout()
     fig.savefig(args.out, dpi=180, bbox_inches="tight", facecolor=SURFACE)
     print(f"-> {args.out}")
