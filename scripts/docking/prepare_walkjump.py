@@ -30,6 +30,7 @@ def main():
     parser.add_argument("dataset", choices=["posebusters", "runs_n_poses"])
     parser.add_argument("--sigmas", type=float, nargs="+", default=DEFAULT_SIGMAS)
     parser.add_argument("--seeds", type=int, default=3)
+    parser.add_argument("--n_starts", type=int, default=5, help="posebusters: co-folded samples used as starts")
     parser.add_argument("--tasks_name", default="walkjump_tasks.tsv")
     args = parser.parse_args()
 
@@ -37,8 +38,19 @@ def main():
     cfg_dir = root / "walkjump_configs"
     cfg_dir.mkdir(parents=True, exist_ok=True)
     if args.dataset == "posebusters":
-        starts = [{"name": r["entry"], "cofold_config": root / "cofold_configs" / f"{r['entry']}.yaml",
-                   "cif": r["seed_cif"]} for r in csv.DictReader(open(root / "failures.csv"))]
+        # Every co-folded sample of a failure is a start (5 per entry), ranked by confidence, so
+        # the protocol matches Runs N' Poses' diverse starts.
+        failures = {r["entry"] for r in csv.DictReader(open(root / "failures.csv"))}
+        samples = {}
+        for r in csv.DictReader(open(root / "cofold_scores.csv")):
+            if r["entry"] in failures:
+                samples.setdefault(r["entry"], []).append(r)
+        starts = []
+        for entry, rows in sorted(samples.items()):
+            rows.sort(key=lambda r: -float(r["confidence_score"] or 0.0))
+            for k, r in enumerate(rows[:args.n_starts]):
+                starts.append({"name": f"{entry}__start{k}", "cofold_config": root / "cofold_configs" / f"{entry}.yaml",
+                               "cif": r["cif"]})
     else:
         starts = [{"name": f"{r['system']}__{r['start']}", "cofold_config": Path(r["config"]), "cif": r["cif"]}
                   for r in csv.DictReader(open(root / "starts.csv"))]

@@ -13,6 +13,7 @@
 #   TASKS=$DOCKING_DIR/posebusters/walkjump_tasks.tsv \
 #       scripts/slurm/submit.sh gpu scripts/slurm/docking_walkjump.sh --array=0-<n-1>
 # The step size is 0.2 sigma and the friction 2.0, with 200 frames per run.
+# ACCELERATOR=cpu runs on the CPU partition when GPUs are contended.
 
 mkdir -p logs
 
@@ -31,7 +32,7 @@ mkdir -p ${OUT_DIR}
 
 CMD="boltz-jump predict ${CONFIG_FILE} --no_kernels --override --out_dir ${OUT_DIR} \
     --walk_jump_sigma ${SIGMA} --walk_jump_delta ${DELTA} --walk_jump_friction 2.0 \
-    --walk_jump_steps 200 --walk_jump_save_every_n_steps 1 --seed ${RUN_SEED}"
+    --walk_jump_steps 200 --walk_jump_save_every_n_steps 1 --seed ${RUN_SEED} --accelerator ${ACCELERATOR:-gpu}"
 echo "Running command: ${CMD}"
 if ${CMD}; then
     echo "Successfully processed ${CONFIG_FILE} sigma=${SIGMA} seed=${RUN_SEED}"

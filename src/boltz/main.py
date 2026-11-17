@@ -1677,11 +1677,13 @@ def boltz_jump_cli():
 )
 @click.option(
     "--diversity_mode",
-    type=click.Choice(["none", "seed", "metad"]),
+    type=click.Choice(["none", "seed", "metad", "q_ratchet"]),
     default="none",
-    help="Exploration bias for the walk: repel from the seed, or metadynamics in RMSD (see wrappers/diversity.py).",
+    help="Bias for the walk: repel from the seed, metadynamics in RMSD, or a ratchet on the fraction of "
+    "native contacts of final_structure (see wrappers/diversity.py).",
 )
-@click.option("--diversity_height", type=float, default=1.0, help="Hill height, in kT per atom.")
+@click.option("--diversity_height", type=float, default=1.0,
+              help="Hill height in kT per atom (seed, metad); ratchet stiffness k in kT per residue (q_ratchet).")
 @click.option("--diversity_width", type=float, default=2.0, help="Hill width, as RMSD in Angstrom.")
 @click.option("--diversity_deposit_every", type=int, default=20, help="Walk steps between hills (metad).")
 @click.option("--diversity_bias_factor", type=float, default=0.0,
@@ -1846,6 +1848,8 @@ def predict_walk_jump(
         denoise_tag = f"_n={num_denoising_steps}" if num_denoising_steps > 1 else ""
         if diversity_mode == "seed":
             denoise_tag += f"_div=seed_h={diversity_height}_w={diversity_width}"
+        elif diversity_mode == "q_ratchet":
+            denoise_tag += f"_div=qratchet_k={diversity_height}"
         elif diversity_mode == "metad":
             denoise_tag += (f"_div=metad_h={diversity_height}_w={diversity_width}"
                             f"_k={diversity_deposit_every}_bf={diversity_bias_factor}")

@@ -70,12 +70,16 @@ def hbond_hydrogen(xyz, n, h, acceptors):
     return ((d_ho < HO_CUTOFF_NM) & (angle > NHO_MIN_ANGLE_DEG)).any(1).astype(int)
 
 
-def hdx_classes(entry_xml):
-    """Residue index (1-based, as in the entry sequence) -> protection level, plus probed set."""
+def hdx_classes(entry_xml, kind="stability"):
+    """Residue index (1-based, as in the entry sequence) -> protection level, plus probed set.
+
+    kind="stability": native-exchange classes (STRONG / MEDIUM / WEAK).
+    kind="folding": pulse-labelling / quenched-flow classes (EARLY / INTERMEDIATE / LATE).
+    """
     root = ET.parse(entry_xml).getroot()
     levels, probed_counts = {}, []
     for exp in root.iter("experiment"):
-        if exp.find("method").get("type") != "stability":
+        if exp.find("method").get("type") != kind:
             continue
         level = exp.find("protection").get("protection_level")
         for r in exp.findall("residue"):
@@ -149,6 +153,9 @@ def main():
     parser.add_argument("--trajectory", help="omit to score the topology structure alone")
     parser.add_argument("--topology", required=True)
     parser.add_argument("--stride", type=int, default=1)
+    parser.add_argument("--window", default="0:1",
+                        help="fraction of the trajectory to score, start:end (e.g. 0:0.5 = first half)")
+    parser.add_argument("--classes", choices=["stability", "folding"], default="stability")
     parser.add_argument("--hbond", choices=["hydrogen", "heavy"], default="hydrogen",
                         help="hydrogen: place amide H and use distance + angle (default); heavy: N...O distance only")
     parser.add_argument("--out")
@@ -157,7 +164,9 @@ def main():
     traj = (md.load(args.trajectory, top=args.topology, stride=args.stride)
             if args.trajectory else md.load(args.topology))
     traj = traj.atom_slice(traj.topology.select("protein"))
-    levels, sequence, probes = hdx_classes(args.entry)
+    a, b = (float(x) for x in args.window.split(":"))
+    traj = traj[int(a * traj.n_frames):max(int(b * traj.n_frames), int(a * traj.n_frames) + 1)]
+    levels, sequence, probes = hdx_classes(args.entry, args.classes)
     model_seq = "".join(r.code or "X" for r in traj.topology.residues if r.is_protein)
     # Crystal structures often lack disordered terminal residues. The model may
     # therefore be an exact substring of the HDX construct; shift its numbering

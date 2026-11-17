@@ -8,6 +8,7 @@
 #SBATCH --array=0-427
 
 # Boltz-2 co-folding of the PoseBusters entries (scripts/docking/prepare_posebusters.py).
+# ACCELERATOR=cpu runs on the CPU partition (e.g. for entries that run out of GPU memory).
 # CONFIG_LIST=<file of config paths> restricts the array (e.g. to the screened
 # failures); DIFFUSION_SAMPLES (default 5) and RUN_TAG set the sample count and
 # output subdirectory, e.g. for the matched-budget baseline:
@@ -36,7 +37,7 @@ mkdir -p ${OUT_DIR}
 
 CMD="boltz predict ${CONFIG_FILE} --no_kernels --override --out_dir ${OUT_DIR} \
     --diffusion_samples ${DIFFUSION_SAMPLES:-5} --max_parallel_samples ${MAX_PARALLEL:-2} --recycling_steps 3 \
-    --sampling_steps 200 --output_format mmcif --seed ${SEED:-0}"
+    --sampling_steps 200 --output_format mmcif --seed ${SEED:-0} --accelerator ${ACCELERATOR:-gpu}"
 NAME=$(basename "${CONFIG_FILE}" .yaml)
 echo "Running command: ${CMD}"
 LOG=$(mktemp)

@@ -20,6 +20,14 @@ is added to the walk's score, so the chain is pushed away from the centres.
   height is scaled by exp(-U(x) / (bias_factor - 1)), so the bias converges
   instead of growing without bound.
 
+- ``q_ratchet``: ratchet-and-pawl folding bias (as in ratchet-and-pawl MD) on the
+  fraction of native contacts Q of a target structure (the YAML's
+  ``final_structure``). It remembers the highest Q reached; while the chain is at
+  or above it there is no force, and below it a harmonic restoring force acts,
+  U = (k N / 2) (Q_max - Q)^2 for N residues. Q is one number for the whole chain,
+  so the bias does not prescribe which contacts form first -- unlike per-residue
+  restraints, which pull every residue towards its own target position.
+
 RMSD is computed after optimal superposition over the atoms in ``atom_mask``.
 The rotation is treated as a constant when differentiating; this is exact,
 because at the optimal rotation the derivative of RMSD with respect to the
@@ -99,11 +107,69 @@ class RMSDHills:
         self.heights.append(h)
 
 
-def build_bias(walk_jump_args, x_init):
+@dataclass
+class NativeContactRatchet:
+    """Ratchet on the fraction of native C-alpha contacts (see module docstring).
+
+    Q(x) = mean_k sigmoid(-beta (r_k - lam r0_k)) over native contacts k: C-alpha
+    pairs within ``cutoff`` A in the target and at least ``min_sep`` apart in sequence
+    (Best, Hummer & Eaton, PNAS 2013, with C-alpha distances).
+    """
+
+    target_ca: torch.Tensor  # [n_res, 3]
+    ca_index: torch.Tensor  # [n_res] atom indices of the C-alphas
+    k: float
+    beta: float = 5.0
+    lam: float = 1.5
+    cutoff: float = 8.0
+    min_sep: int = 4
+    q_max: float = float("-inf")
+
+    def __post_init__(self):
+        d = torch.cdist(self.target_ca, self.target_ca)
+        n = len(self.target_ca)
+        i, j = torch.triu_indices(n, n, offset=self.min_sep)
+        keep = d[i, j] < self.cutoff
+        self.i, self.j, self.r0 = i[keep], j[keep], d[i, j][keep]
+
+    def q(self, x):
+        ca = x[..., self.ca_index, :]
+        r = torch.linalg.norm(ca[..., self.i, :] - ca[..., self.j, :], dim=-1)
+        return torch.sigmoid(-self.beta * (r - self.lam * self.r0.to(x))).mean(-1)
+
+    def energy(self, x, mask=None):
+        gap = torch.clamp(self.q_max - self.q(x), min=0.0)
+        return 0.5 * self.k * len(self.target_ca) * gap**2
+
+    def gradient(self, x, mask=None):
+        if not torch.isfinite(torch.tensor(self.q_max)):
+            return torch.zeros_like(x)
+        with torch.enable_grad():
+            xg = x.detach().to(torch.promote_types(x.dtype, torch.float32)).requires_grad_(True)
+            (g,) = torch.autograd.grad(self.energy(xg).sum(), xg)
+        return g.to(x.dtype)
+
+    def maybe_deposit(self, x, mask=None):
+        """Advance the pawl: remember the highest Q reached."""
+        with torch.no_grad():
+            self.q_max = max(self.q_max, float(self.q(x.float()).max()))
+
+
+def build_bias(walk_jump_args, x_init, feats=None):
     """Construct the bias described by walk_jump_args, or None."""
     mode = walk_jump_args.get("diversity_mode", "none")
     if mode in (None, "none"):
         return None
+    if mode == "q_ratchet":
+        if feats is None or not bool(feats.get("valid_final_structure", torch.tensor(False)).any()):
+            raise ValueError("q_ratchet needs a final_structure in the input YAML")
+        mask = feats["atom_pad_mask"][0].bool()
+        target = torch.zeros(mask.shape[0], 3, device=mask.device)
+        target[mask] = feats["final_structure_coords"].reshape(-1, 3).float()
+        ca_index = feats["token_to_rep_atom"][0].float().argmax(-1)  # representative atom of each token
+        ca_index = ca_index[feats["token_pad_mask"][0].bool()]
+        return NativeContactRatchet(target_ca=target[ca_index], ca_index=ca_index,
+                                    k=walk_jump_args["diversity_height"])
     if mode not in ("seed", "metad"):
         raise ValueError(f"unknown diversity_mode {mode!r}")
     bias = RMSDHills(mode=mode, height=walk_jump_args["diversity_height"],

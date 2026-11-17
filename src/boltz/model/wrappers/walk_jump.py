@@ -217,7 +217,7 @@ class WalkJumpWrapper(Boltz2Wrapper):
 
         # Optional exploration bias (see diversity.py). Its gradient is added to
         # the score once per walk step, which is also when hills are deposited.
-        bias = build_bias(self.walk_jump_args, x_init)
+        bias = build_bias(self.walk_jump_args, x_init, feats)
         bias_mask = feats["atom_pad_mask"].to(bool)
 
         def score_fn(y: torch.Tensor) -> torch.Tensor:

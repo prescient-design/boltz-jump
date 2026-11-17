@@ -100,7 +100,7 @@ def main():
         else:
             verdict = "clean_pose_failure"
         verdicts[verdict].append(entry)
-        # walk-jump starts from the top-ranked (label-free) sample
+        # top-ranked (label-free) sample, for reference; walk-jump starts from every sample (prepare_walkjump.py)
         top = max(samples, key=lambda r: (r["confidence_score"] or 0.0))
         out.append({"entry": entry, "verdict": verdict, "n_samples": len(samples),
                     "best_lig_rmsd": best["lig_rmsd"], "pocket_ca_at_best": best["pocket_ca"],
