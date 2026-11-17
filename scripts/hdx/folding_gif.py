@@ -30,7 +30,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from plot_guidance_sweep import native_contacts  # noqa: E402
 
 INK, INK2 = "#0b0b0b", "#52514e"
-LABELS = {"unguided": "No guidance", "guided_w0.003": "Guidance towards the crystal (weight 0.003)"}
+def label(cond):
+    if cond == "unguided":
+        return "Boltz-Jump (no guidance)"
+    return f"Boltz-Jump (guidance with weight {cond.removeprefix('guided_w')})" if cond.startswith("guided_w") else cond
 
 # Secondary structure is per atom in PyMOL, not per state, so it is reassigned before
 # rendering each frame. The camera fits every condition's frames from --zoom_from_step on
@@ -128,7 +131,7 @@ def main():
                 canvas = Image.new("RGB", (im.width, im.height + 110), "white")
                 canvas.paste(im, (0, 110))
                 d = ImageDraw.Draw(canvas)
-                d.text((20, 12), LABELS.get(cond, cond), fill=INK, font=font(24))
+                d.text((20, 12), label(cond), fill=INK, font=font(24))
                 d.text((20, 52), f"step {i * args.stride:>4}    Q = {q[i]:.2f}", fill=INK2, font=font(26))
                 frames.append(canvas)
             movies[cond] = frames
