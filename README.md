@@ -65,8 +65,6 @@ SLURM_GPU_GRES=gpu:1
 SLURM_CPU_PARTITION=
 ```
 
-A config that uses an unset variable fails with an error naming it.
-
 ## Reproducing the paper
 
 All steps run from the repository root. Each SLURM script is an array job over one
