@@ -9,8 +9,7 @@ helix (small D1, large D2); DFG-out flips it towards the beta3 Lys (large D1,
 small D2). Residues are taken by position in the construct, which starts at
 Ser248, so the Boltz numbering 1..287 maps onto it directly.
 
-Writes the per-frame distances (CSV) and a figure: D1 vs D2 for every sample,
-and D1 along each walk-jump chain.
+Writes the per-frame distances (CSV) and a figure of D1 vs D2 for every sample.
 
 Usage:
     python scripts/eval/abl_dfg.py --runs $RESULTS_DIR/abl_kinase_states --out figures/abl_kinase/abl_dfg.png
@@ -77,20 +76,18 @@ def main():
         print(f"{s:<28} n={len(g):<5} D1 median {g.D1.median():5.1f} [{g.D1.min():.1f}, {g.D1.max():.1f}]   "
               f"D2 median {g.D2.median():5.1f} [{g.D2.min():.1f}, {g.D2.max():.1f}]")
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5.2), facecolor=SURFACE, gridspec_kw={"width_ratios": [1, 1.25]})
-    for ax in axes:
-        ax.set_facecolor(SURFACE)
-        for side in ("top", "right"):
-            ax.spines[side].set_visible(False)
-        for side in ("left", "bottom"):
-            ax.spines[side].set_color(MUTED)
-        ax.tick_params(colors=INK2)
-        ax.grid(color=GRID, lw=0.8)
-        ax.set_axisbelow(True)
+    fig, ax = plt.subplots(figsize=(9, 6.5), facecolor=SURFACE)
+    ax.set_facecolor(SURFACE)
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    for side in ("left", "bottom"):
+        ax.spines[side].set_color(MUTED)
+    ax.tick_params(colors=INK2)
+    ax.grid(color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
 
-    ax = axes[0]
     g = df[df.set == "Boltz-2 diffusion"]
-    ax.scatter(g.D1, g.D2, s=40, color=ORANGE, alpha=0.8, edgecolor=SURFACE, lw=0.8, label=f"Boltz-2 diffusion ({len(g)})",
+    ax.scatter(g.D1, g.D2, s=40, color=ORANGE, alpha=0.8, edgecolor=SURFACE, lw=0.8, label=f"Boltz-2 diffusion ({len(g)} samples)",
                zorder=4)
     for _, label, color in CHAINS:
         g = df[df.set == label]
@@ -100,28 +97,13 @@ def main():
         ax.scatter(g.D1, g.D2, s=380, marker=marker, color=INK, edgecolor=SURFACE, lw=1.5, label=label, zorder=5)
     ax.set_xlabel("D1: αC-Glu+4 Cα – DFG-Phe Cζ (Å)", color=INK2)
     ax.set_ylabel("D2: β3-Lys Cα – DFG-Phe Cζ (Å)", color=INK2)
-    ax.set_title("DFG conformation of every sample", color=INK, fontsize=17, loc="left")
-
-    ax = axes[1]
-    for _, label, color in CHAINS:
-        g = df[df.set == label]
-        ax.plot(g.frame, g.D1, color=color, lw=1.4, label=label)
-    for (code, label), ls in zip(REFS, ("--", ":")):
-        y = df[df.set == label].D1.iloc[0]
-        ax.axhline(y, color=INK, lw=1.4, ls=ls)
-        ax.text(1.0, y, f" {label.split(' (')[0]}\n {code}", transform=ax.get_yaxis_transform(), va="center",
-                color=INK2, fontsize=13)
-    ax.set_xlabel("walk step", color=INK2)
-    ax.set_ylabel("D1 (Å)", color=INK2)
-    ax.set_title("D1 along each Boltz-Jump chain", color=INK, fontsize=17, loc="left")
-
-    h0, l0 = axes[0].get_legend_handles_labels()
-    leg = fig.legend(h0, l0, loc="upper center", ncol=3, frameon=False, fontsize=13.5, labelcolor=INK2,
-                     bbox_to_anchor=(0.5, 1.1), markerscale=1)
+    ax.set_title("Abl kinase: DFG conformation of every sample", color=INK, fontsize=17, loc="left")
+    leg = ax.legend(loc="upper right", frameon=True, facecolor=SURFACE, edgecolor=GRID, framealpha=1, fontsize=13,
+                    labelcolor=INK2, markerscale=0.8)
     for hnd in leg.legend_handles:
         hnd.set_alpha(1)
-    fig.text(0.5, -0.04, "Abl kinase domain (1b numbering): D1 = M309 Cα – F401 Cζ, D2 = K290 Cα – F401 Cζ "
-             "(Modi & Dunbrack 2019). σ = 2 Å, 1000 steps per chain.", ha="center", color=INK2, fontsize=12.5)
+    fig.text(0.5, -0.06, "1b numbering: D1 = M309 Cα – F401 Cζ, D2 = K290 Cα – F401 Cζ (Modi & Dunbrack 2019).\n"
+             "Boltz-Jump: σ = 2 Å, 1000 steps per chain.", ha="center", color=INK2, fontsize=12.5)
     fig.tight_layout()
     fig.savefig(args.out, dpi=200, bbox_inches="tight", facecolor=SURFACE)
     print(f"-> {args.out}")
