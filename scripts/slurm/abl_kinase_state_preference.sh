@@ -7,7 +7,7 @@
 #SBATCH --mem=64G
 #SBATCH --array=0-2
 
-# Does Boltz-2 diffusion prefer the inactive (6XR6) or active (6XR7) Abl kinase
+# Does Boltz-2 diffusion prefer the active (6XR6) or inactive I1 (6XR7) Abl kinase
 # state, and does unguided walk-jump seeded from either state visit the other?
 cd "${SLURM_SUBMIT_DIR:-$PWD}"
 [ -f .env ] && { set -a; source .env; set +a; }
