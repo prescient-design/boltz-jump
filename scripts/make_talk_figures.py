@@ -126,19 +126,18 @@ def noised_seed(out):
 
 
 def walk_denoise(out):
-    # Number of denoising steps is an ordered magnitude: one-hue ramp (steps 250, 450, 650).
-    models = [("Boltz-2 Jump (MSA, δ=1)", "1-step jump (Boltz-Jump)", "#86b6ef"),
-              ("Boltz-2 Walk-Denoise (MSA, δ=1, N=10)", "walk-denoise, N = 10", "#2a78d6"),
-              ("Boltz-2 Walk-Denoise (MSA, δ=1, N=53)", "walk-denoise, N = 53", "#104281")]
+    # Boltz-Jump keeps its colour from 1 and 1b; N = number of reverse-diffusion steps per saved frame.
+    models = [("Boltz-2 Jump (MSA, δ=1)", "Boltz-Jump (1-step jump)", BLUE),
+              ("Boltz-2 Walk-Denoise (MSA, δ=1, N=10)", "walk-denoise, N = 10 denoising steps", YELLOW)]
     metrics = METRICS
     fig, axes = plt.subplots(1, 2, figsize=(14, 4.8), facecolor=SURFACE)
     for ax, (ds, title) in zip(axes, [("atlas", "ATLAS"), ("mdcath", "mdCATH, 320 K")]):
         d = pd.read_csv(ROOT / "results_plots_nov2026" / ds / "summary_table.csv", index_col=0)
         style(ax)
         x = np.arange(len(metrics))
-        w = 0.26
+        w = 0.34
         for k, (row, label, color) in enumerate(models):
-            ax.bar(x + (k - 1) * w, [d.loc[row, m] for m, _ in metrics], w * 0.92, color=color, label=label, zorder=2)
+            ax.bar(x + (k - 0.5) * w, [d.loc[row, m] for m, _ in metrics], w * 0.92, color=color, label=label, zorder=2)
         ax.set_xticks(x)
         ax.set_xticklabels([m for _, m in metrics], color=INK2, fontsize=15)
         ax.set_title(title, color=INK, fontsize=18, loc="left")
@@ -146,9 +145,9 @@ def walk_denoise(out):
     axes[0].set_ylabel("score (higher is better)", color=INK2)
     h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=3, frameon=False, fontsize=15, labelcolor=INK2, bbox_to_anchor=(0.5, 1.07))
-    caption(fig, -0.04, "Same walk; each saved frame denoised by one Tweedie step or an N-step reverse diffusion "
-             "from sigma = 2 A.\nMore steps: slightly better single structures, ~35% less diversity, weaker contact "
-             "metrics (exposed residues mixed); N = 53 costs ~4x N = 10.", ha="center", color=INK2, fontsize=12.5)
+    caption(fig, -0.04, "Same walk; each saved frame denoised by one Tweedie step (Boltz-Jump) or a 10-step reverse "
+            "diffusion from sigma = 2 A. 10 steps: slightly better single structures (lDDT precision +0.01), ~30% less "
+            "diversity, weaker contact metrics (exposed residues mixed).", ha="center", color=INK2, fontsize=13)
     fig.tight_layout()
     fig.savefig(out, dpi=200, bbox_inches="tight", facecolor=SURFACE)
     plt.close(fig)
