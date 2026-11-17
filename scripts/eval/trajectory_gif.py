@@ -3,7 +3,8 @@
 
 Every frame is superposed on --ref by C-alpha (optionally only the core, dropping
 --trim residues at each end) and rendered as a cartoon from one fixed camera
-shared by all trajectories: helix red, strand blue, loop pink, reassigned per
+shared by all trajectories, coloured with PyMOL's helix cyan / sheet red / loop magenta
+preset, reassigned per
 frame (PyMOL stores secondary structure per atom, not per state).
 
 Writes <out_prefix>_<i>.gif per trajectory and <out_prefix>_side_by_side.gif.
@@ -26,12 +27,13 @@ from matplotlib import font_manager
 from PIL import Image, ImageDraw, ImageFont
 
 INK, INK2 = "#0b0b0b", "#52514e"
-HELIX, STRAND, LOOP = "0xd62728", "0x2a78d6", "0xf4a6c6"
+# PyMOL's "color by ss" preset: helix cyan, sheet red, loop magenta
+HELIX, STRAND, LOOP = "cyan", "red", "magenta"
 
 MOVIE_PML = """
 python
 import sys
-from pymol import cmd
+from pymol import cmd, util
 pdb, view, prefix, size = sys.argv[-4], sys.argv[-3], sys.argv[-2], int(sys.argv[-1])
 cmd.load(view, "view")
 cmd.load(pdb, "mol")
@@ -48,13 +50,11 @@ cmd.disable("view")
 for s in range(1, cmd.count_states("mol") + 1):
     cmd.frame(s)
     cmd.dss("mol", state=s)
-    cmd.color("%s", "mol and ss L+''")
-    cmd.color("%s", "mol and ss H")
-    cmd.color("%s", "mol and ss S")
+    util.cbss("mol", "%s", "%s", "%s")
     cmd.ray(size, size)
     cmd.png(f"{prefix}{s:04d}.png")
 python end
-""" % (LOOP, HELIX, STRAND)
+""" % (HELIX, STRAND, LOOP)
 
 
 def font(size):
