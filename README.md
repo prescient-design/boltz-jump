@@ -5,9 +5,9 @@
   <img src="docs/abl_kinase.gif" alt="Boltz-Jump trajectories of Abl kinase from the active (6XR6) and inactive (6XR7) states" width="800">
 </p>
 
-*Boltz-Jump trajectories of Abl kinase (1000 steps, σ = 2 Å), started from the active (PDB 6XR6, left) and inactive I1 (PDB 6XR7, right) NMR structures. 
+*Boltz-Jump trajectories of Abl kinase (1000 steps, σ = 2 Å), started from the active (PDB 6XR6, left) and inactive I1 (PDB 6XR7, right) NMR structures.* 
 
-Official code release for [Boltz-Jump](https://openreview.net/forum?id=PeZjk9BcPR), accepted as a spotlight paper at the [GenBio workshop at ICML 2026](https://genbio-workshop.github.io/2026/). Boltz-Jump is a method for accelerated sampling of conformational ensembles using walk-jump sampling applied to the Boltz-2 diffusion model (but can be applied to any all-atom diffusion model). The code is open-source and available under the MIT license.
+Official code release for [Boltz-Jump](https://openreview.net/forum?id=PeZjk9BcPR), accepted as a spotlight paper at the [GenBio workshop at ICML 2026](https://genbio-workshop.github.io/2026/) and as an oral presentation at [MLCB 2026](https://www.mlcb.org/). Boltz-Jump is a method for accelerated sampling of conformational ensembles using walk-jump sampling applied to the Boltz-2 diffusion model (but can be applied to any all-atom diffusion model). The code is open-source and available under the MIT license.
 
 **Paper**: [Boltz-Jump: Seeded Conformational Ensemble Generation and Structure Refinement with Boltz-2](paper/paper.pdf) (PDF, MLCB version).
 
