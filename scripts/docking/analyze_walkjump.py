@@ -34,9 +34,10 @@ _IDEAL = {}
 def target_info(dataset, root, name):
     """(target id, reference, SMILES) for a walk-jump start."""
     if dataset == "posebusters":
-        entry = json.load(open(root / "manifest.json"))["entries"][name]
-        ref = Reference.posebusters(docking_dir() / "data/posebusters/posebusters_benchmark_set" / name)
-        return name, ref, entry["ligand_smiles"]
+        target = name.rsplit("__", 1)[0]  # <entry>__start<k>
+        entry = json.load(open(root / "manifest.json"))["entries"][target]
+        ref = Reference.posebusters(docking_dir() / "data/posebusters/posebusters_benchmark_set" / target)
+        return target, ref, entry["ligand_smiles"]
     system, start = name.rsplit("__", 1)
     row = next(r for r in csv.DictReader(open(root / "starts.csv")) if r["system"] == system and r["start"] == start)
     gt = docking_dir() / "data/runs_n_poses/ground_truth" / system

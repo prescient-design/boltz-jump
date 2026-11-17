@@ -7,6 +7,7 @@ import mdtraj
 from pytorch_lightning import LightningModule
 
 from .base import Boltz2Wrapper
+from .diversity import build_bias
 from boltz.model.modules.integrator import BAOAB
 from boltz.model.models.boltz2 import Boltz2
 from boltz.model.modules.utils import center_random_augmentation
@@ -214,9 +215,19 @@ class WalkJumpWrapper(Boltz2Wrapper):
             xhat += guidance_update
             return xhat
 
+        # Optional exploration bias (see diversity.py). Its gradient is added to
+        # the score once per walk step, which is also when hills are deposited.
+        bias = build_bias(self.walk_jump_args, x_init, feats)
+        bias_mask = feats["atom_pad_mask"].to(bool)
+
         def score_fn(y: torch.Tensor) -> torch.Tensor:
             # Walk always uses single-step for speed
-            return (xhat_fn(y, num_denoising_steps=1) - y) / (self.walk_jump_args["sigma"] ** 2)
+            xhat = xhat_fn(y, num_denoising_steps=1)
+            score = (xhat - y) / (self.walk_jump_args["sigma"] ** 2)
+            if bias is not None:
+                score = score - bias.gradient(xhat, bias_mask)
+                bias.maybe_deposit(xhat, bias_mask)
+            return score
 
         mcmc = BAOAB(
             delta=self.walk_jump_args["delta"],

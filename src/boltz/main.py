@@ -178,6 +178,11 @@ class WalkJumpArgs:
     friction: float
     save_every_n_steps: int
     num_denoising_steps: int = 1
+    diversity_mode: str = "none"
+    diversity_height: float = 1.0
+    diversity_width: float = 2.0
+    diversity_deposit_every: int = 20
+    diversity_bias_factor: float = 0.0
     M: float = 1.0
     save_trajectory: bool = True
     burn_in_steps: int = 0
@@ -1671,6 +1676,19 @@ def boltz_jump_cli():
     help="Number of denoising steps to perform after the walk-jump sampling. Default is 1 (i.e. one final denoising step).",
 )
 @click.option(
+    "--diversity_mode",
+    type=click.Choice(["none", "seed", "metad", "q_ratchet"]),
+    default="none",
+    help="Bias for the walk: repel from the seed, metadynamics in RMSD, or a ratchet on the fraction of "
+    "native contacts of final_structure (see wrappers/diversity.py).",
+)
+@click.option("--diversity_height", type=float, default=1.0,
+              help="Hill height in kT per atom (seed, metad); ratchet stiffness k in kT per residue (q_ratchet).")
+@click.option("--diversity_width", type=float, default=2.0, help="Hill width, as RMSD in Angstrom.")
+@click.option("--diversity_deposit_every", type=int, default=20, help="Walk steps between hills (metad).")
+@click.option("--diversity_bias_factor", type=float, default=0.0,
+              help="Well-tempered bias factor (>1 enables tempering; metad).")
+@click.option(
     "--use_full_diffusion",
     is_flag=True,
     help="Whether to use the full diffusion, instead of walk-jump."
@@ -1748,6 +1766,11 @@ def predict_walk_jump(
     walk_jump_friction: float,
     walk_jump_save_every_n_steps: int,
     num_denoising_steps: int,
+    diversity_mode: str = "none",
+    diversity_height: float = 1.0,
+    diversity_width: float = 2.0,
+    diversity_deposit_every: int = 20,
+    diversity_bias_factor: float = 0.0,
     use_full_diffusion: bool = False,
     num_diffusion_samples: Optional[int] = None,
     use_noised_seed: bool = False,
@@ -1823,6 +1846,13 @@ def predict_walk_jump(
         # Walk-denoise (multi-step jump) runs get their own directory; single-step
         # runs keep the original name.
         denoise_tag = f"_n={num_denoising_steps}" if num_denoising_steps > 1 else ""
+        if diversity_mode == "seed":
+            denoise_tag += f"_div=seed_h={diversity_height}_w={diversity_width}"
+        elif diversity_mode == "q_ratchet":
+            denoise_tag += f"_div=qratchet_k={diversity_height}"
+        elif diversity_mode == "metad":
+            denoise_tag += (f"_div=metad_h={diversity_height}_w={diversity_width}"
+                            f"_k={diversity_deposit_every}_bf={diversity_bias_factor}")
         out_dir = out_dir / f"boltz_jump_results_s={walk_jump_sigma}_d={walk_jump_delta}_f={walk_jump_friction}{denoise_tag}_{data.stem}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1915,6 +1945,11 @@ def predict_walk_jump(
         friction=walk_jump_friction,
         save_every_n_steps=walk_jump_save_every_n_steps,
         num_denoising_steps=num_denoising_steps,
+        diversity_mode=diversity_mode,
+        diversity_height=diversity_height,
+        diversity_width=diversity_width,
+        diversity_deposit_every=diversity_deposit_every,
+        diversity_bias_factor=diversity_bias_factor,
     )
 
     model = Boltz2.load_from_checkpoint(

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assign Abl kinase samples to the inactive (6XR6) or active (6XR7) state.
+"""Assign Abl kinase samples to the active (6XR6) or inactive I1 (6XR7) state.
 
 Each frame is superposed on the stable kinase core and compared to both
 reference structures over the regions that differ between them (P-loop, aC
@@ -46,8 +46,8 @@ def main():
     parser.add_argument("--cif_dir", help="Directory of predicted CIFs (one sample each)")
     parser.add_argument("--xtc", help="Trajectory file")
     parser.add_argument("--top", help="Topology for --xtc")
-    parser.add_argument("--inactive", default="structures/6XR6.cif")
-    parser.add_argument("--active", default="structures/6XR7.cif")
+    parser.add_argument("--active", default="structures/6XR6.cif")
+    parser.add_argument("--inactive", default="structures/6XR7.cif")
     parser.add_argument("--out_csv")
     args = parser.parse_args()
 
@@ -56,7 +56,7 @@ def main():
         frames = md.join([ca_coords(md.load(f)) for f in files])
     else:
         frames = ca_coords(md.load(args.xtc, top=args.top))
-    refs = {"6XR6": ca_coords(md.load(args.inactive)), "6XR7": ca_coords(md.load(args.active))}
+    refs = {"6XR6": ca_coords(md.load(args.active)), "6XR7": ca_coords(md.load(args.inactive))}
 
     n_res = frames.n_atoms
     assert all(r.n_atoms == n_res for r in refs.values()), "residue count mismatch with references"
@@ -74,7 +74,7 @@ def main():
 
     ref_gap = region_rmsd(refs["6XR7"], refs["6XR6"], core, state)[0]
     print(f"{args.name}: {len(df)} frames; references are {ref_gap:.2f} A apart over the state regions")
-    print(f"  closer to 6XR6 (inactive): {np.mean(df.closer_to == '6XR6'):.0%}")
+    print(f"  closer to 6XR6 (active): {np.mean(df.closer_to == '6XR6'):.0%}")
     for label in refs:
         print(f"  state-region RMSD to {label}: median {df[f'state_rmsd_{label}'].median():.2f} A "
               f"(min {df[f'state_rmsd_{label}'].min():.2f})   tail: median {df[f'tail_rmsd_{label}'].median():.2f} A")

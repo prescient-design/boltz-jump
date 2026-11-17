@@ -106,7 +106,15 @@ def load_frames(pred_root, prefix, system_id):
     if len(dirs) != 1:
         return None
     d = dirs[0]
-    traj = md.load(f"{d}/{system_id}_model_0.xtc", top=f"{d}/{system_id}_model_0.cif")
+    xtc = f"{d}/{system_id}_model_0.xtc"
+    if Path(xtc).exists():  # walk-jump: one trajectory
+        traj = md.load(xtc, top=f"{d}/{system_id}_model_0.cif")
+    else:  # diffusion: one CIF per independent sample
+        cifs = sorted(glob.glob(f"{d}/{system_id}_model_*.cif"),
+                      key=lambda p: int(Path(p).stem.rsplit("_", 1)[1]))
+        if not cifs:
+            return None
+        traj = md.join([md.load(c) for c in cifs])
     traj = traj.atom_slice(traj.top.select("name CA"))
     return 10 * traj.xyz  # nm -> Angstrom
 
