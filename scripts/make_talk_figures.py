@@ -206,12 +206,6 @@ def convergence_nfe(out, subdir="convergence_seeded"):
         for model, label, color, nfe in models:
             q = d[d.model == model].groupby("n")["rmwd"].median()
             ax.plot([nfe(n) for n in q.index], q.values, color=color, lw=2, marker="o", ms=8, label=label, zorder=3)
-            # walk-jump labels sit beside their end point, away from each other's lines
-            ax.annotate(f"{q.index[-1]} samples", (nfe(q.index[-1]), q.values[-1]), textcoords="offset points",
-                        xytext={"boltz2_jump_msa_d1": (-12, -4), "boltz2_jump_msa_no_init_d1": (12, -4)}.get(model, (0, -12)),
-                        ha={"boltz2_jump_msa_d1": "right", "boltz2_jump_msa_no_init_d1": "left"}.get(model, "center"),
-                        va="center" if model.startswith("boltz2_jump") else "top",
-                        color=INK2, fontsize=13)
         ax.set_xscale("log")
         ax.set_xticks([1, 10, 100, 1000, 10000])
         ax.set_xticklabels(["1", "10", "100", "1,000", "10,000"])
@@ -220,8 +214,8 @@ def convergence_nfe(out, subdir="convergence_seeded"):
     axes[0].set_ylabel("RMWD to MD (Å, lower is better)", color=INK2)
     h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=3, frameon=False, fontsize=15, labelcolor=INK2, bbox_to_anchor=(0.5, 1.07))
-    caption(fig, -0.03, "Points: 2, 5, 10, 20, 50, 100 samples. Diffusion: 200 NFE per sample; "
-             "walk-jump: 1 per frame, + 200 for a Boltz-2 seed.", ha="center", color=INK2, fontsize=13)
+    caption(fig, -0.03, "Points: 2-100 samples. Diffusion: 200 NFE/sample; "
+             "walk-jump: 1/frame (+200 for a Boltz-2 seed).", ha="center", color=INK2, fontsize=13)
     fig.tight_layout()
     fig.savefig(out, dpi=200, bbox_inches="tight", facecolor=SURFACE)
     plt.close(fig)
